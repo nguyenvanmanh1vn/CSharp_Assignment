@@ -1,0 +1,16 @@
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\ref\CSharpFundamental_1.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\bin\Debug\net5.0\CSharpFundamental_1.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\ref\CSharpFundamental_1.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Assignment\CSharpFundamental_1\obj\Debug\net5.0\CSharpFundamental_1.genruntimeconfig.cache

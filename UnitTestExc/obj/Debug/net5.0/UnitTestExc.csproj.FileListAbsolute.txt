@@ -1,0 +1,246 @@
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\appsettings.json
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.exe
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.deps.json
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.runtimeconfig.json
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.runtimeconfig.dev.json
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\ref\UnitTestExc.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.Views.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\UnitTestExc.Views.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csprojAssemblyReference.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.AssemblyInfoInputs.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.AssemblyInfo.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csproj.CoreCompileInputs.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorAssemblyInfo.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorAssemblyInfo.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\staticwebassets\UnitTestExc.StaticWebAssets.Manifest.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\staticwebassets\UnitTestExc.StaticWebAssets.xml
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\scopedcss\bundle\UnitTestExc.styles.css
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.TagHelpers.input.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.TagHelpers.output.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorCoreGenerate.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorTargetAssemblyInfo.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorTargetAssemblyInfo.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.Views.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csproj.CopyComplete
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\ref\UnitTestExc.dll
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.pdb
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\UnitTestExc.genruntimeconfig.cache
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Author\Create.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Author\Index.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Book\Create.cshtml.g.cs
+C:\Users\Benh Bong\Desktop\UnitTestExc\obj\Debug\net5.0\Razor\Views\Book\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ref\UnitTestExc.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\ref\UnitTestExc.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.genruntimeconfig.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\testhost.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\testhost.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\appsettings.Development.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\appsettings.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.Views.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\UnitTestExc.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Castle.Core.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Humanizer.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.TestPlatform.CommunicationUtilities.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.TestPlatform.CrossPlatEngine.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.TestPlatform.Utilities.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Moq.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\NuGet.Frameworks.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\System.Runtime.Caching.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.abstractions.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.assert.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.core.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\xunit.execution.dotnet.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.MvcApplicationPartsAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.TagHelpers.input.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.TagHelpers.output.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorCoreGenerate.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Author\Create.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Author\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Book\Create.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Book\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorTargetAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.RazorTargetAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\UnitTestExc.csproj.CopyComplete
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_15_(2021-04-02)\Session_1_Unit_Testing_With_NUnit_Mentor\Practices\UnitTestExc\obj\Debug\net5.0\Razor\Views\Book\GetBookByID.cshtml.g.cs

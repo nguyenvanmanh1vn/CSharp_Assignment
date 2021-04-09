@@ -1,0 +1,16 @@
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.exe
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\ref\FindPrimeNumbersAsync.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\bin\Debug\net5.0\FindPrimeNumbersAsync.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\ref\FindPrimeNumbersAsync.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\CSharpFundamental_3\FindPrimeNumbersAsync\obj\Debug\net5.0\FindPrimeNumbersAsync.genruntimeconfig.cache

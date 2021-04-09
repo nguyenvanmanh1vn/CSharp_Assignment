@@ -1,0 +1,30 @@
+@model IEnumerable<Book>
+@{
+    ViewBag.Title = "Get Book By ID Result";
+}
+<h1>@ViewBag.Title</h1>
+@* @if(Model.Any()){
+    <ul>
+    @foreach(var book in Model){
+        <li>@book.BookId @book.Title @book.AuthorId
+        </li>
+    }
+    </ul>
+} *@
+<div><b>Book By ID Result</b><br /></div>  
+<table class="table table-bordered table-responsive table-hover">  
+    <tr>  
+        <th>Book Id </th>  
+        <th>Title </th>  
+        <th>Author Id </th>  
+    </tr>  
+    @foreach (var d in Model)  
+    {  
+        <tr>  
+            <td>@d.BookId</td>  
+            <td>@d.Title</td>  
+            <td>@d.AuthorId</td>  
+        </tr>  
+    }  
+</table>
+<div>@Html.ActionLink("New", "create")

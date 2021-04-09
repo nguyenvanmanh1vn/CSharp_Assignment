@@ -1,0 +1,16 @@
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\ref\DigitalClock.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\bin\Debug\net5.0\DigitalClock.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\ref\DigitalClock.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_7_(2021-23-03)\Session_1_CSharp_Fundamental\Practices\DigitalClock\obj\Debug\net5.0\DigitalClock.genruntimeconfig.cache

@@ -1,0 +1,179 @@
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\appsettings.Development.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\appsettings.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.MvcApplicationPartsAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.Manifest.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.xml
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\scopedcss\bundle\GettingStarted.styles.css
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.input.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.output.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorCoreGenerate.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Details.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.genruntimeconfig.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CopyComplete
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Create.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_8_(2021-24-03)\Session_2_ASP.Net_Core_MVC_#1\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Index.cshtml.g.cs
+F:\C# Form\GettingStarted\bin\Debug\net5.0\appsettings.Development.json
+F:\C# Form\GettingStarted\bin\Debug\net5.0\appsettings.json
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.exe
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.deps.json
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.json
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.dev.json
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.dll
+F:\C# Form\GettingStarted\bin\Debug\net5.0\ref\GettingStarted.dll
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.pdb
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.dll
+F:\C# Form\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.pdb
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.csprojAssemblyReference.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.GeneratedMSBuildEditorConfig.editorconfig
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfoInputs.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfo.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CoreCompileInputs.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.MvcApplicationPartsAssemblyInfo.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.Manifest.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.xml
+F:\C# Form\GettingStarted\obj\Debug\net5.0\scopedcss\bundle\GettingStarted.styles.css
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.input.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.output.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorCoreGenerate.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Create.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Details.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Index.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cs
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.Views.pdb
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.dll
+F:\C# Form\GettingStarted\obj\Debug\net5.0\ref\GettingStarted.dll
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.pdb
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.genruntimeconfig.cache
+F:\C# Form\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CopyComplete
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\appsettings.Development.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\appsettings.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.exe
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.MvcApplicationPartsAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.Manifest.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.xml
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\scopedcss\bundle\GettingStarted.styles.css
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.input.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.output.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorCoreGenerate.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Create.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Details.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.genruntimeconfig.cache
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CopyComplete
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Delete.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Edit.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\Offline_Course\Day_9_(2021-25-03)\Session_1_ASP_.Net_Core_MVC_#3\Practices\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\List.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\appsettings.Development.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\appsettings.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.exe
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.deps.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.runtimeconfig.dev.json
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\bin\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.csprojAssemblyReference.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfoInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.AssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CoreCompileInputs.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.MvcApplicationPartsAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.Manifest.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\staticwebassets\GettingStarted.StaticWebAssets.xml
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\scopedcss\bundle\GettingStarted.styles.css
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.input.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.TagHelpers.output.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorCoreGenerate.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Login.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Create.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Delete.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Details.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Edit.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Members\Index.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.RazorTargetAssemblyInfo.cs
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.Views.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\ref\GettingStarted.dll
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.pdb
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.genruntimeconfig.cache
+D:\Jobs\Nash_Tech\MS_Rookies\CSharp_Assignment\DotnetCoreMVC_Day_3\GettingStarted\obj\Debug\net5.0\GettingStarted.csproj.CopyComplete

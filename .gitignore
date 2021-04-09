@@ -1,0 +1,14 @@
+### DotnetCore ###
+# .NET Core build folders
+# *bin
+# *obj
+
+### vscode ###
+*.vscode
+
+# Extra files/directories to ignore
+# *Pages/
+# *Properties/
+# *wwwroot/
+# *appsettings.Development.json
+# *appsettings.json
