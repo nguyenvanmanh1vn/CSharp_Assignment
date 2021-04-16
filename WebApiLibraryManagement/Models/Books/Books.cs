@@ -11,10 +11,10 @@ namespace WebApiLibraryManagement.Models
         public string Title { get; set; }
         [Required]
         public int AuthorId { get; set; }
-        public Author Author { get; set; }
+        public virtual Author Author { get; set; }
         [Required]
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public List<BorrowingRequestDetail> BorrowingRequestDetails {get; set; }
+        public virtual Category Category { get; set; }
+        public virtual List<BorrowingRequestDetail> BorrowingRequestDetails {get; set; }
     }
 }

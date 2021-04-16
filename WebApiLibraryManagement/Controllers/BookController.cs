@@ -20,22 +20,72 @@ namespace WebApiLibraryManagement.Controllers
     {
         private readonly ILogger<BookController> _logger;
         private readonly IBookRepository _repository;
+
         private readonly RepositoryContext _repositoryContext;
 
-        public BookController(IBookRepository repository, RepositoryContext repositoryContext, ILogger<BookController> logger)
+        public BookController(ILogger<BookController> logger, IBookRepository repository, RepositoryContext repositoryContext)
         {
+            _logger = logger;
             _repository = repository;
             _repositoryContext = repositoryContext;
-            _logger = logger;
         }
         #endregion
 
         // GET: api/book
         #region snippet_Get_List_Book
-        [HttpGet]
-        public IEnumerable<Book> GetListBook()
+        [HttpGet] 
+        public IActionResult GetListBook() 
+        { 
+            try 
+            { 
+                var books = _repository.GetList(); 
+                _logger.LogInformation($"Returned all books from database.");
+
+                return Ok(books); 
+            } 
+            catch (Exception ex) 
+            { 
+                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}"); 
+                return StatusCode(500, "Internal server error"); 
+            } 
+        }
+        #endregion
+
+        // GET: api/book/:id
+        #region snippet_Get_Book_By_Id
+        [HttpGet("{id}", Name="BookById")]
+        public IActionResult GetBookById(int id)
         {
-            return _repository.GetAll(b => b.Author, b => b.Category).Select(b => new Book
+            try 
+            { 
+                var book = _repository.GetById(id); 
+                if (book == null) 
+                { 
+                    _logger.LogError($"Book with id: {id}, hasn't been found in db."); 
+                    return NotFound(); 
+                } 
+                else 
+                { 
+                    _logger.LogInformation($"Returned book with id: {id}");
+
+                    return Ok(book); 
+                } 
+            } 
+            catch (Exception ex) 
+            { 
+                _logger.LogError($"Something went wrong inside GetBookById action: {ex.Message}"); 
+                return StatusCode(500, "Internal server error"); 
+            } 
+        }
+        #endregion
+        
+        // GET: api/book/get/all
+        #region snippet_Get_All_Books_With_Details
+        [HttpGet]
+        [Route("get/all")]
+        public IEnumerable<Book> GetAllBooksWithDetails()
+        {
+            return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
             {
                 Id = b.Id,
                 Title = b.Title,
@@ -54,123 +104,123 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // GET: api/book/5
-        #region snippet_Get_Book_By_Id
-        [HttpGet("{id}", Name="BookById")]
-        public ActionResult<List<Book>> GetBookById(int id)
-        {
-            Book book = _repository.GetById(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
-            return Ok(book);
-        }
-        #endregion
-
         // POST api/book
         #region snippet_Create
         [HttpPost]
-        public ActionResult PostBook(BookForCreate model)
+        public IActionResult CreateBook([FromBody]Book book)
         {
-            if (!ModelState.IsValid) return BadRequest("Not a valid model");
-
             try
             {
+                if (book == null)
+                {
+                    _logger.LogError("Book object sent from client is null.");
+                    return BadRequest("Book object is null");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid book object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+
                 var entity = new Book
                 {
-                    Title = model.Title,
-                    AuthorId = model.AuthorId,
-                    CategoryId = model.CategoryId,
+                    Title = book.Title,
+                    AuthorId = book.AuthorId,
+                    CategoryId = book.CategoryId,
                     CreatedDate = DateTime.Now
                 };
+
                 _repository.Insert(entity);
 
-                // Returns an HTTP 201 status code if successful
-                return CreatedAtAction(nameof(GetListBook), new { id = model.AuthorId }, model);
-                // Returns an HTTP 200 status code, and getListById if successful
-                // return new JsonResult(entity);
+                return CreatedAtRoute("BookById", new { id = book.Id }, book);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-                return new StatusCodeResult((int)HttpStatusCode.InternalServerError);
+                _logger.LogError($"Something went wrong inside CreateOwner action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
             }
         }
         #endregion
 
-        // PUT api/book/5
+        // PUT api/book/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public ActionResult PutBook(int id
-        // , [FromBody] string value
-        , Book model)
+        public ActionResult UpdateBook(int id, [FromBody]Book book)
         {
-            if (!ModelState.IsValid) return BadRequest("Not a valid model");
-
             try
             {
-                var entity = new Book
-                {
-                    Id = id,
-                    Title = model.Title,
-                    AuthorId = model.AuthorId,
-                    CategoryId = model.CategoryId,
-                    ModifiedDate = DateTime.Now
-                };
-                _repository.Update(entity);
+                var checkBookExist = _repository.GetById(id);
 
-                return Ok();
-                // return new JsonResult(entity);
+                if (book == null)
+                {
+                    _logger.LogError("Book object sent from client is null.");
+                    return BadRequest("Book object is null");
+                }
+                    else if (!ModelState.IsValid)
+                    {
+                        _logger.LogError("Invalid book object sent from client.");
+                        return BadRequest("Invalid model object");
+                    }
+                        else if (checkBookExist == null)
+                        {
+                            _logger.LogError($"Book with id: {id}, hasn't been found in db.");
+                            return NotFound();
+                        }
+                            else{
+                                var bookEntity = new Book
+                                    {
+                                        Id = id,
+                                        Title = book.Title,
+                                        AuthorId = book.AuthorId,
+                                        CategoryId = book.CategoryId,
+                                        ModifiedDate = DateTime.Now
+                                    };
+
+                                _repository.Update(bookEntity);
+
+                                return NoContent();
+                            }
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!BookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                _logger.LogError($"Something went wrong inside UpdateBook action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
             }
-            
         }
         #endregion
 
         // DELETE api/book/5
         #region snippet_Delete
-        // [HttpDelete("{id}")]
-        // public IActionResult DeleteBook(int id)
-        // {
-            // try
-            // {
-            //     if (!BookExists(id))
-            //     {
-            //         return NotFound();
-            //     }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            try
+            {
+                var book = _repository.GetById(id);
+                if (book == null)
+                {
+                    _logger.LogError($"Book with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                    // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBook(id).Any()) 
+                    // {
+                    //     _logger.LogError($"Cannot delete book with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                    //     return BadRequest("Cannot delete book. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                    // }
+                        else
+                        {
+                            _repository.Delete(book);
 
-            //     var entity = new Book
-            //     {
-            //         Id = id,
-            //         Title = model.Title,
-            //         AuthorId = model.AuthorId,
-            //         CategoryId = model.CategoryId,
-            //         ModifiedDate = DateTime.Now
-            //     };
-
-            //     _repository.Delete(entity);
-            //             _repository.Save();
-            //     return NoContent();
-            // }
-            // catch (Exception ex)
-            // {
-            //     return StatusCode(500, "Internal server error");
-            // }
-        // }
+                            return NoContent();
+                        }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside DeleteBook action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
          #endregion
-
-         private bool BookExists(int id) =>
-             _repositoryContext.Books.Any(b=> b.Id == id);
     }
 }

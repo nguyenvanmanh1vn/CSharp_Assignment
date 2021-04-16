@@ -21,6 +21,6 @@ namespace WebApiLibraryManagement.Models
         [Required]
         [Column(TypeName = "text")]
         public string RoleDescription{get;set;}
-        public List<User> Users { get; set; }
+        public virtual List<User> Users { get; set; }
     }
 }

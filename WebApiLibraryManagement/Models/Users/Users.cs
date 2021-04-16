@@ -24,14 +24,14 @@ namespace WebApiLibraryManagement.Models
         [Required]
         [StringLength(100)]
         public string Email { get; set; }
-        public List<BorrowingRequest> BorrowingRequests {get; set; }
 
         [Required(ErrorMessage = "Address is required")]
         [StringLength(100, ErrorMessage = "Address cannot be loner then 100 characters")]
         public string Address { get; set; }
 
+        public virtual List<BorrowingRequest> BorrowingRequests {get; set; }
         [Required]
         public int RoleId { get; set; }
-        public Role Role { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

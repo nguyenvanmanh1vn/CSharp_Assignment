@@ -17,15 +17,21 @@ namespace WebApiLibraryManagement.Repositories
             this.Context = context;
             Entities = context.Set<T>();
         }
-        public IEnumerable<T> GetAll(params Expression<Func<T, object>>[] includes)
-        {
-            var query = Entities.AsQueryable();
-            return includes.Aggregate(query, (current, include) => current.Include(include));
+        
+        public IEnumerable<T> GetList() 
+        { 
+            return Entities.ToList();
         }
         public T GetById(int id)
         {
             return Entities.SingleOrDefault(s => s.Id == id);
         }
+        public IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] includes)
+        {
+            var query = Entities.AsQueryable();
+            return includes.Aggregate(query, (current, include) => current.Include(include));
+        }
+
         public void Insert(T entity)
         {
             if (entity == null)

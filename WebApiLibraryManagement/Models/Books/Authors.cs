@@ -5,6 +5,6 @@ namespace WebApiLibraryManagement.Models
 {
     public class Author : Person
     {
-        public List<Book> Books { get; set; }
+        public virtual List<Book> Books { get; set; }
     }
 }

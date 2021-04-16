@@ -19,6 +19,6 @@ namespace WebApiLibraryManagement.Models
         public string LastName { get; set; }
         
         [Column(TypeName = "nvarchar(24)")]
-        public Gender Gender { get; set; }
+        public virtual Gender Gender { get; set; }
     }
 }
