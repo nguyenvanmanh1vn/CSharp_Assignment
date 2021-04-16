@@ -1,4 +1,4 @@
-﻿using WebApiLibraryManagement.Models.FluentAPI.Relationships.Required;
+﻿using WebApiLibraryManagement.Repositories;
 using WebApiLibraryManagement.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace WebApiLibraryManagement.Repositories.BookRepository
 {
     public class BookRepository : GenericRepository<Book>, IBookRepository
     {
-        public BookRepository(MyContext context) : base(context)
+        public BookRepository(RepositoryContext context) : base(context)
         {
         }
 
@@ -19,7 +19,5 @@ namespace WebApiLibraryManagement.Repositories.BookRepository
                 .Include(b => b.Category)
                 .AsEnumerable();
         }
-
-        public Book GetBookById(int id) => Entities.FirstOrDefault(b => b.Id == id);
     }
 }

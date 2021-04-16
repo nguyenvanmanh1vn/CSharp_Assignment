@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using WebApiLibraryManagement.Models.FluentAPI.Relationships.Required;
+using WebApiLibraryManagement.Repositories;
 using WebApiLibraryManagement.Repositories.BookRepository;
 using WebApiLibraryManagement.Models;
 
@@ -35,8 +35,18 @@ namespace WebApiLibraryManagement
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiLibraryManagement", Version = "v1" });
             });
+
+            // ConfigureCors
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
             // DbContext
-            services.AddDbContext<MyContext>(options =>
+            services.AddDbContext<RepositoryContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
 
             services.AddScoped<IBookRepository, BookRepository>();

@@ -7,6 +7,8 @@ using System.Net;
 using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories.BookRepository;
+using WebApiLibraryManagement.Repositories;
+using Microsoft.Extensions.Logging;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -16,11 +18,15 @@ namespace WebApiLibraryManagement.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
+        private readonly ILogger<BookController> _logger;
         private readonly IBookRepository _repository;
+        private readonly RepositoryContext _repositoryContext;
 
-        public BookController(IBookRepository repository)
+        public BookController(IBookRepository repository, RepositoryContext repositoryContext, ILogger<BookController> logger)
         {
             _repository = repository;
+            _repositoryContext = repositoryContext;
+            _logger = logger;
         }
         #endregion
 
@@ -50,10 +56,10 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/5
         #region snippet_Get_Book_By_Id
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name="BookById")]
         public ActionResult<List<Book>> GetBookById(int id)
         {
-            Book book = _repository.GetBookById(id);
+            Book book = _repository.GetById(id);
             if (book == null)
             {
                 return NotFound();
@@ -65,7 +71,7 @@ namespace WebApiLibraryManagement.Controllers
         // POST api/book
         #region snippet_Create
         [HttpPost]
-        public ActionResult PostBook(CreateBook model)
+        public ActionResult PostBook(BookForCreate model)
         {
             if (!ModelState.IsValid) return BadRequest("Not a valid model");
 
@@ -98,14 +104,9 @@ namespace WebApiLibraryManagement.Controllers
         [HttpPut("{id}")]
         public ActionResult PutBook(int id
         // , [FromBody] string value
-        , UpdateBook model)
+        , Book model)
         {
             if (!ModelState.IsValid) return BadRequest("Not a valid model");
-
-            // if (id != model.Id)
-            // {
-            //     return BadRequest("Not a valid model");
-            // }
 
             try
             {
@@ -119,23 +120,57 @@ namespace WebApiLibraryManagement.Controllers
                 };
                 _repository.Update(entity);
 
-                return new JsonResult(entity);
+                return Ok();
+                // return new JsonResult(entity);
             }
-            catch (Exception ex)
+            catch (DbUpdateConcurrencyException)
             {
-                Console.WriteLine(ex);
-                return new StatusCodeResult((int)HttpStatusCode.InternalServerError);
+                if (!BookExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
+            
         }
         #endregion
 
         // DELETE api/book/5
         #region snippet_Delete
-        [HttpDelete("{id}")]
-        public void DeleteBook(int id)
-        {
+        // [HttpDelete("{id}")]
+        // public IActionResult DeleteBook(int id)
+        // {
+            // try
+            // {
+            //     if (!BookExists(id))
+            //     {
+            //         return NotFound();
+            //     }
 
-        }
+            //     var entity = new Book
+            //     {
+            //         Id = id,
+            //         Title = model.Title,
+            //         AuthorId = model.AuthorId,
+            //         CategoryId = model.CategoryId,
+            //         ModifiedDate = DateTime.Now
+            //     };
+
+            //     _repository.Delete(entity);
+            //             _repository.Save();
+            //     return NoContent();
+            // }
+            // catch (Exception ex)
+            // {
+            //     return StatusCode(500, "Internal server error");
+            // }
+        // }
          #endregion
+
+         private bool BookExists(int id) =>
+             _repositoryContext.Books.Any(b=> b.Id == id);
     }
 }

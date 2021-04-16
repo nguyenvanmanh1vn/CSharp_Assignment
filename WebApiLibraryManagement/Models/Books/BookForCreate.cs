@@ -2,15 +2,15 @@
 
 namespace WebApiLibraryManagement.Models
 {
-    public class CreateBook
+    public class BookForCreate
     {
         [MaxLength(255)]
         public string Title { get; set; }
 
-        [Range(1, int.MaxValue)]
+        [Range(1, long.MaxValue)]
         public int AuthorId { get; set; }
 
-        [Range(1, int.MaxValue)]
+        [Range(1, long.MaxValue)]
         public int CategoryId { get; set; }
     }
 }
