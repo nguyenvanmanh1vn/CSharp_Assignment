@@ -150,7 +150,7 @@ namespace WebApiLibraryManagement.Controllers
         {
             try
             {
-                var checkBookExist = _repository.checkExist(id);
+                var bookExist = _repository.GetById(id);
 
                 if (model == null)
                 {
@@ -162,7 +162,7 @@ namespace WebApiLibraryManagement.Controllers
                         _logger.LogError("Invalid book object sent from client.");
                         return BadRequest("Invalid model object");
                     }
-                        else if (!checkBookExist)
+                        else if (bookExist == null)
                         {
                             _logger.LogError($"Book with id: {id}, hasn't been found in db.");
                             return NotFound();
@@ -174,6 +174,7 @@ namespace WebApiLibraryManagement.Controllers
                                         Title = model.Title,
                                         AuthorId = model.AuthorId,
                                         CategoryId = model.CategoryId,
+                                        CreatedDate = bookExist.CreatedDate,
                                         ModifiedDate = DateTime.Now
                                     };
 

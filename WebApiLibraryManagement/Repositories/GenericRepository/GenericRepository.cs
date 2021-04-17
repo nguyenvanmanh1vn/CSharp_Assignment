@@ -24,7 +24,7 @@ namespace WebApiLibraryManagement.Repositories
         }
         public T GetById(int id)
         {
-            return Entities.SingleOrDefault(s => s.Id == id);
+            return Entities.AsNoTracking().SingleOrDefault(s => s.Id == id);
         }
         public IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] includes)
         {
@@ -58,14 +58,6 @@ namespace WebApiLibraryManagement.Repositories
             }
             Entities.Remove(entity);
             Context.SaveChanges();
-        }
-        public bool checkExist(int id){
-            var item = Entities.FirstOrDefault(i => i.Id == id);
-            if (item != null)
-            {
-                return true;
-            }
-            return false;
         }
     }
 }
