@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
-using WebApiLibraryManagement.Repositories.BookRepository;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 

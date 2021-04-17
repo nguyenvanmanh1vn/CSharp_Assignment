@@ -13,9 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WebApiLibraryManagement.Repositories;
-using WebApiLibraryManagement.Repositories.BookRepository;
 using WebApiLibraryManagement.Models;
-using WebApiLibraryManagement.Repositories.CategoryRepository;
 
 namespace WebApiLibraryManagement
 {
@@ -52,6 +50,7 @@ namespace WebApiLibraryManagement
 
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IBorrowingRequestRepository, BorrowingRequestRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
