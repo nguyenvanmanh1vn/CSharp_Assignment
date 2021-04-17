@@ -5,22 +5,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiLibraryManagement.Models
 {
-    public enum RoleName{
-        Admin,
-        User
+    public enum RoleName
+    {
+        User = 0,
+        Admin = 1
     }
     public class Role
     {
         [Key]
-        public int Id{get;set;}
+        public int Id { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar(24)")]
-        public RoleName RoleName{get;set;}
+        public RoleName RoleName { get; set; }
 
         [Required]
         [Column(TypeName = "text")]
-        public string RoleDescription{get;set;}
+        public string RoleDescription { get; set; }
         public virtual List<User> Users { get; set; }
     }
 }
