@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiLibraryManagement.Models
 {
     public enum Status
     {
-        Approving = 1,
-        Pending = 2,
-        Rejecting = 3
+        Approve = 1,
+        Waiting = 2,
+        Reject = 3
     }
     public class BorrowingRequest : BaseEntity
     {
         [Required]
+        [FromQuery(Name = "userId")]
         public int UserId { get; set; }
         public virtual User User { get; set; }
         public Status Status { get; set; }

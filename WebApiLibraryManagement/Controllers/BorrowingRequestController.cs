@@ -196,5 +196,26 @@ namespace WebApiLibraryManagement.Controllers
             }
         }
         #endregion
+
+        // GET: api/BorrowingRequest
+        #region snippet_Get_List_BorrowingRequest_By_User_Id
+        [HttpGet]
+        [Route("getListByUserId")]
+        public IActionResult GetListBorrowingRequestByUserId([FromQuery] int userId)
+        {
+            try
+            {
+                var listBorrowingRequest = _repository.ListBorrowingRequestByUserId(userId);
+
+                _logger.LogInformation($"Returned all borrowing Requests from database by UserId.");
+                return Ok(listBorrowingRequest);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList BorrowingRequest By User Id action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
     }
 }

@@ -3,7 +3,7 @@ using WebApiLibraryManagement.Models;
 
 namespace WebApiLibraryManagement.Repositories
 {
-public interface ICategoryRepository : IGenericRepository<Category>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
     }
 }

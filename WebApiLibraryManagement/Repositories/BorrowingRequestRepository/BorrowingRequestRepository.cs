@@ -11,5 +11,10 @@ namespace WebApiLibraryManagement.Repositories
         public BorrowingRequestRepository(RepositoryContext context) : base(context)
         {
         }
+
+        public IEnumerable<BorrowingRequest> ListBorrowingRequestByUserId(int userId)
+        {
+            return Entities.Where(br => br.UserId == userId).ToList();
+        }
     }
 }
