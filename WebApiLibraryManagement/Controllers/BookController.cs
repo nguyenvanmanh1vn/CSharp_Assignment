@@ -21,64 +21,61 @@ namespace WebApiLibraryManagement.Controllers
         private readonly ILogger<BookController> _logger;
         private readonly IBookRepository _repository;
 
-        private readonly RepositoryContext _repositoryContext;
-
-        public BookController(ILogger<BookController> logger, IBookRepository repository, RepositoryContext repositoryContext)
+        public BookController(ILogger<BookController> logger, IBookRepository repository)
         {
             _logger = logger;
             _repository = repository;
-            _repositoryContext = repositoryContext;
         }
         #endregion
 
         // GET: api/book
         #region snippet_Get_List_Book
-        [HttpGet] 
-        public IActionResult GetListBook() 
-        { 
-            try 
-            { 
-                var books = _repository.GetList(); 
+        [HttpGet]
+        public IActionResult GetListBook()
+        {
+            try
+            {
+                var books = _repository.GetList();
                 _logger.LogInformation($"Returned all books from database.");
 
-                return Ok(books); 
-            } 
-            catch (Exception ex) 
-            { 
-                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}"); 
-                return StatusCode(500, "Internal server error"); 
-            } 
+                return Ok(books);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
         #endregion
 
         // GET: api/book/:id
         #region snippet_Get_Book_By_Id
-        [HttpGet("{id}", Name="BookById")]
+        [HttpGet("{id}", Name = "BookById")]
         public IActionResult GetBookById(int id)
         {
-            try 
-            { 
-                var book = _repository.GetById(id); 
-                if (book == null) 
-                { 
-                    _logger.LogError($"Book with id: {id}, hasn't been found in db."); 
-                    return NotFound(); 
-                } 
-                else 
-                { 
+            try
+            {
+                var book = _repository.GetById(id);
+                if (book == null)
+                {
+                    _logger.LogError($"Book with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
                     _logger.LogInformation($"Returned book with id: {id}");
 
-                    return Ok(book); 
-                } 
-            } 
-            catch (Exception ex) 
-            { 
-                _logger.LogError($"Something went wrong inside GetBookById action: {ex.Message}"); 
-                return StatusCode(500, "Internal server error"); 
-            } 
+                    return Ok(book);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetBookById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
         #endregion
-        
+
         // GET: api/book/get/all
         #region snippet_Get_All_Books_With_Details
         [HttpGet]
@@ -107,7 +104,7 @@ namespace WebApiLibraryManagement.Controllers
         // POST api/book
         #region snippet_Create
         [HttpPost]
-        public IActionResult CreateBook([FromBody]Book book)
+        public IActionResult CreateBook([FromBody] Book book)
         {
             try
             {
@@ -146,7 +143,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/book/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id, [FromBody]Book newBook)
+        public IActionResult UpdateBook(int id, [FromBody] Book newBook)
         {
             try
             {
@@ -157,31 +154,32 @@ namespace WebApiLibraryManagement.Controllers
                     _logger.LogError("Book object sent from client is null.");
                     return BadRequest("Book object is null");
                 }
-                    else if (!ModelState.IsValid)
+                else if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid book object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+                else if (oldBook == null)
+                {
+                    _logger.LogError($"Book with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    var bookEntity = new Book
                     {
-                        _logger.LogError("Invalid book object sent from client.");
-                        return BadRequest("Invalid model object");
-                    }
-                        else if (oldBook == null)
-                        {
-                            _logger.LogError($"Book with id: {id}, hasn't been found in db.");
-                            return NotFound();
-                        }
-                            else{
-                                var bookEntity = new Book
-                                    {
-                                        Id = id,
-                                        Title = newBook.Title,
-                                        AuthorId = newBook.AuthorId,
-                                        CategoryId = newBook.CategoryId,
-                                        CreatedDate = oldBook.CreatedDate,
-                                        ModifiedDate = DateTime.Now
-                                    };
+                        Id = id,
+                        Title = newBook.Title,
+                        AuthorId = newBook.AuthorId,
+                        CategoryId = newBook.CategoryId,
+                        CreatedDate = oldBook.CreatedDate,
+                        ModifiedDate = DateTime.Now
+                    };
 
-                                _repository.Update(bookEntity);
+                    _repository.Update(bookEntity);
 
-                                return NoContent();
-                            }
+                    return NoContent();
+                }
             }
             catch (Exception ex)
             {
@@ -204,17 +202,17 @@ namespace WebApiLibraryManagement.Controllers
                     _logger.LogError($"Book with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
-                    // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBook(id).Any()) 
-                    // {
-                    //     _logger.LogError($"Cannot delete book with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                    //     return BadRequest("Cannot delete book. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                    // }
-                        else
-                        {
-                            _repository.Delete(book);
+                // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBook(id).Any()) 
+                // {
+                //     _logger.LogError($"Cannot delete book with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return BadRequest("Cannot delete book. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                // }
+                else
+                {
+                    _repository.Delete(book);
 
-                            return NoContent();
-                        }
+                    return NoContent();
+                }
             }
             catch (Exception ex)
             {
@@ -222,6 +220,6 @@ namespace WebApiLibraryManagement.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-         #endregion
+        #endregion
     }
 }

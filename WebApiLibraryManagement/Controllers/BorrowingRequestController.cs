@@ -1,0 +1,201 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
+using WebApiLibraryManagement.Models;
+using WebApiLibraryManagement.Repositories.BorrowingRequestRepository;
+using WebApiLibraryManagement.Repositories;
+using Microsoft.Extensions.Logging;
+
+// https://localhost:5001/swagger/index.html
+namespace WebApiLibraryManagement.Controllers
+{
+    #region TodoController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class BorrowingRequestController : ControllerBase
+    {
+        private readonly ILogger<BorrowingRequestController> _logger;
+        private readonly IBorrowingRequestRepository _repository;
+
+        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository)
+        {
+            _logger = logger;
+            _repository = repository;
+        }
+        #endregion
+
+        // GET: api/BorrowingRequest
+        #region snippet_Get_List_BorrowingRequest
+        [HttpGet]
+        public IActionResult GetListBorrowingRequest()
+        {
+            try
+            {
+                var borrowingRequests = _repository.GetList();
+                _logger.LogInformation($"Returned all borrowing Requests from database.");
+
+                return Ok(borrowingRequests);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // GET: api/BorrowingRequest/:id
+        #region snippet_Get_BorrowingRequest_By_Id
+        [HttpGet("{id}", Name = "BorrowingRequestById")]
+        public IActionResult GetBorrowingRequestById(int id)
+        {
+            try
+            {
+                var borrowingRequest = _repository.GetById(id);
+                if (borrowingRequest == null)
+                {
+                    _logger.LogError($"Borrowing Request with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInformation($"Returned Borrowing Request with id: {id}");
+
+                    return Ok(borrowingRequest);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside Get Borrowing Request By Id action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // POST api/BorrowingRequest
+        #region snippet_Create
+        [HttpPost]
+        public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequest borrowingRequest)
+        {
+            try
+            {
+                if (borrowingRequest == null)
+                {
+                    _logger.LogError("BorrowingRequest object sent from client is null.");
+                    return BadRequest("BorrowingRequest object is null");
+                }
+
+                else if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid BorrowingRequest object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+
+                else
+                {
+                    var entity = new BorrowingRequest
+                    {
+                        UserId = borrowingRequest.UserId,
+                        Status = borrowingRequest.Status,
+                        CreatedDate = DateTime.Now
+                    };
+
+                    _repository.Insert(entity);
+
+                    return CreatedAtRoute("BorrowingRequestById", new { id = borrowingRequest.Id }, borrowingRequest);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside Create Borrowing Request action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // PUT api/BorrowingRequest/:id
+        #region snippet_Update
+        [HttpPut("{id}")]
+        public ActionResult UpdateBorrowingRequest(int id, [FromBody] BorrowingRequest newBorrowingRequest)
+        {
+            try
+            {
+                var oldBorrowingRequest = _repository.GetById(id);
+
+                if (newBorrowingRequest == null)
+                {
+                    _logger.LogError("BorrowingRequest object sent from client is null.");
+                    return BadRequest("BorrowingRequest object is null");
+                }
+                else if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid BorrowingRequest object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+                else if (oldBorrowingRequest == null)
+                {
+                    _logger.LogError($"BorrowingRequest with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    var borrowingRequestEntity = new BorrowingRequest
+                    {
+                        Id = id,
+                        UserId = newBorrowingRequest.UserId,
+                        Status = newBorrowingRequest.Status,
+                        CreatedDate = oldBorrowingRequest.CreatedDate,
+                        ModifiedDate = DateTime.Now
+                    };
+
+                    _repository.Update(borrowingRequestEntity);
+
+                    return NoContent();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside Update BorrowingRequest action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // DELETE api/BorrowingRequest/:id
+        #region snippet_Delete
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBorrowingRequest(int id)
+        {
+            try
+            {
+                var borrowingRequest = _repository.GetById(id);
+                if (borrowingRequest == null)
+                {
+                    _logger.LogError($"BorrowingRequest with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBorrowingRequest(id).Any()) 
+                // {
+                //     _logger.LogError($"Cannot delete BorrowingRequest with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return BadRequest("Cannot delete BorrowingRequest. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                // }
+                else
+                {
+                    _repository.Delete(borrowingRequest);
+
+                    return NoContent();
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside Delete BorrowingRequest action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+    }
+}

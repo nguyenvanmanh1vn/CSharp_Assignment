@@ -21,68 +21,65 @@ namespace WebApiLibraryManagement.Controllers
         private readonly ILogger<CategoryController> _logger;
         private readonly ICategoryRepository _repository;
 
-        private readonly RepositoryContext _repositoryContext;
-
-        public CategoryController(ILogger<CategoryController> logger, ICategoryRepository repository, RepositoryContext repositoryContext)
+        public CategoryController(ILogger<CategoryController> logger, ICategoryRepository repository)
         {
             _logger = logger;
             _repository = repository;
-            _repositoryContext = repositoryContext;
         }
         #endregion
 
         // GET: api/category
         #region snippet_Get_List_Category
-        [HttpGet] 
-        public IActionResult GetListCategory() 
-        { 
-            try 
-            { 
-                var categories = _repository.GetList(); 
+        [HttpGet]
+        public IActionResult GetListCategory()
+        {
+            try
+            {
+                var categories = _repository.GetList();
                 _logger.LogInformation($"Returned all categories from database.");
 
-                return Ok(categories); 
-            } 
-            catch (Exception ex) 
-            { 
-                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}"); 
-                return StatusCode(500, "Internal server error"); 
-            } 
+                return Ok(categories);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
         #endregion
 
         // GET: api/category/:id
         #region snippet_Get_Category_By_Id
-        [HttpGet("{id}", Name="CategoryById")]
+        [HttpGet("{id}", Name = "CategoryById")]
         public IActionResult GetCategoryById(int id)
         {
-            try 
-            { 
-                var category = _repository.GetById(id); 
-                if (category == null) 
-                { 
-                    _logger.LogError($"Category with id: {id}, hasn't been found in db."); 
-                    return NotFound(); 
-                } 
-                else 
-                { 
+            try
+            {
+                var category = _repository.GetById(id);
+                if (category == null)
+                {
+                    _logger.LogError($"Category with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
                     _logger.LogInformation($"Returned category with id: {id}");
 
-                    return Ok(category); 
-                } 
-            } 
-            catch (Exception ex) 
-            { 
-                _logger.LogError($"Something went wrong inside GetCategoryById action: {ex.Message}"); 
-                return StatusCode(500, "Internal server error"); 
-            } 
+                    return Ok(category);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetCategoryById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
         #endregion
-        
+
         // POST api/category
         #region snippet_Create
         [HttpPost]
-        public IActionResult CreateCategory([FromBody]Category category)
+        public IActionResult CreateCategory([FromBody] Category category)
         {
             try
             {
@@ -92,24 +89,24 @@ namespace WebApiLibraryManagement.Controllers
                     return BadRequest("Category object is null");
                 }
 
-                    else if (!ModelState.IsValid)
+                else if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid Category object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+
+                else
+                {
+                    var entity = new Category
                     {
-                        _logger.LogError("Invalid Category object sent from client.");
-                        return BadRequest("Invalid model object");
-                    }
+                        Name = category.Name,
+                        CreatedDate = DateTime.Now
+                    };
 
-                        else
-                        {
-                            var entity = new Category
-                            {
-                                Name = category.Name,
-                                CreatedDate = DateTime.Now
-                            };
+                    _repository.Insert(entity);
 
-                            _repository.Insert(entity);
-
-                            return CreatedAtRoute("CategoryById", new { id = category.Id }, category);
-                        }
+                    return CreatedAtRoute("CategoryById", new { id = category.Id }, category);
+                }
             }
             catch (Exception ex)
             {
@@ -122,7 +119,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/category/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public ActionResult UpdateCategory(int id, [FromBody]Category newCategory)
+        public ActionResult UpdateCategory(int id, [FromBody] Category newCategory)
         {
             try
             {
@@ -133,29 +130,30 @@ namespace WebApiLibraryManagement.Controllers
                     _logger.LogError("Category object sent from client is null.");
                     return BadRequest("Category object is null");
                 }
-                    else if (!ModelState.IsValid)
+                else if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid Category object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+                else if (oldCategory == null)
+                {
+                    _logger.LogError($"Category with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    var categoryEntity = new Category
                     {
-                        _logger.LogError("Invalid Category object sent from client.");
-                        return BadRequest("Invalid model object");
-                    }
-                        else if (oldCategory == null)
-                        {
-                            _logger.LogError($"Category with id: {id}, hasn't been found in db.");
-                            return NotFound();
-                        }
-                            else{
-                                var categoryEntity = new Category
-                                    {
-                                        Id = id,
-                                        Name = newCategory.Name,
-                                        CreatedDate = oldCategory.CreatedDate,
-                                        ModifiedDate = DateTime.Now
-                                    };
+                        Id = id,
+                        Name = newCategory.Name,
+                        CreatedDate = oldCategory.CreatedDate,
+                        ModifiedDate = DateTime.Now
+                    };
 
-                                _repository.Update(categoryEntity);
+                    _repository.Update(categoryEntity);
 
-                                return NoContent();
-                            }
+                    return NoContent();
+                }
             }
             catch (Exception ex)
             {
@@ -178,17 +176,17 @@ namespace WebApiLibraryManagement.Controllers
                     _logger.LogError($"Category with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
-                    // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByCategory(id).Any()) 
-                    // {
-                    //     _logger.LogError($"Cannot delete category with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                    //     return BadRequest("Cannot delete category. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                    // }
-                        else
-                        {
-                            _repository.Delete(category);
+                // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByCategory(id).Any()) 
+                // {
+                //     _logger.LogError($"Cannot delete category with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return BadRequest("Cannot delete category. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                // }
+                else
+                {
+                    _repository.Delete(category);
 
-                            return NoContent();
-                        }
+                    return NoContent();
+                }
             }
             catch (Exception ex)
             {
@@ -196,6 +194,6 @@ namespace WebApiLibraryManagement.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-         #endregion
+        #endregion
     }
 }
