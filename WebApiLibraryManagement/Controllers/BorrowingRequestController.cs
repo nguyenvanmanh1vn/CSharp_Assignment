@@ -197,7 +197,7 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // GET: api/BorrowingRequest
+        // GET: api/BorrowingRequest/getlistbyuserid?userid=1
         #region snippet_Get_List_BorrowingRequest_By_User_Id
         [HttpGet]
         [Route("getListByUserId")]
