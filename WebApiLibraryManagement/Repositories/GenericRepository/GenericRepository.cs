@@ -59,5 +59,13 @@ namespace WebApiLibraryManagement.Repositories
             Entities.Remove(entity);
             Context.SaveChanges();
         }
+        public bool checkExist(int id){
+            var item = Entities.FirstOrDefault(i => i.Id == id);
+            if (item != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -137,7 +137,7 @@ namespace WebApiLibraryManagement.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside CreateOwner action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside Create Category action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
@@ -146,13 +146,13 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/book/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public ActionResult UpdateBook(int id, [FromBody]Book book)
+        public IActionResult UpdateBook(int id, [FromBody]Book model)
         {
             try
             {
-                var checkBookExist = _repository.GetById(id);
+                var checkBookExist = _repository.checkExist(id);
 
-                if (book == null)
+                if (model == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
                     return BadRequest("Book object is null");
@@ -162,7 +162,7 @@ namespace WebApiLibraryManagement.Controllers
                         _logger.LogError("Invalid book object sent from client.");
                         return BadRequest("Invalid model object");
                     }
-                        else if (checkBookExist == null)
+                        else if (!checkBookExist)
                         {
                             _logger.LogError($"Book with id: {id}, hasn't been found in db.");
                             return NotFound();
@@ -171,9 +171,9 @@ namespace WebApiLibraryManagement.Controllers
                                 var bookEntity = new Book
                                     {
                                         Id = id,
-                                        Title = book.Title,
-                                        AuthorId = book.AuthorId,
-                                        CategoryId = book.CategoryId,
+                                        Title = model.Title,
+                                        AuthorId = model.AuthorId,
+                                        CategoryId = model.CategoryId,
                                         ModifiedDate = DateTime.Now
                                     };
 
@@ -190,7 +190,7 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // DELETE api/book/5
+        // DELETE api/book/:id
         #region snippet_Delete
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
