@@ -146,13 +146,13 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/book/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public IActionResult UpdateBook(int id, [FromBody]Book model)
+        public IActionResult UpdateBook(int id, [FromBody]Book newBook)
         {
             try
             {
-                var bookExist = _repository.GetById(id);
+                var oldBook = _repository.GetById(id);
 
-                if (model == null)
+                if (newBook == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
                     return BadRequest("Book object is null");
@@ -162,7 +162,7 @@ namespace WebApiLibraryManagement.Controllers
                         _logger.LogError("Invalid book object sent from client.");
                         return BadRequest("Invalid model object");
                     }
-                        else if (bookExist == null)
+                        else if (oldBook == null)
                         {
                             _logger.LogError($"Book with id: {id}, hasn't been found in db.");
                             return NotFound();
@@ -171,10 +171,10 @@ namespace WebApiLibraryManagement.Controllers
                                 var bookEntity = new Book
                                     {
                                         Id = id,
-                                        Title = model.Title,
-                                        AuthorId = model.AuthorId,
-                                        CategoryId = model.CategoryId,
-                                        CreatedDate = bookExist.CreatedDate,
+                                        Title = newBook.Title,
+                                        AuthorId = newBook.AuthorId,
+                                        CategoryId = newBook.CategoryId,
+                                        CreatedDate = oldBook.CreatedDate,
                                         ModifiedDate = DateTime.Now
                                     };
 

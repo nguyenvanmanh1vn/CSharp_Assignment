@@ -122,13 +122,13 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/category/:id
         #region snippet_Update
         [HttpPut("{id}")]
-        public ActionResult UpdateCategory(int id, [FromBody]Category model)
+        public ActionResult UpdateCategory(int id, [FromBody]Category newCategory)
         {
             try
             {
-                var categoryExist = _repository.GetById(id);
+                var oldCategory = _repository.GetById(id);
 
-                if (model == null)
+                if (newCategory == null)
                 {
                     _logger.LogError("Category object sent from client is null.");
                     return BadRequest("Category object is null");
@@ -138,7 +138,7 @@ namespace WebApiLibraryManagement.Controllers
                         _logger.LogError("Invalid Category object sent from client.");
                         return BadRequest("Invalid model object");
                     }
-                        else if (categoryExist == null)
+                        else if (oldCategory == null)
                         {
                             _logger.LogError($"Category with id: {id}, hasn't been found in db.");
                             return NotFound();
@@ -147,8 +147,8 @@ namespace WebApiLibraryManagement.Controllers
                                 var categoryEntity = new Category
                                     {
                                         Id = id,
-                                        Name = model.Name,
-                                        CreatedDate = categoryExist.CreatedDate,
+                                        Name = newCategory.Name,
+                                        CreatedDate = oldCategory.CreatedDate,
                                         ModifiedDate = DateTime.Now
                                     };
 
