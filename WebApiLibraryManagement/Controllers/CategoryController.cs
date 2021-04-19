@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -29,6 +30,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/category
         #region snippet_Get_List_Category
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetListCategory()
         {
@@ -49,6 +51,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/category/:id
         #region snippet_Get_Category_By_Id
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}", Name = "CategoryById")]
         public IActionResult GetCategoryById(int id)
         {
@@ -77,6 +80,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // POST api/category
         #region snippet_Create
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateCategory([FromBody] Category category)
         {
@@ -85,13 +89,13 @@ namespace WebApiLibraryManagement.Controllers
                 if (category == null)
                 {
                     _logger.LogError("Category object sent from client is null.");
-                    return BadRequest("Category object is null");
+                    return ValidationProblem("Category object is null");
                 }
 
                 else if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid Category object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
 
                 else
@@ -117,6 +121,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // PUT api/category/:id
         #region snippet_Update
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public ActionResult UpdateCategory(int id, [FromBody] Category newCategory)
         {
@@ -127,12 +132,12 @@ namespace WebApiLibraryManagement.Controllers
                 if (newCategory == null)
                 {
                     _logger.LogError("Category object sent from client is null.");
-                    return BadRequest("Category object is null");
+                    return ValidationProblem("Category object is null");
                 }
                 else if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid Category object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
                 else if (oldCategory == null)
                 {
@@ -164,6 +169,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // DELETE api/category/:id
         #region snippet_Delete
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
@@ -178,7 +184,7 @@ namespace WebApiLibraryManagement.Controllers
                 // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByCategory(id).Any()) 
                 // {
                 //     _logger.LogError($"Cannot delete category with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                //     return BadRequest("Cannot delete category. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return ValidationProblem("Cannot delete category. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
                 // }
                 else
                 {

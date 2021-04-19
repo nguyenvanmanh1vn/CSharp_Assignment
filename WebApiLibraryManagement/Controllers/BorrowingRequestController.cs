@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -19,16 +20,19 @@ namespace WebApiLibraryManagement.Controllers
     {
         private readonly ILogger<BorrowingRequestController> _logger;
         private readonly IBorrowingRequestRepository _repository;
+        private readonly IBorrowingRequestDetailsRepository _borrowingRequestDetailsRepository;
 
-        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository)
+        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository borrowingRequestDetailsRepository)
         {
             _logger = logger;
             _repository = repository;
+            _borrowingRequestDetailsRepository = borrowingRequestDetailsRepository;
         }
         #endregion
 
         // GET: api/BorrowingRequest
         #region snippet_Get_List_BorrowingRequest
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetListBorrowingRequest()
         {
@@ -49,6 +53,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/BorrowingRequest/:id
         #region snippet_Get_BorrowingRequest_By_Id
+        // [Authorize(Roles = "Admin")]
         [HttpGet("{id}", Name = "BorrowingRequestById")]
         public IActionResult GetBorrowingRequestById(int id)
         {
@@ -77,6 +82,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // POST api/BorrowingRequest
         #region snippet_Create
+        // [Authorize(Roles = "User, Admin")]
         [HttpPost]
         public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequest borrowingRequest)
         {
@@ -85,27 +91,52 @@ namespace WebApiLibraryManagement.Controllers
                 if (borrowingRequest == null)
                 {
                     _logger.LogError("BorrowingRequest object sent from client is null.");
-                    return BadRequest("BorrowingRequest object is null");
+                    return ValidationProblem("BorrowingRequest object is null");
                 }
 
                 else if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid BorrowingRequest object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
 
                 else
                 {
-                    var entity = new BorrowingRequest
+                    int[] borrowingBooksRequestStringToArray = Array.ConvertAll(borrowingRequest.BorrowBooks.Split(','), Int32.Parse);
+                    /* Front End:
+                     * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
+                    */
+                    var checkBorrowInMonth = _repository.GetAllWithDetails().Count(br => br.UserId == borrowingRequest.UserId && br.CreatedDate.Month == DateTime.Now.Month);
+
+                    if (checkBorrowInMonth < 3)
                     {
-                        UserId = borrowingRequest.UserId,
-                        Status = borrowingRequest.Status,
-                        CreatedDate = DateTime.Now
-                    };
+                        if (borrowingBooksRequestStringToArray.Length <= 5)
+                        {
+                            var entity = new BorrowingRequest
+                            {
+                                UserId = borrowingRequest.UserId,
+                                Status = Status.Waiting,
+                                BorrowBooks = borrowingRequest.BorrowBooks,
+                                CreatedDate = DateTime.Now
+                            };
 
-                    _repository.Insert(entity);
+                            foreach (int item in borrowingBooksRequestStringToArray)
+                            {
+                                var entityRequestDetails = new BorrowingRequestDetail
+                                {
+                                    BookId = item,
+                                    BorrowingRequestId = entity.Id,
+                                };
+                                _borrowingRequestDetailsRepository.Insert(entityRequestDetails);
+                            }
 
-                    return CreatedAtRoute("BorrowingRequestById", new { id = borrowingRequest.Id }, borrowingRequest);
+                            _repository.Insert(entity);
+                            return CreatedAtRoute("BorrowingRequestById", new { id = borrowingRequest.Id }, entity);
+                        }
+                        return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
+                    }
+                    return ValidationProblem("You can't create 3 borrowing requests in a month");
+
                 }
             }
             catch (Exception ex)
@@ -118,6 +149,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // PUT api/BorrowingRequest/:id
         #region snippet_Update
+        // [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public ActionResult UpdateBorrowingRequest(int id, [FromBody] BorrowingRequest newBorrowingRequest)
         {
@@ -128,12 +160,12 @@ namespace WebApiLibraryManagement.Controllers
                 if (newBorrowingRequest == null)
                 {
                     _logger.LogError("BorrowingRequest object sent from client is null.");
-                    return BadRequest("BorrowingRequest object is null");
+                    return ValidationProblem("BorrowingRequest object is null");
                 }
                 else if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid BorrowingRequest object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
                 else if (oldBorrowingRequest == null)
                 {
@@ -166,6 +198,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // DELETE api/BorrowingRequest/:id
         #region snippet_Delete
+        // [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteBorrowingRequest(int id)
         {
@@ -180,7 +213,7 @@ namespace WebApiLibraryManagement.Controllers
                 // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBorrowingRequest(id).Any()) 
                 // {
                 //     _logger.LogError($"Cannot delete BorrowingRequest with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                //     return BadRequest("Cannot delete BorrowingRequest. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return ValidationProblem("Cannot delete BorrowingRequest. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
                 // }
                 else
                 {
@@ -199,13 +232,14 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/BorrowingRequest/getlistbyuserid?userid=1
         #region snippet_Get_List_BorrowingRequest_By_User_Id
+        // [Authorize(Roles = "User, Admin")]
         [HttpGet]
         [Route("getListByUserId")]
         public IActionResult GetListBorrowingRequestByUserId([FromQuery] int userId)
         {
             try
             {
-                var listBorrowingRequest = _repository.ListBorrowingRequestByUserId(userId);
+                var listBorrowingRequest = _repository.GetListBorrowingRequestByUserId(userId);
 
                 _logger.LogInformation($"Returned all borrowing Requests from database by UserId.");
                 return Ok(listBorrowingRequest);

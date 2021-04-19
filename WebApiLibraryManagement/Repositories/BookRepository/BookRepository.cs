@@ -12,12 +12,17 @@ namespace WebApiLibraryManagement.Repositories
         {
         }
 
+        // Eager Loading of Related Data
         public IEnumerable<Book> GetAllInclude()
         {
             return Entities
-                .Include(b => b.Author)
-                .Include(b => b.Category)
-                .AsEnumerable();
+                .Include(book => book.Author)
+                .Include(book => book.Category)
+                .ToList();
+        }
+        public IEnumerable<Book> GetListBookByCategoryId(int categoryId)
+        {
+            return Entities.Where(b => b.CategoryId == categoryId).ToList();
         }
     }
 }

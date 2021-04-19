@@ -120,6 +120,7 @@ namespace WebApiLibraryManagement.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
+                    BorrowBooks = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -165,12 +166,12 @@ namespace WebApiLibraryManagement.Migrations
                 columns: new[] { "Id", "CreatedDate", "FirstName", "Gender", "LastName", "ModifiedDate" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(7227), "Manh", 1, "Nguyen", null },
-                    { 2, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8190), "Linh", 0, "Tran", null },
-                    { 3, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8196), "Huong", 0, "Nguyen", null },
-                    { 4, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8198), "Mai", 0, "Bui", null },
-                    { 5, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8200), "Kien", 1, "Do", null },
-                    { 6, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8201), "Dung", 1, "Nguyen", null }
+                    { 1, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(4310), "Manh", 1, "Nguyen", null },
+                    { 2, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5259), "Linh", 0, "Tran", null },
+                    { 3, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5265), "Huong", 0, "Nguyen", null },
+                    { 4, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5267), "Mai", 0, "Bui", null },
+                    { 5, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5269), "Kien", 1, "Do", null },
+                    { 6, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5271), "Dung", 1, "Nguyen", null }
                 });
 
             migrationBuilder.InsertData(
@@ -178,8 +179,8 @@ namespace WebApiLibraryManagement.Migrations
                 columns: new[] { "Id", "CreatedDate", "ModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(8511), null, "Front End" },
-                    { 2, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(9179), null, "Back End" }
+                    { 1, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5557), null, "Front End" },
+                    { 2, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6230), null, "Back End" }
                 });
 
             migrationBuilder.InsertData(
@@ -196,13 +197,13 @@ namespace WebApiLibraryManagement.Migrations
                 columns: new[] { "Id", "AuthorId", "CategoryId", "CreatedDate", "ModifiedDate", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, new DateTime(2021, 4, 17, 12, 3, 7, 59, DateTimeKind.Local).AddTicks(477), null, "JavaScript" },
-                    { 3, 3, 1, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2711), null, "HTML" },
-                    { 4, 4, 1, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2714), null, "CSS" },
-                    { 5, 5, 1, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2716), null, "React" },
-                    { 2, 2, 2, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2687), null, "C#" },
-                    { 6, 6, 2, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2717), null, "Unit Test" },
-                    { 7, 1, 2, new DateTime(2021, 4, 17, 12, 3, 7, 60, DateTimeKind.Local).AddTicks(2719), null, "Note Js" }
+                    { 1, 1, 1, new DateTime(2021, 4, 19, 12, 9, 43, 996, DateTimeKind.Local).AddTicks(7286), null, "JavaScript" },
+                    { 3, 3, 1, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9528), null, "HTML" },
+                    { 4, 4, 1, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9530), null, "CSS" },
+                    { 5, 5, 1, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9533), null, "React" },
+                    { 2, 2, 2, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9505), null, "C#" },
+                    { 6, 6, 2, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9534), null, "Unit Test" },
+                    { 7, 1, 2, new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9536), null, "Note Js" }
                 });
 
             migrationBuilder.InsertData(
@@ -210,24 +211,24 @@ namespace WebApiLibraryManagement.Migrations
                 columns: new[] { "Id", "Address", "CreatedDate", "DateOfBirth", "Email", "FirstName", "Gender", "LastName", "ModifiedDate", "Password", "Phone", "RoleId", "UserName" },
                 values: new object[,]
                 {
-                    { 1, "Ha Noi", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(1570), new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "manh@gmail.com", "Manh", 1, "Nguyen", null, "123456", "0123456789", 1, "Manh" },
-                    { 2, "Quang Ninh", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(2633), new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "tung@gmail.com", "Tung", 1, "Tran", null, "123456", "9876543210", 2, "Tung" },
-                    { 3, "Ha Noi", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(2638), new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), "trang@gmail.com", "Trang", 0, "Bui", null, "123456", "1237894560", 2, "Trang" },
-                    { 4, "Ho Chi Minh", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(2640), new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "thu@gmail.com", "Thu", 0, "Nguyen", null, "123456", "4561237890", 2, "Thu" },
-                    { 5, "Nghe An", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(2642), new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "hung@gmail.com", "Hung", 1, "Nguyen", null, "123456", "7894561230", 2, "Hung" },
-                    { 6, "Da Nang", new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(2644), new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "toan@gmail.com", "Toan", 1, "Tran", null, "123456", "7891234560", 2, "Toan" }
+                    { 1, "Ha Noi", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(8702), new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "manh@gmail.com", "Manh", 1, "Nguyen", null, "123456", "0123456789", 1, "Manh" },
+                    { 2, "Quang Ninh", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9854), new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "tung@gmail.com", "Tung", 1, "Tran", null, "123456", "9876543210", 2, "Tung" },
+                    { 3, "Ha Noi", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9859), new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), "trang@gmail.com", "Trang", 0, "Bui", null, "123456", "1237894560", 2, "Trang" },
+                    { 4, "Ho Chi Minh", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9863), new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "thu@gmail.com", "Thu", 0, "Nguyen", null, "123456", "4561237890", 2, "Thu" },
+                    { 5, "Nghe An", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9865), new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "hung@gmail.com", "Hung", 1, "Nguyen", null, "123456", "7894561230", 2, "Hung" },
+                    { 6, "Da Nang", new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9867), new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "toan@gmail.com", "Toan", 1, "Tran", null, "123456", "7891234560", 2, "Toan" }
                 });
 
             migrationBuilder.InsertData(
                 table: "BorrowingRequests",
-                columns: new[] { "Id", "CreatedDate", "ModifiedDate", "Status", "UserId" },
+                columns: new[] { "Id", "BorrowBooks", "CreatedDate", "ModifiedDate", "Status", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2021, 4, 17, 12, 3, 7, 61, DateTimeKind.Local).AddTicks(9382), null, 1, 1 },
-                    { 2, new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(66), null, 1, 1 },
-                    { 3, new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(71), null, 2, 2 },
-                    { 4, new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(73), null, 3, 3 },
-                    { 5, new DateTime(2021, 4, 17, 12, 3, 7, 62, DateTimeKind.Local).AddTicks(74), null, 1, 4 }
+                    { 1, null, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6418), null, 1, 1 },
+                    { 2, null, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6993), null, 1, 1 },
+                    { 3, null, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6997), null, 2, 2 },
+                    { 4, null, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6999), null, 3, 3 },
+                    { 5, null, new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(7000), null, 1, 4 }
                 });
 
             migrationBuilder.InsertData(

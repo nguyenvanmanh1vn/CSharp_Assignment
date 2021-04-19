@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -29,6 +30,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book
         #region snippet_Get_List_Book
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetListBook()
         {
@@ -49,6 +51,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/:id
         #region snippet_Get_Book_By_Id
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}", Name = "BookById")]
         public IActionResult GetBookById(int id)
         {
@@ -77,6 +80,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/get/all
         #region snippet_Get_All_Books_With_Details
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("get/all")]
         public IEnumerable<Book> GetAllBooksWithDetails()
@@ -102,6 +106,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // POST api/book
         #region snippet_Create
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateBook([FromBody] Book book)
         {
@@ -110,13 +115,13 @@ namespace WebApiLibraryManagement.Controllers
                 if (book == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
-                    return BadRequest("Book object is null");
+                    return ValidationProblem("Book object is null");
                 }
 
                 if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid book object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
 
                 var entity = new Book
@@ -141,6 +146,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // PUT api/book/:id
         #region snippet_Update
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, [FromBody] Book newBook)
         {
@@ -151,12 +157,12 @@ namespace WebApiLibraryManagement.Controllers
                 if (newBook == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
-                    return BadRequest("Book object is null");
+                    return ValidationProblem("Book object is null");
                 }
                 else if (!ModelState.IsValid)
                 {
                     _logger.LogError("Invalid book object sent from client.");
-                    return BadRequest("Invalid model object");
+                    return ValidationProblem("Invalid model object");
                 }
                 else if (oldBook == null)
                 {
@@ -190,6 +196,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // DELETE api/book/:id
         #region snippet_Delete
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
@@ -204,7 +211,7 @@ namespace WebApiLibraryManagement.Controllers
                 // else if (_repositoryContext.BorrowingRequestDetails.BorrowingRequestDetailsByBook(id).Any()) 
                 // {
                 //     _logger.LogError($"Cannot delete book with id: {id}. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
-                //     return BadRequest("Cannot delete book. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
+                //     return ValidationProblem("Cannot delete book. It has related Borrowing Request Details. Delete those Borrowing Request Details first"); 
                 // }
                 else
                 {
@@ -216,6 +223,28 @@ namespace WebApiLibraryManagement.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong inside DeleteBook action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // GET: api/book/getlistbycategoryid?categoryid=1
+        #region snippet_Get_List_Book_By_Category_Id
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("getListByCategoryId")]
+        public IActionResult GetListByCategoryId([FromQuery] int categoryId)
+        {
+            try
+            {
+                var listBorrowingRequest = _repository.GetListBookByCategoryId(categoryId);
+
+                _logger.LogInformation($"Returned all books from database by CategoryId.");
+                return Ok(listBorrowingRequest);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList Book By Category Id action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

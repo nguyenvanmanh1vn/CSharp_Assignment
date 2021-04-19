@@ -26,10 +26,10 @@ namespace WebApiLibraryManagement.Repositories
         {
             return Entities.AsNoTracking().SingleOrDefault(s => s.Id == id);
         }
-        public IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] includes)
+        public IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] includeProperties)
         {
             var query = Entities.AsQueryable();
-            return includes.Aggregate(query, (current, include) => current.Include(include));
+            return includeProperties.Aggregate(query, (current, include) => current.Include(include));
         }
 
         public void Insert(T entity)
