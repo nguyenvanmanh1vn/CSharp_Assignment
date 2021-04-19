@@ -85,23 +85,23 @@ namespace WebApiLibraryManagement.Controllers
         [Route("get/all")]
         public IEnumerable<Book> GetAllBooksWithDetails()
         {
-            return _repository.GetAllInclude();
-            // return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
-            // {
-            //     Id = b.Id,
-            //     Title = b.Title,
-            //     Author = b.Author != null ? new Author
-            //     {
-            //         Id = b.Author.Id,
-            //         FirstName = b.Author.FirstName,
-            //         LastName = b.Author.LastName
-            //     } : null,
-            //     Category = b.Category != null ? new Category
-            //     {
-            //         Id = b.Category.Id,
-            //         Name = b.Category.Name
-            //     } : null
-            // });
+            // return _repository.GetAllInclude();
+            return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
+            {
+                Id = b.Id,
+                Title = b.Title,
+                Author = b.Author != null ? new Author
+                {
+                    Id = b.Author.Id,
+                    FirstName = b.Author.FirstName,
+                    LastName = b.Author.LastName
+                } : null,
+                Category = b.Category != null ? new Category
+                {
+                    Id = b.Category.Id,
+                    Name = b.Category.Name
+                } : null
+            });
         }
         #endregion
 
