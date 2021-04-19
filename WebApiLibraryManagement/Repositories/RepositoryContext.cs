@@ -52,11 +52,11 @@ namespace WebApiLibraryManagement.Repositories
 
             // Borrowing Request List
             modelBuilder.Entity<BorrowingRequest>().HasData(
-                new { Id = 1, UserId = 1, Status = Status.Approve, CreatedDate = DateTime.Now },
-                new { Id = 2, UserId = 1, Status = Status.Approve, CreatedDate = DateTime.Now },
+                new { Id = 1, UserId = 1, Status = Status.Approved, CreatedDate = DateTime.Now },
+                new { Id = 2, UserId = 1, Status = Status.Approved, CreatedDate = DateTime.Now },
                 new { Id = 3, UserId = 2, Status = Status.Waiting, CreatedDate = DateTime.Now },
-                new { Id = 4, UserId = 3, Status = Status.Reject, CreatedDate = DateTime.Now },
-                new { Id = 5, UserId = 4, Status = Status.Approve, CreatedDate = DateTime.Now }
+                new { Id = 4, UserId = 3, Status = Status.Rejected, CreatedDate = DateTime.Now },
+                new { Id = 5, UserId = 4, Status = Status.Approved, CreatedDate = DateTime.Now }
             );
 
             // Borrowing Request Detail List

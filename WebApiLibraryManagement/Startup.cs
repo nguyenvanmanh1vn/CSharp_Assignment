@@ -29,7 +29,20 @@ namespace WebApiLibraryManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+            .AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
+
+            services.AddMvc();
+            // .AddJsonOptions(opt =>
+            // {
+            //     opt.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+            //     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            // });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiLibraryManagement", Version = "v1" });
@@ -43,6 +56,7 @@ namespace WebApiLibraryManagement
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
+
 
             // DbContext
             services.AddDbContext<RepositoryContext>(options =>

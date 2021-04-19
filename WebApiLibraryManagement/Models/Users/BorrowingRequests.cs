@@ -11,9 +11,9 @@ namespace WebApiLibraryManagement.Models
 {
     public enum Status
     {
-        Approve = 1,
+        Approved = 1,
         Waiting = 2,
-        Reject = 3
+        Rejected = 3
     }
     public class BorrowingRequest : BaseEntity
     {

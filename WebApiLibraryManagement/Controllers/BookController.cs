@@ -30,7 +30,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book
         #region snippet_Get_List_Book
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetListBook()
         {
@@ -51,7 +51,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/:id
         #region snippet_Get_Book_By_Id
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet("{id}", Name = "BookById")]
         public IActionResult GetBookById(int id)
         {
@@ -80,33 +80,34 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/get/all
         #region snippet_Get_All_Books_With_Details
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("get/all")]
         public IEnumerable<Book> GetAllBooksWithDetails()
         {
-            return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
-            {
-                Id = b.Id,
-                Title = b.Title,
-                Author = b.Author != null ? new Author
-                {
-                    Id = b.Author.Id,
-                    FirstName = b.Author.FirstName,
-                    LastName = b.Author.LastName
-                } : null,
-                Category = b.Category != null ? new Category
-                {
-                    Id = b.Category.Id,
-                    Name = b.Category.Name
-                } : null
-            });
+            return _repository.GetAllInclude();
+            // return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
+            // {
+            //     Id = b.Id,
+            //     Title = b.Title,
+            //     Author = b.Author != null ? new Author
+            //     {
+            //         Id = b.Author.Id,
+            //         FirstName = b.Author.FirstName,
+            //         LastName = b.Author.LastName
+            //     } : null,
+            //     Category = b.Category != null ? new Category
+            //     {
+            //         Id = b.Category.Id,
+            //         Name = b.Category.Name
+            //     } : null
+            // });
         }
         #endregion
 
         // POST api/book
         #region snippet_Create
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateBook([FromBody] Book book)
         {
@@ -146,7 +147,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // PUT api/book/:id
         #region snippet_Update
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, [FromBody] Book newBook)
         {
@@ -196,7 +197,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // DELETE api/book/:id
         #region snippet_Delete
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
@@ -230,7 +231,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/book/getlistbycategoryid?categoryid=1
         #region snippet_Get_List_Book_By_Category_Id
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("getListByCategoryId")]
         public IActionResult GetListByCategoryId([FromQuery] int categoryId)

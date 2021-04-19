@@ -30,7 +30,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/category
         #region snippet_Get_List_Category
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetListCategory()
         {
@@ -51,7 +51,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // GET: api/category/:id
         #region snippet_Get_Category_By_Id
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpGet("{id}", Name = "CategoryById")]
         public IActionResult GetCategoryById(int id)
         {
@@ -80,7 +80,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // POST api/category
         #region snippet_Create
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateCategory([FromBody] Category category)
         {
@@ -121,7 +121,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // PUT api/category/:id
         #region snippet_Update
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public ActionResult UpdateCategory(int id, [FromBody] Category newCategory)
         {
@@ -169,7 +169,7 @@ namespace WebApiLibraryManagement.Controllers
 
         // DELETE api/category/:id
         #region snippet_Delete
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
