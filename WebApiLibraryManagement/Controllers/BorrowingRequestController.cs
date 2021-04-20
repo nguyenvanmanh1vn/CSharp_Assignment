@@ -84,11 +84,11 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "User, Admin")]
         [HttpPost]
-        public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequest borrowingRequest)
+        public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequestDTO borrowingRequestDTO)
         {
             try
             {
-                if (borrowingRequest == null)
+                if (borrowingRequestDTO == null)
                 {
                     _logger.LogError("BorrowingRequest object sent from client is null.");
                     return BadRequest("BorrowingRequest object is null");
@@ -102,32 +102,31 @@ namespace WebApiLibraryManagement.Controllers
 
                 else
                 {
-                    int[] arrayIds = Array.ConvertAll(borrowingRequest.BorrowBooks.Split(','), Int32.Parse);
+                    int[] arrayBookIds = Array.ConvertAll(borrowingRequestDTO.BorrowBooks.Split(','), Int32.Parse);
                     /* Front End:
                      * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
                     */
-                    var numberOfBorrowRequestsInMonth = _repository.GetAllWithDetails().Count(br => br.UserId == borrowingRequest.UserId && br.CreatedDate.Month == DateTime.Now.Month);
+                    var numberOfBorrowRequestsInMonth = _repository.GetAllWithDetails().Count(br => br.UserId == borrowingRequestDTO.UserId && br.CreatedDate.Month == DateTime.Now.Month);
 
                     if (numberOfBorrowRequestsInMonth >= 3)
                     {
-                            return ValidationProblem("You can't create 3 borrowing requests in a month");
+                        return ValidationProblem("You can't create 3 borrowing requests in a month");
                     }
-                    if (arrayIds.Length > 5)
+                    if (arrayBookIds.Length > 5)
                     {
                         return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
                     }
-                            
+
                     var entity = new BorrowingRequest
                     {
-                        UserId = borrowingRequest.UserId,
-                        Status = Status.Waiting,
-                        BorrowBooks = borrowingRequest.BorrowBooks,
+                        UserId = borrowingRequestDTO.UserId,
+                        Status = "Waiting",
                         CreatedDate = DateTime.Now
                     };
 
                     _repository.Insert(entity);
 
-                    foreach (int bookId in arrayIds)
+                    foreach (int bookId in arrayBookIds)
                     {
                         var entityRequestDetails = new BorrowingRequestDetail
                         {
@@ -137,8 +136,8 @@ namespace WebApiLibraryManagement.Controllers
                         _borrowingRequestDetailsRepository.Insert(entityRequestDetails);
                     }
 
-                    return CreatedAtRoute("BorrowingRequestById", new { id = borrowingRequest.Id }, entity);
-                    
+                    return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
+
                 }
             }
             catch (Exception ex)
@@ -162,7 +161,7 @@ namespace WebApiLibraryManagement.Controllers
                 if (newBorrowingRequest == null)
                 {
                     _logger.LogError("BorrowingRequest object sent from client is null.");
-                    return ValidationProblem("BorrowingRequest object is null");
+                    return BadRequest("BorrowingRequest object is null");
                 }
                 else if (!ModelState.IsValid)
                 {

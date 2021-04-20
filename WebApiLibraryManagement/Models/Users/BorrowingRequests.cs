@@ -9,21 +9,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiLibraryManagement.Models
 {
-    public enum Status
-    {
-        Approved = 1,
-        Waiting = 2,
-        Rejected = 3
-    }
     public class BorrowingRequest : BaseEntity
     {
         [Required]
         [FromQuery(Name = "userId")]
         public int UserId { get; set; }
         public virtual User User { get; set; }
-        public Status Status { get; set; }
+        [StringLength(10)]
+        public string Status { get; set; }
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public string BorrowBooks { get; set; }
         public virtual List<BorrowingRequestDetail> BorrowingRequestDetails { get; set; }
     }
 }

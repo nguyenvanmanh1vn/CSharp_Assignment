@@ -10,7 +10,7 @@ using WebApiLibraryManagement.Repositories;
 namespace WebApiLibraryManagement.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20210419050944_CreateInitial")]
+    [Migration("20210420081341_CreateInitial")]
     partial class CreateInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,8 +36,9 @@ namespace WebApiLibraryManagement.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
+                    b.Property<string>("Gender")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -55,49 +56,49 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(236),
                             FirstName = "Manh",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Nguyen"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5259),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3097),
                             FirstName = "Linh",
-                            Gender = 0,
+                            Gender = "Female",
                             LastName = "Tran"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5265),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3116),
                             FirstName = "Huong",
-                            Gender = 0,
+                            Gender = "Female",
                             LastName = "Nguyen"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5267),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3120),
                             FirstName = "Mai",
-                            Gender = 0,
+                            Gender = "Female",
                             LastName = "Bui"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5269),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3125),
                             FirstName = "Kien",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Do"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5271),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3130),
                             FirstName = "Dung",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Nguyen"
                         });
                 });
@@ -140,7 +141,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             AuthorId = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 996, DateTimeKind.Local).AddTicks(7286),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 478, DateTimeKind.Local).AddTicks(6879),
                             Title = "JavaScript"
                         },
                         new
@@ -148,7 +149,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 2,
                             AuthorId = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9505),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(297),
                             Title = "C#"
                         },
                         new
@@ -156,7 +157,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 3,
                             AuthorId = 3,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9528),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(336),
                             Title = "HTML"
                         },
                         new
@@ -164,7 +165,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 4,
                             AuthorId = 4,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9530),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(340),
                             Title = "CSS"
                         },
                         new
@@ -172,7 +173,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 5,
                             AuthorId = 5,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9533),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(344),
                             Title = "React"
                         },
                         new
@@ -180,7 +181,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 6,
                             AuthorId = 6,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9534),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(346),
                             Title = "Unit Test"
                         },
                         new
@@ -188,7 +189,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 7,
                             AuthorId = 1,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 997, DateTimeKind.Local).AddTicks(9536),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(429),
                             Title = "Note Js"
                         });
                 });
@@ -200,17 +201,15 @@ namespace WebApiLibraryManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BorrowBooks")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -225,36 +224,36 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6418),
-                            Status = 1,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(5541),
+                            Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6993),
-                            Status = 1,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6673),
+                            Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6997),
-                            Status = 2,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6687),
+                            Status = "Waiting",
                             UserId = 2
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6999),
-                            Status = 3,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6690),
+                            Status = "Rejected",
                             UserId = 3
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(7000),
-                            Status = 1,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6692),
+                            Status = "Approved",
                             UserId = 4
                         });
                 });
@@ -344,13 +343,13 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(5557),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3682),
                             Name = "Front End"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(6230),
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(5156),
                             Name = "Back End"
                         });
                 });
@@ -366,8 +365,9 @@ namespace WebApiLibraryManagement.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("RoleName")
-                        .HasColumnType("int");
+                    b.Property<string>("UserRoles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -378,13 +378,13 @@ namespace WebApiLibraryManagement.Migrations
                         {
                             Id = 1,
                             RoleDescription = "Admin can do the following actions: Viewing/Adding/Updating/Deleting a Category; Viewing/Adding/Updating/Deleting a Book; Viewing the list of borrowing requests; Approving/Rejecting request from Normal User",
-                            RoleName = 1
+                            UserRoles = "Admin"
                         },
                         new
                         {
                             Id = 2,
                             RoleDescription = "User can do the following actions: Borrowing book. One borrowing request can request more than 1 book (maximum is 5 books and 3 borrowing requests in a month); Normal User can see the list of books that he/she already borrowed with status (Approve/Reject/Waiting)",
-                            RoleName = 0
+                            UserRoles = "User"
                         });
                 });
 
@@ -399,6 +399,12 @@ namespace WebApiLibraryManagement.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Avatar")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -416,8 +422,9 @@ namespace WebApiLibraryManagement.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
+                    b.Property<string>("Gender")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -440,11 +447,6 @@ namespace WebApiLibraryManagement.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
@@ -456,91 +458,91 @@ namespace WebApiLibraryManagement.Migrations
                         {
                             Id = 1,
                             Address = "Ha Noi",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(8702),
+                            Age = 24,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(9785),
                             DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manh@gmail.com",
                             FirstName = "Manh",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Nguyen",
                             Password = "123456",
                             Phone = "0123456789",
-                            RoleId = 1,
-                            UserName = "Manh"
+                            RoleId = 1
                         },
                         new
                         {
                             Id = 2,
                             Address = "Quang Ninh",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9854),
+                            Age = 23,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2644),
                             DateOfBirth = new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tung@gmail.com",
                             FirstName = "Tung",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Tran",
                             Password = "123456",
-                            Phone = "9876543210",
-                            RoleId = 2,
-                            UserName = "Tung"
+                            Phone = "0987654321",
+                            RoleId = 2
                         },
                         new
                         {
                             Id = 3,
                             Address = "Ha Noi",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9859),
+                            Age = 22,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2655),
                             DateOfBirth = new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "trang@gmail.com",
                             FirstName = "Trang",
-                            Gender = 0,
+                            Gender = "Female",
                             LastName = "Bui",
                             Password = "123456",
-                            Phone = "1237894560",
-                            RoleId = 2,
-                            UserName = "Trang"
+                            Phone = "0123789456",
+                            RoleId = 2
                         },
                         new
                         {
                             Id = 4,
                             Address = "Ho Chi Minh",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9863),
+                            Age = 21,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2664),
                             DateOfBirth = new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "thu@gmail.com",
                             FirstName = "Thu",
-                            Gender = 0,
+                            Gender = "Female",
                             LastName = "Nguyen",
                             Password = "123456",
-                            Phone = "4561237890",
-                            RoleId = 2,
-                            UserName = "Thu"
+                            Phone = "0456123789",
+                            RoleId = 2
                         },
                         new
                         {
                             Id = 5,
                             Address = "Nghe An",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9865),
+                            Age = 20,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2673),
                             DateOfBirth = new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hung@gmail.com",
                             FirstName = "Hung",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Nguyen",
                             Password = "123456",
-                            Phone = "7894561230",
-                            RoleId = 2,
-                            UserName = "Hung"
+                            Phone = "0789456123",
+                            RoleId = 2
                         },
                         new
                         {
                             Id = 6,
                             Address = "Da Nang",
-                            CreatedDate = new DateTime(2021, 4, 19, 12, 9, 43, 999, DateTimeKind.Local).AddTicks(9867),
+                            Age = 19,
+                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2682),
                             DateOfBirth = new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "toan@gmail.com",
                             FirstName = "Toan",
-                            Gender = 1,
+                            Gender = "Male",
                             LastName = "Tran",
                             Password = "123456",
-                            Phone = "7891234560",
-                            RoleId = 2,
-                            UserName = "Toan"
+                            Phone = "0789123456",
+                            RoleId = 2
                         });
                 });
 

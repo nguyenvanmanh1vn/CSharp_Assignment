@@ -5,18 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiLibraryManagement.Models
 {
-    public enum RoleName
-    {
-        User = 0,
-        Admin = 1
-    }
     public class Role
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public RoleName RoleName { get; set; }
+        public string UserRoles { get; set; }
 
         [Required]
         [Column(TypeName = "text")]

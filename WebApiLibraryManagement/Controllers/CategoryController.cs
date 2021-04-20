@@ -89,7 +89,7 @@ namespace WebApiLibraryManagement.Controllers
                 if (category == null)
                 {
                     _logger.LogError("Category object sent from client is null.");
-                    return ValidationProblem("Category object is null");
+                    return BadRequest("Category object is null");
                 }
 
                 else if (!ModelState.IsValid)
@@ -132,7 +132,7 @@ namespace WebApiLibraryManagement.Controllers
                 if (newCategory == null)
                 {
                     _logger.LogError("Category object sent from client is null.");
-                    return ValidationProblem("Category object is null");
+                    return BadRequest("Category object is null");
                 }
                 else if (!ModelState.IsValid)
                 {

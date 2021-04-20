@@ -116,7 +116,7 @@ namespace WebApiLibraryManagement.Controllers
                 if (book == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
-                    return ValidationProblem("Book object is null");
+                    return BadRequest("Book object is null");
                 }
 
                 if (!ModelState.IsValid)
@@ -158,7 +158,7 @@ namespace WebApiLibraryManagement.Controllers
                 if (newBook == null)
                 {
                     _logger.LogError("Book object sent from client is null.");
-                    return ValidationProblem("Book object is null");
+                    return BadRequest("Book object is null");
                 }
                 else if (!ModelState.IsValid)
                 {

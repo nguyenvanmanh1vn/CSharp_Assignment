@@ -3,6 +3,7 @@ using WebApiLibraryManagement.Models;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace WebApiLibraryManagement.Repositories
 {
@@ -11,7 +12,7 @@ namespace WebApiLibraryManagement.Repositories
         IEnumerable<T> GetList();
         T GetById(int id);
         IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] include);
-        void Insert(T entity);
+        Task Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
     }

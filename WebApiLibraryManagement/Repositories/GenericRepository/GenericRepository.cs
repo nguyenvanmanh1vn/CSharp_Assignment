@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace WebApiLibraryManagement.Repositories
 {
@@ -17,9 +18,9 @@ namespace WebApiLibraryManagement.Repositories
             this.Context = context;
             Entities = context.Set<T>();
         }
-        
-        public IEnumerable<T> GetList() 
-        { 
+
+        public IEnumerable<T> GetList()
+        {
             return Entities.ToList();
         }
         public T GetById(int id)
@@ -32,14 +33,14 @@ namespace WebApiLibraryManagement.Repositories
             return includeProperties.Aggregate(query, (current, include) => current.Include(include));
         }
 
-        public void Insert(T entity)
+        public async Task Insert(T entity)
         {
             if (entity == null)
             {
                 throw new ArgumentNullException("entity");
             }
             Entities.Add(entity);
-            Context.SaveChanges();
+            await Context.SaveChangesAsync();
         }
         public void Update(T entity)
         {
