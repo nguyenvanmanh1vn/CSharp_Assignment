@@ -12,10 +12,9 @@ namespace WebApiLibraryManagement.Repositories
 {
     public class UsersRepository : GenericRepository<User>, IUsersRepository, IDisposable
     {
-        protected readonly IUserServices _services;
-        public UsersRepository(RepositoryContext context, IUserServices services) : base(context)
+        // protected readonly IUserServices _services;
+        public UsersRepository(RepositoryContext context) : base(context)
         {
-            _services = services;
         }
 
         // Eager Loading of Related Data
@@ -25,6 +24,20 @@ namespace WebApiLibraryManagement.Repositories
                 .Include(u => u.Role)
                 .ToList();
         }
+        public string GetMD5(string str)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] fromData = Encoding.UTF8.GetBytes(str);
+            byte[] targetData = md5.ComputeHash(fromData);
+            string byte2String = null;
+
+            for (int i = 0; i < targetData.Length; i++)
+            {
+                byte2String += targetData[i].ToString("x2");
+
+            }
+            return byte2String;
+        }
         public IEnumerable<User> GetListUserByRoleId(int roleId)
         {
             return Entities.Where(b => b.RoleId == roleId).ToList();
@@ -32,7 +45,8 @@ namespace WebApiLibraryManagement.Repositories
 
         public User PostLogin(string email, string password)
         {
-            return Entities.Where(s => s.Email == email && s.Password == _services.GetMD5(password)).FirstOrDefault();
+            // return Entities.Where(s => s.Email == email && s.Password == _services.GetMD5(password)).FirstOrDefault();
+            return Entities.Where(s => s.Email == email && s.Password == password).FirstOrDefault();
         }
 
         public IEnumerable<User> PostRegister(string email)

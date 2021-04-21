@@ -1,11 +1,15 @@
+using System.Threading.Tasks;
 using WebApiLibraryManagement.Models;
+using WebApiLibraryManagement.Repositories;
 
 namespace WebApiLibraryManagement.Services
 {
     public interface IBorrowingRequestServices
     {
-        BorrowingRequest CreateBorrowingRequest(BorrowingRequestDTO borrowingRequestDTO);
+        int[] arrayBookIds(BorrowingRequestDTO borrowingRequestDTO);
+        bool IsBRInABRValid(int[] arrayBookIds, BorrowingRequestDTO borrowingRequestDTO);
         bool IsNumberOfTimesBRInMonthValid(BorrowingRequestDTO borrowingRequestDTO);
-        bool IsBRInABRValid(BorrowingRequestDTO borrowingRequestDTO);
+        BorrowingRequest CreateBorrowingRequest(int[] arrayBookIds, BorrowingRequestDTO borrowingRequestDTO);
+        void CreateBorrowingRequestDetails(int bRId, int[] arrayBookIds);
     }
 }

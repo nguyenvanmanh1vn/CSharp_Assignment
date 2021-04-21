@@ -12,7 +12,7 @@ namespace WebApiLibraryManagement.Repositories
         IEnumerable<T> GetList();
         T GetById(int id);
         IEnumerable<T> GetAllWithDetails(params Expression<Func<T, object>>[] include);
-        Task Insert(T entity);
+        void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
     }

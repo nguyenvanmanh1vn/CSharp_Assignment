@@ -21,14 +21,14 @@ namespace WebApiLibraryManagement.Controllers
     {
         private readonly ILogger<BorrowingRequestsController> _logger;
         private readonly IBorrowingRequestRepository _repository;
-        private readonly IBorrowingRequestDetailsRepository _borrowingRequestDetailsRepository;
+        private readonly IBorrowingRequestDetailsRepository _bRDRepository;
         private readonly IBorrowingRequestServices _services;
 
-        public BorrowingRequestsController(ILogger<BorrowingRequestsController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository borrowingRequestDetailsRepository, IBorrowingRequestServices services)
+        public BorrowingRequestsController(ILogger<BorrowingRequestsController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository bRDRepository, IBorrowingRequestServices services)
         {
             _logger = logger;
             _repository = repository;
-            _borrowingRequestDetailsRepository = borrowingRequestDetailsRepository;
+            _bRDRepository = bRDRepository;
             _services = services;
         }
         #endregion
@@ -105,11 +105,17 @@ namespace WebApiLibraryManagement.Controllers
 
                 else
                 {
-                    bool isBRValid = _services.IsBRInABRValid(borrowingRequestDTO);
+                    int[] arrayBookIds = _services.arrayBookIds(borrowingRequestDTO);
+                    bool isBRValid = _services.IsBRInABRValid(arrayBookIds, borrowingRequestDTO);
                     bool isBRInAMonthValid = _services.IsNumberOfTimesBRInMonthValid(borrowingRequestDTO);
+
                     if (isBRValid == false) return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
+
                     if (isBRInAMonthValid == false) return ValidationProblem("You can't create 3 borrowing requests in a month");
-                    var entity = _services.CreateBorrowingRequest(borrowingRequestDTO);
+
+                    BorrowingRequest entity = _services.CreateBorrowingRequest(arrayBookIds, borrowingRequestDTO);
+
+                    _services.CreateBorrowingRequestDetails(entity.Id, arrayBookIds);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
                 }

@@ -56,45 +56,45 @@ namespace WebApiLibraryManagement.Controllers
         #endregion
 
         // api/users/register
-        #region Post
-        [HttpPost]
-        [Route("register")]
-        public async Task<ActionResult> PostRegister([FromForm] FormUserRegister _user)
-        {
-            var check = _repository.PostRegister(_user.Email);
-            if (check.Count() > 0)
-            {
-                return Ok(-1);
-            }
-            var user = new User
-            {
-                FirstName = _user.FirstName,
-                Age = _user.Age,
-                Email = _user.Email.ToLower(),
-                Address = _user.Address,
-                Password = _services.GetMD5(_user.Password),
-                DateOfBirth = _user.DateOfBirth
+        // #region Post
+        // [HttpPost]
+        // [Route("register")]
+        // public async Task<ActionResult> PostRegister([FromForm] FormUserRegister _user)
+        // {
+        //     var check = _repository.PostRegister(_user.Email);
+        //     if (check.Count() > 0)
+        //     {
+        //         return Ok(-1);
+        //     }
+        //     var user = new User
+        //     {
+        //         FirstName = _user.FirstName,
+        //         Age = _user.Age,
+        //         Email = _user.Email.ToLower(),
+        //         Address = _user.Address,
+        //         Password = _services.GetMD5(_user.Password),
+        //         DateOfBirth = _user.DateOfBirth
 
-            };
-            var filesPath = Directory.GetCurrentDirectory() + "/images";
-            //get filename
-            string ImageName = Path.GetFileName(_user.Avatar.FileName);
-            var fullFilePath = Path.Combine(filesPath, ImageName);
-            using (var stream = new FileStream(fullFilePath, FileMode.Create))
-            {
-                await _user.Avatar.CopyToAsync(stream);
-            }
-            user.Avatar = filesPath + "/" + ImageName;
+        //     };
+        //     var filesPath = Directory.GetCurrentDirectory() + "/images";
+        //     //get filename
+        //     string ImageName = Path.GetFileName(_user.Avatar.FileName);
+        //     var fullFilePath = Path.Combine(filesPath, ImageName);
+        //     using (var stream = new FileStream(fullFilePath, FileMode.Create))
+        //     {
+        //         await _user.Avatar.CopyToAsync(stream);
+        //     }
+        //     user.Avatar = filesPath + "/" + ImageName;
 
-            await _repository.Insert(user);
-            int _insertID = user.Id;
-            if (_insertID > 0)
-            {
-                return Ok(_insertID);
-            }
-            return Ok(0);
-        }
-        #endregion
+        //    _repository.Insert(user);
+        //     int _insertID = user.Id;
+        //     if (_insertID > 0)
+        //     {
+        //         return Ok(_insertID);
+        //     }
+        //     return Ok(0);
+        // }
+        // #endregion
 
         // GET: api/User
         #region snippet_Get_List_User

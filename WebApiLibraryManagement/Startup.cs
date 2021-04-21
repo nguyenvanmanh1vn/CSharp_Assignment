@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using WebApiLibraryManagement.Repositories;
+using WebApiLibraryManagement.Services;
 
 namespace WebApiLibraryManagement
 {
@@ -52,6 +53,10 @@ namespace WebApiLibraryManagement
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IBorrowingRequestRepository, BorrowingRequestRepository>();
             services.AddScoped<IBorrowingRequestDetailsRepository, BorrowingRequestDetailsRepository>();
+            services.AddScoped<IUsersRepository, UsersRepository>();
+
+            services.AddScoped<IBorrowingRequestServices, BorrowingRequestServices>();
+            services.AddScoped<IUserServices, UserServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

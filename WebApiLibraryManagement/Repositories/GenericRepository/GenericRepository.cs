@@ -33,14 +33,14 @@ namespace WebApiLibraryManagement.Repositories
             return includeProperties.Aggregate(query, (current, include) => current.Include(include));
         }
 
-        public async Task Insert(T entity)
+        public void Insert(T entity)
         {
             if (entity == null)
             {
                 throw new ArgumentNullException("entity");
             }
             Entities.Add(entity);
-            await Context.SaveChangesAsync();
+            Context.SaveChanges();
         }
         public void Update(T entity)
         {
