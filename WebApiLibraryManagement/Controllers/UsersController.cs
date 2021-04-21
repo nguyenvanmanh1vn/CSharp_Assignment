@@ -10,6 +10,7 @@ using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
+using WebApiLibraryManagement.Services;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -21,11 +22,13 @@ namespace WebApiLibraryManagement.Controllers
     {
         private readonly ILogger<UsersController> _logger;
         private readonly IUsersRepository _repository;
+        private readonly IUserServices _services;
 
-        public UsersController(ILogger<UsersController> logger, IUsersRepository repository)
+        public UsersController(ILogger<UsersController> logger, IUsersRepository repository, IUserServices services)
         {
             _logger = logger;
             _repository = repository;
+            _services = services;
         }
         #endregion
 
@@ -69,7 +72,7 @@ namespace WebApiLibraryManagement.Controllers
                 Age = _user.Age,
                 Email = _user.Email.ToLower(),
                 Address = _user.Address,
-                Password = _repository.GetMD5(_user.Password),
+                Password = _services.GetMD5(_user.Password),
                 DateOfBirth = _user.DateOfBirth
 
             };

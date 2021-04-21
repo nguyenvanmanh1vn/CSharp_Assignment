@@ -6,32 +6,17 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
 using System;
+using WebApiLibraryManagement.Services;
 
 namespace WebApiLibraryManagement.Repositories
 {
     public class UsersRepository : GenericRepository<User>, IUsersRepository, IDisposable
     {
-        public UsersRepository(RepositoryContext context) : base(context)
+        protected readonly IUserServices _services;
+        public UsersRepository(RepositoryContext context, IUserServices services) : base(context)
         {
+            _services = services;
         }
-
-        //create a string MD5
-        #region GetMD5
-        public string GetMD5(string str)
-        {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] fromData = Encoding.UTF8.GetBytes(str);
-            byte[] targetData = md5.ComputeHash(fromData);
-            string byte2String = null;
-
-            for (int i = 0; i < targetData.Length; i++)
-            {
-                byte2String += targetData[i].ToString("x2");
-
-            }
-            return byte2String;
-        }
-        #endregion
 
         // Eager Loading of Related Data
         public IEnumerable<User> GetAllInclude()
@@ -47,7 +32,7 @@ namespace WebApiLibraryManagement.Repositories
 
         public User PostLogin(string email, string password)
         {
-            return Entities.Where(s => s.Email == email && s.Password == GetMD5(password)).FirstOrDefault();
+            return Entities.Where(s => s.Email == email && s.Password == _services.GetMD5(password)).FirstOrDefault();
         }
 
         public IEnumerable<User> PostRegister(string email)

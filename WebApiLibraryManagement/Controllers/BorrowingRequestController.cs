@@ -111,7 +111,6 @@ namespace WebApiLibraryManagement.Controllers
                     var entity = _services.CreateBorrowingRequest(borrowingRequestDTO);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
-
                 }
             }
             catch (Exception ex)
