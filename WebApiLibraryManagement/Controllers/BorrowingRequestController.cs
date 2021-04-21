@@ -9,6 +9,7 @@ using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using WebApiLibraryManagement.Services;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -21,6 +22,7 @@ namespace WebApiLibraryManagement.Controllers
         private readonly ILogger<BorrowingRequestController> _logger;
         private readonly IBorrowingRequestRepository _repository;
         private readonly IBorrowingRequestDetailsRepository _borrowingRequestDetailsRepository;
+        private readonly IBorrowingRequestServices _services;
 
         public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository borrowingRequestDetailsRepository)
         {
@@ -102,39 +104,11 @@ namespace WebApiLibraryManagement.Controllers
 
                 else
                 {
-                    int[] arrayBookIds = Array.ConvertAll(borrowingRequestDTO.BorrowBooks.Split(','), Int32.Parse);
-                    /* Front End:
-                     * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
-                    */
-                    var numberOfBorrowRequestsInMonth = _repository.GetAllWithDetails().Count(br => br.UserId == borrowingRequestDTO.UserId && br.CreatedDate.Month == DateTime.Now.Month);
-
-                    if (numberOfBorrowRequestsInMonth >= 3)
-                    {
-                        return ValidationProblem("You can't create 3 borrowing requests in a month");
-                    }
-                    if (arrayBookIds.Length > 5)
-                    {
-                        return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
-                    }
-
-                    var entity = new BorrowingRequest
-                    {
-                        UserId = borrowingRequestDTO.UserId,
-                        Status = "Waiting",
-                        CreatedDate = DateTime.Now
-                    };
-
-                    _repository.Insert(entity);
-
-                    foreach (int bookId in arrayBookIds)
-                    {
-                        var entityRequestDetails = new BorrowingRequestDetail
-                        {
-                            BookId = bookId,
-                            BorrowingRequestId = entity.Id,
-                        };
-                        _borrowingRequestDetailsRepository.Insert(entityRequestDetails);
-                    }
+                    bool isBRValid = _services.IsBRInABRValid(borrowingRequestDTO);
+                    bool isBRInAMonthValid = _services.IsNumberOfTimesBRInMonthValid(borrowingRequestDTO);
+                    if (isBRValid == false) return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
+                    if (isBRInAMonthValid == false) return ValidationProblem("You can't create 3 borrowing requests in a month");
+                    var entity = _services.CreateBorrowingRequest(borrowingRequestDTO);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
 

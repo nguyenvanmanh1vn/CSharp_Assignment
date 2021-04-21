@@ -5,10 +5,11 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
+using System;
 
 namespace WebApiLibraryManagement.Repositories
 {
-    public class UsersRepository : GenericRepository<User>, IUsersRepository
+    public class UsersRepository : GenericRepository<User>, IUsersRepository, IDisposable
     {
         public UsersRepository(RepositoryContext context) : base(context)
         {
@@ -54,5 +55,16 @@ namespace WebApiLibraryManagement.Repositories
             return Entities.Where(s => s.Email == email.ToLower()).ToList();
         }
 
+        //This method is used to check and validate the user credentials
+        public User ValidateUser(string email, string password)
+        {
+            return Entities.FirstOrDefault(user =>
+            user.Email.Equals(email, StringComparison.OrdinalIgnoreCase)
+            && user.Password == password);
+        }
+        public void Dispose()
+        {
+            Context.Dispose();
+        }
     }
 }

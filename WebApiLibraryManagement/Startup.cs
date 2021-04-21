@@ -15,6 +15,12 @@ using Microsoft.OpenApi.Models;
 using WebApiLibraryManagement.Repositories;
 using WebApiLibraryManagement.Models;
 
+using Owin;
+using Microsoft.Owin;
+using Microsoft.Owin.Security.OAuth;
+
+[assembly: OwinStartup(typeof(WebApiLibraryManagement.Startup))]
+
 namespace WebApiLibraryManagement
 {
     public class Startup
@@ -63,9 +69,25 @@ namespace WebApiLibraryManagement
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IAppBuilder appBuilder, RepositoryContext db)
         {
-            app.UseCors("CorsPolicy");
+            // Enable CORS (cross origin resource sharing) for making request using browser from different domains
+            // app.UseCors("CorsPolicy");
+            appBuilder.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
+            OAuthAuthorizationServerOptions options = new OAuthAuthorizationServerOptions
+            {
+                AllowInsecureHttp = true,
+                //The Path For generating the Toekn
+                TokenEndpointPath = new PathString("/token"),
+                //Setting the Token Expired Time (24 hours)
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                //MyAuthorizationServerProvider class will validate the user credentials
+                Provider = new MyAuthorizationServerProvider()
+            };
+            //Token Generations
+            appBuilder.UseOAuthAuthorizationServer(options);
+            appBuilder.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
             if (env.IsDevelopment())
             {
@@ -73,6 +95,8 @@ namespace WebApiLibraryManagement
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiLibraryManagement v1"));
             }
+
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
 
