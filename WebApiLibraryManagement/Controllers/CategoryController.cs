@@ -16,12 +16,12 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoryController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        private readonly ILogger<CategoryController> _logger;
+        private readonly ILogger<CategoriesController> _logger;
         private readonly ICategoryRepository _repository;
 
-        public CategoryController(ILogger<CategoryController> logger, ICategoryRepository repository)
+        public CategoriesController(ILogger<CategoriesController> logger, ICategoryRepository repository)
         {
             _logger = logger;
             _repository = repository;

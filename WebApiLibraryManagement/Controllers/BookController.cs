@@ -16,12 +16,12 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class BooksController : ControllerBase
     {
-        private readonly ILogger<BookController> _logger;
+        private readonly ILogger<BooksController> _logger;
         private readonly IBookRepository _repository;
 
-        public BookController(ILogger<BookController> logger, IBookRepository repository)
+        public BooksController(ILogger<BooksController> logger, IBookRepository repository)
         {
             _logger = logger;
             _repository = repository;

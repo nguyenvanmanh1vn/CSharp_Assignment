@@ -17,18 +17,19 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class BorrowingRequestController : ControllerBase
+    public class BorrowingRequestsController : ControllerBase
     {
-        private readonly ILogger<BorrowingRequestController> _logger;
+        private readonly ILogger<BorrowingRequestsController> _logger;
         private readonly IBorrowingRequestRepository _repository;
         private readonly IBorrowingRequestDetailsRepository _borrowingRequestDetailsRepository;
         private readonly IBorrowingRequestServices _services;
 
-        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository borrowingRequestDetailsRepository)
+        public BorrowingRequestsController(ILogger<BorrowingRequestsController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository borrowingRequestDetailsRepository, IBorrowingRequestServices services)
         {
             _logger = logger;
             _repository = repository;
             _borrowingRequestDetailsRepository = borrowingRequestDetailsRepository;
+            _services = services;
         }
         #endregion
 
