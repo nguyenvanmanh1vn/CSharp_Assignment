@@ -172,6 +172,14 @@ namespace WebApiLibraryManagement.Controllers
                     {
                         FirstName = User.FirstName,
                         LastName = User.LastName,
+                        Email = User.Email,
+                        Avatar = User.Avatar,
+                        Address = User.Address,
+                        Password = User.Password,
+                        Phone = User.Phone,
+                        Age = User.Age,
+                        DateOfBirth = User.DateOfBirth,
+                        RoleId = User.RoleId,
                         CreatedDate = DateTime.Now
                     };
 
@@ -220,6 +228,14 @@ namespace WebApiLibraryManagement.Controllers
                         Id = id,
                         FirstName = newUser.FirstName,
                         LastName = newUser.LastName,
+                        Email = newUser.Email,
+                        Avatar = newUser.Avatar,
+                        Address = newUser.Address,
+                        Password = newUser.Password,
+                        Phone = newUser.Phone,
+                        Age = newUser.Age,
+                        DateOfBirth = newUser.DateOfBirth,
+                        RoleId = newUser.RoleId,
                         CreatedDate = oldUser.CreatedDate,
                         ModifiedDate = DateTime.Now
                     };
