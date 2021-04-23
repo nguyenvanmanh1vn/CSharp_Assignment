@@ -53,7 +53,7 @@ namespace WebApiLibraryManagement
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IBorrowingRequestRepository, BorrowingRequestRepository>();
             services.AddScoped<IBorrowingRequestDetailsRepository, BorrowingRequestDetailsRepository>();
-            services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<IBorrowingRequestServices, BorrowingRequestServices>();
             services.AddScoped<IUserServices, UserServices>();

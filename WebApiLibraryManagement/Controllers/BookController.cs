@@ -16,22 +16,23 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class BooksController : ControllerBase
+    public class BookController : ControllerBase
     {
-        private readonly ILogger<BooksController> _logger;
+        private readonly ILogger<BookController> _logger;
         private readonly IBookRepository _repository;
 
-        public BooksController(ILogger<BooksController> logger, IBookRepository repository)
+        public BookController(ILogger<BookController> logger, IBookRepository repository)
         {
             _logger = logger;
             _repository = repository;
         }
         #endregion
 
-        // GET: api/book
+        // GET: api/books
         #region snippet_Get_List_Book
         // [Authorize(Roles = "Admin")]
         [HttpGet]
+        [Route("api/books")]
         public IActionResult GetListBook()
         {
             try
@@ -82,7 +83,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_All_Books_With_Details
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("get/all")]
+        [Route("api/books/get/all")]
         public IEnumerable<Book> GetAllBooksWithDetails()
         {
             // return _repository.GetAllInclude();
@@ -109,6 +110,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
+        [Route("api/books")]
         public IActionResult CreateBook([FromBody] Book book)
         {
             try
@@ -233,7 +235,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_Book_By_Category_Id
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("getListByCategoryId")]
+        [Route("api/books/getListByCategoryId")]
         public IActionResult GetListByCategoryId([FromQuery] int categoryId)
         {
             try

@@ -10,10 +10,10 @@ using WebApiLibraryManagement.Services;
 
 namespace WebApiLibraryManagement.Repositories
 {
-    public class UsersRepository : GenericRepository<User>, IUsersRepository, IDisposable
+    public class UserRepository : GenericRepository<User>, IUserRepository, IDisposable
     {
         // protected readonly IUserServices _services;
-        public UsersRepository(RepositoryContext context) : base(context)
+        public UserRepository(RepositoryContext context) : base(context)
         {
         }
 

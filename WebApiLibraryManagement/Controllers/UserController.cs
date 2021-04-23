@@ -18,13 +18,13 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private readonly ILogger<UsersController> _logger;
-        private readonly IUsersRepository _repository;
+        private readonly ILogger<UserController> _logger;
+        private readonly IUserRepository _repository;
         private readonly IUserServices _services;
 
-        public UsersController(ILogger<UsersController> logger, IUsersRepository repository, IUserServices services)
+        public UserController(ILogger<UserController> logger, IUserRepository repository, IUserServices services)
         {
             _logger = logger;
             _repository = repository;
@@ -35,7 +35,7 @@ namespace WebApiLibraryManagement.Controllers
         // api/users/login
         #region Post_Login
         [HttpPost]
-        [Route("login")]
+        [Route("api/users/login")]
         public ActionResult PostLogin(FormUserLogin _user)
         {
             try
@@ -100,6 +100,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_User
         // [Authorize(Roles = "Admin")]
         [HttpGet]
+        [Route("api/users")]
         public IActionResult GetListUser()
         {
             try
@@ -146,10 +147,11 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // POST api/User
+        // POST api/Users
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
+        [Route("api/users")]
         public IActionResult CreateUser([FromBody] User User)
         {
             try

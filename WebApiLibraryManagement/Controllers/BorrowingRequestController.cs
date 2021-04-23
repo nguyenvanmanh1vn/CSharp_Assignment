@@ -17,14 +17,14 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class BorrowingRequestsController : ControllerBase
+    public class BorrowingRequestController : ControllerBase
     {
-        private readonly ILogger<BorrowingRequestsController> _logger;
+        private readonly ILogger<BorrowingRequestController> _logger;
         private readonly IBorrowingRequestRepository _repository;
         private readonly IBorrowingRequestDetailsRepository _bRDRepository;
         private readonly IBorrowingRequestServices _services;
 
-        public BorrowingRequestsController(ILogger<BorrowingRequestsController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository bRDRepository, IBorrowingRequestServices services)
+        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository bRDRepository, IBorrowingRequestServices services)
         {
             _logger = logger;
             _repository = repository;
@@ -37,6 +37,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_BorrowingRequest
         // [Authorize(Roles = "Admin")]
         [HttpGet]
+        [Route("api/borrowingRequests")]
         public IActionResult GetListBorrowingRequest()
         {
             try
@@ -87,6 +88,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "User, Admin")]
         [HttpPost]
+        [Route("api/borrowingRequests")]
         public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequestDTO borrowingRequestDTO)
         {
             try
@@ -215,7 +217,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_BorrowingRequest_By_User_Id
         // [Authorize(Roles = "User, Admin")]
         [HttpGet]
-        [Route("getListByUserId")]
+        [Route("api/borrowingRequests/getListByUserId")]
         public IActionResult GetListBorrowingRequestByUserId([FromQuery] int userId)
         {
             try

@@ -3,7 +3,7 @@ using WebApiLibraryManagement.Models;
 
 namespace WebApiLibraryManagement.Repositories
 {
-    public interface IUsersRepository : IGenericRepository<User>
+    public interface IUserRepository : IGenericRepository<User>
     {
         string GetMD5(string str);
         IEnumerable<User> GetAllInclude();

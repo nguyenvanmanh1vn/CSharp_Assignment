@@ -16,22 +16,23 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-        private readonly ILogger<CategoriesController> _logger;
+        private readonly ILogger<CategoryController> _logger;
         private readonly ICategoryRepository _repository;
 
-        public CategoriesController(ILogger<CategoriesController> logger, ICategoryRepository repository)
+        public CategoryController(ILogger<CategoryController> logger, ICategoryRepository repository)
         {
             _logger = logger;
             _repository = repository;
         }
         #endregion
 
-        // GET: api/category
+        // GET: api/categories
         #region snippet_Get_List_Category
         // [Authorize(Roles = "Admin")]
         [HttpGet]
+        [Route("api/categories")]
         public IActionResult GetListCategory()
         {
             try
@@ -78,10 +79,11 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // POST api/category
+        // POST api/categories
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
+        [Route("api/categories")]
         public IActionResult CreateCategory([FromBody] Category category)
         {
             try
