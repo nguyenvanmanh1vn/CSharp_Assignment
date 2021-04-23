@@ -15,7 +15,7 @@ using WebApiLibraryManagement.Services;
 namespace WebApiLibraryManagement.Controllers
 {
     #region TodoController
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class BorrowingRequestController : ControllerBase
     {
@@ -37,7 +37,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_BorrowingRequest
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/borrowingRequests")]
+        [Route("borrowingRequests")]
         public IActionResult GetListBorrowingRequest()
         {
             try
@@ -58,7 +58,7 @@ namespace WebApiLibraryManagement.Controllers
         // GET: api/BorrowingRequest/:id
         #region snippet_Get_BorrowingRequest_By_Id
         // [Authorize(Roles = "Admin")]
-        [HttpGet("{id}", Name = "BorrowingRequestById")]
+        [HttpGet("borrowingRequest/{id}", Name = "BorrowingRequestById")]
         public IActionResult GetBorrowingRequestById(int id)
         {
             try
@@ -84,11 +84,11 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // POST api/BorrowingRequest
+        // POST api/BorrowingRequests
         #region snippet_Create
         // [Authorize(Roles = "User, Admin")]
         [HttpPost]
-        [Route("api/borrowingRequests")]
+        [Route("borrowingRequests")]
         public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequestDTO borrowingRequestDTO)
         {
             try
@@ -133,7 +133,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/BorrowingRequest/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]
-        [HttpPut("{id}")]
+        [HttpPut("borrowingRequest/{id}")]
         public ActionResult UpdateBorrowingRequest(int id, [FromBody] BorrowingRequest newBorrowingRequest)
         {
             try
@@ -182,7 +182,7 @@ namespace WebApiLibraryManagement.Controllers
         // DELETE api/BorrowingRequest/:id
         #region snippet_Delete
         // [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("borrowingRequest/{id}")]
         public IActionResult DeleteBorrowingRequest(int id)
         {
             try
@@ -217,7 +217,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_BorrowingRequest_By_User_Id
         // [Authorize(Roles = "User, Admin")]
         [HttpGet]
-        [Route("api/borrowingRequests/getListByUserId")]
+        [Route("borrowingRequests/getListByUserId")]
         public IActionResult GetListBorrowingRequestByUserId([FromQuery] int userId)
         {
             try

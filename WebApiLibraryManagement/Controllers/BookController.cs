@@ -14,14 +14,14 @@ using Microsoft.AspNetCore.Authorization;
 namespace WebApiLibraryManagement.Controllers
 {
     #region TodoController
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class BooksController : ControllerBase
     {
-        private readonly ILogger<BookController> _logger;
+        private readonly ILogger<BooksController> _logger;
         private readonly IBookRepository _repository;
 
-        public BookController(ILogger<BookController> logger, IBookRepository repository)
+        public BooksController(ILogger<BooksController> logger, IBookRepository repository)
         {
             _logger = logger;
             _repository = repository;
@@ -32,7 +32,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_Book
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/books")]
+        [Route("books")]
         public IActionResult GetListBook()
         {
             try
@@ -53,7 +53,7 @@ namespace WebApiLibraryManagement.Controllers
         // GET: api/book/:id
         #region snippet_Get_Book_By_Id
         // [Authorize(Roles = "Admin")]
-        [HttpGet("{id}", Name = "BookById")]
+        [HttpGet("book/{id}", Name = "BookById")]
         public IActionResult GetBookById(int id)
         {
             try
@@ -83,7 +83,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_All_Books_With_Details
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/books/get/all")]
+        [Route("books/get/all")]
         public IEnumerable<Book> GetAllBooksWithDetails()
         {
             // return _repository.GetAllInclude();
@@ -110,7 +110,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
-        [Route("api/books")]
+        [Route("books")]
         public IActionResult CreateBook([FromBody] Book book)
         {
             try
@@ -150,7 +150,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/book/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]
-        [HttpPut("{id}")]
+        [HttpPut("book/{id}")]
         public IActionResult UpdateBook(int id, [FromBody] Book newBook)
         {
             try
@@ -200,7 +200,7 @@ namespace WebApiLibraryManagement.Controllers
         // DELETE api/book/:id
         #region snippet_Delete
         // [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("book/{id}")]
         public IActionResult DeleteBook(int id)
         {
             try
@@ -235,7 +235,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_Book_By_Category_Id
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/books/getListByCategoryId")]
+        [Route("books/getListByCategoryId")]
         public IActionResult GetListByCategoryId([FromQuery] int categoryId)
         {
             try

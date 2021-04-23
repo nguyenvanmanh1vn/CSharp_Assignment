@@ -16,7 +16,7 @@ using WebApiLibraryManagement.Services;
 namespace WebApiLibraryManagement.Controllers
 {
     #region TodoController
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -35,7 +35,7 @@ namespace WebApiLibraryManagement.Controllers
         // api/users/login
         #region Post_Login
         [HttpPost]
-        [Route("api/users/login")]
+        [Route("users/login")]
         public ActionResult PostLogin(FormUserLogin _user)
         {
             try
@@ -58,7 +58,7 @@ namespace WebApiLibraryManagement.Controllers
         // api/users/register
         // #region Post
         // [HttpPost]
-        // [Route("register")]
+        // [Route("users/register")]
         // public async Task<ActionResult> PostRegister([FromForm] FormUserRegister _user)
         // {
         //     var check = _repository.PostRegister(_user.Email);
@@ -100,7 +100,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_User
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/users")]
+        [Route("users")]
         public IActionResult GetListUser()
         {
             try
@@ -121,7 +121,7 @@ namespace WebApiLibraryManagement.Controllers
         // GET: api/User/:id
         #region snippet_Get_User_By_Id
         // [Authorize(Roles = "Admin")]
-        [HttpGet("{id}", Name = "UserById")]
+        [HttpGet("user/{id}", Name = "UserById")]
         public IActionResult GetUserById(int id)
         {
             try
@@ -151,7 +151,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
-        [Route("api/users")]
+        [Route("users")]
         public IActionResult CreateUser([FromBody] User User)
         {
             try
@@ -201,7 +201,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/User/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]
-        [HttpPut("{id}")]
+        [HttpPut("user/{id}")]
         public ActionResult UpdateUser(int id, [FromBody] User newUser)
         {
             try
@@ -258,7 +258,7 @@ namespace WebApiLibraryManagement.Controllers
         // DELETE api/User/:id
         #region snippet_Delete
         // [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("user/{id}")]
         public IActionResult DeleteUser(int id)
         {
             try

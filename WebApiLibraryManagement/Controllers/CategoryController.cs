@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace WebApiLibraryManagement.Controllers
 {
     #region TodoController
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class CategoryController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Get_List_Category
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("api/categories")]
+        [Route("categories")]
         public IActionResult GetListCategory()
         {
             try
@@ -53,7 +53,7 @@ namespace WebApiLibraryManagement.Controllers
         // GET: api/category/:id
         #region snippet_Get_Category_By_Id
         // [Authorize(Roles = "Admin")]
-        [HttpGet("{id}", Name = "CategoryById")]
+        [HttpGet("category/{id}", Name = "CategoryById")]
         public IActionResult GetCategoryById(int id)
         {
             try
@@ -83,7 +83,7 @@ namespace WebApiLibraryManagement.Controllers
         #region snippet_Create
         // [Authorize(Roles = "Admin")]
         [HttpPost]
-        [Route("api/categories")]
+        [Route("categories")]
         public IActionResult CreateCategory([FromBody] Category category)
         {
             try
@@ -124,7 +124,7 @@ namespace WebApiLibraryManagement.Controllers
         // PUT api/category/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]
-        [HttpPut("{id}")]
+        [HttpPut("category/{id}")]
         public ActionResult UpdateCategory(int id, [FromBody] Category newCategory)
         {
             try
@@ -172,7 +172,7 @@ namespace WebApiLibraryManagement.Controllers
         // DELETE api/category/:id
         #region snippet_Delete
         // [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
+        [HttpDelete("category/{id}")]
         public IActionResult DeleteCategory(int id)
         {
             try
