@@ -92,7 +92,7 @@ namespace WebApiLibraryManagement.Controllers
         {
             try
             {
-                var book = _repository.GetById(id);
+                var book = _repository.GetBookById(id);
                 if (book == null)
                 {
                     _logger.LogError($"Book with id: {id}, hasn't been found in db.");

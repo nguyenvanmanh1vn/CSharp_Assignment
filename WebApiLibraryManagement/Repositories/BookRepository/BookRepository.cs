@@ -29,5 +29,9 @@ namespace WebApiLibraryManagement.Repositories
         {
             return Entities.Where(b => b.CategoryId == categoryId).ToList();
         }
+        public Book GetBookById(int id)
+        {
+            return Entities.AsNoTracking().AsQueryable().Include(b => b.Author).Include(b => b.Category).SingleOrDefault(b => b.Id == id);
+        }
     }
 }
