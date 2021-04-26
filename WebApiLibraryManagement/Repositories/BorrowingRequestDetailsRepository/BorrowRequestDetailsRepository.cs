@@ -7,16 +7,16 @@ using System;
 
 namespace WebApiLibraryManagement.Repositories
 {
-    public class BorrowingRequestDetailsRepository : IBorrowingRequestDetailsRepository
+    public class BorrowRequestDetailsRepository : IBorrowRequestDetailsRepository
     {
         protected readonly RepositoryContext _context;
-        protected readonly DbSet<BorrowingRequestDetail> _entities;
-        public BorrowingRequestDetailsRepository(RepositoryContext context)
+        protected readonly DbSet<BorrowRequestDetail> _entities;
+        public BorrowRequestDetailsRepository(RepositoryContext context)
         {
             _context = context;
-            _entities = context.Set<BorrowingRequestDetail>();
+            _entities = context.Set<BorrowRequestDetail>();
         }
-        public void Insert(BorrowingRequestDetail entity)
+        public void Insert(BorrowRequestDetail entity)
         {
             if (entity == null)
             {

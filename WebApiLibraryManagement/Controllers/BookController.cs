@@ -9,6 +9,7 @@ using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -28,17 +29,50 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
+        // // GET: api/books
+        // #region snippet_Get_List_Book
+        // // [Authorize(Roles = "Admin")]
+        // [HttpGet]
+        // [Route("books")]
+        // public IActionResult GetListBook()
+        // {
+        //     try
+        //     {
+        //         var books = _repository.GetList();
+        //         _logger.LogInformation($"Returned all books from database.");
+
+        //         return Ok(books);
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
+        //         return StatusCode(500, "Internal server error");
+        //     }
+        // }
+        // #endregion
+
         // GET: api/books
-        #region snippet_Get_List_Book
+        #region snippet_Get_Books_Paging
         // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("books")]
-        public IActionResult GetListBook()
+        public IActionResult GetBooksPaging([FromQuery] BookParameters bookParameters)
         {
             try
             {
-                var books = _repository.GetList();
-                _logger.LogInformation($"Returned all books from database.");
+                var books = _repository.GetBooks(bookParameters);
+
+                var metadata = new
+                {
+                    books.TotalCount,
+                    books.PageSize,
+                    books.CurrentPage,
+                    books.TotalPages,
+                    books.HasNext,
+                    books.HasPrevious
+                };
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+                _logger.LogInformation($"Returned {books.TotalCount} books from database.");
 
                 return Ok(books);
             }
@@ -87,22 +121,7 @@ namespace WebApiLibraryManagement.Controllers
         public IEnumerable<Book> GetAllBooksWithDetails()
         {
             // return _repository.GetAllInclude();
-            return _repository.GetAllWithDetails(b => b.Author, b => b.Category).Select(b => new Book
-            {
-                Id = b.Id,
-                Title = b.Title,
-                Author = b.Author != null ? new Author
-                {
-                    Id = b.Author.Id,
-                    FirstName = b.Author.FirstName,
-                    LastName = b.Author.LastName
-                } : null,
-                Category = b.Category != null ? new Category
-                {
-                    Id = b.Category.Id,
-                    Name = b.Category.Name
-                } : null
-            });
+            return _repository.GetByQueryConditions().AsQueryable().Include(b => b.Author).ThenInclude(a => a.Books).Include(b => b.Category);
         }
         #endregion
 

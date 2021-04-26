@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApiLibraryManagement.Models
 {
-    public class BorrowingRequestDTO
+    public class BorrowRequestDTO
     {
         [Required]
         public int UserId { get; set; }

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiLibraryManagement.Models
 {
-    public class BorrowingRequest : BaseEntity
+    public class BorrowRequest : BaseEntity
     {
         [Required]
         [FromQuery(Name = "userId")]
@@ -18,6 +18,6 @@ namespace WebApiLibraryManagement.Models
         [StringLength(10)]
         public string Status { get; set; }
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public virtual List<BorrowingRequestDetail> BorrowingRequestDetails { get; set; }
+        public virtual List<BorrowRequestDetail> BorrowRequestDetails { get; set; }
     }
 }

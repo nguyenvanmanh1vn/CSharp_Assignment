@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using WebApiLibraryManagement.Services;
+using Newtonsoft.Json;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -96,19 +97,33 @@ namespace WebApiLibraryManagement.Controllers
         // }
         // #endregion
 
+
         // GET: api/User
         #region snippet_Get_List_User
         // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("users")]
-        public IActionResult GetListUser()
+        public IActionResult GetAccountsForUser([FromQuery] UserParameters parameters)
         {
             try
             {
-                var categories = _repository.GetList();
-                _logger.LogInformation($"Returned all categories from database.");
+                var accounts = _repository.GetUsers(parameters);
 
-                return Ok(categories);
+                var metadata = new
+                {
+                    accounts.TotalCount,
+                    accounts.PageSize,
+                    accounts.CurrentPage,
+                    accounts.TotalPages,
+                    accounts.HasNext,
+                    accounts.HasPrevious
+                };
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+
+                _logger.LogInformation($"Returned {accounts.TotalCount} users from database.");
+
+                return Ok(accounts);
             }
             catch (Exception ex)
             {
@@ -172,16 +187,16 @@ namespace WebApiLibraryManagement.Controllers
                 {
                     var entity = new User
                     {
+                        Email = User.Email,
+                        Password = User.Password,
                         FirstName = User.FirstName,
                         LastName = User.LastName,
-                        Email = User.Email,
                         Avatar = User.Avatar,
                         Address = User.Address,
-                        Password = User.Password,
-                        Phone = User.Phone,
-                        Age = User.Age,
                         DateOfBirth = User.DateOfBirth,
-                        RoleId = User.RoleId,
+                        RoleId = 2,
+                        Phone = User.Phone,
+                        Age = DateTime.Now.Year - User.DateOfBirth.Year,
                         CreatedDate = DateTime.Now
                     };
 
@@ -235,7 +250,7 @@ namespace WebApiLibraryManagement.Controllers
                         Address = newUser.Address,
                         Password = newUser.Password,
                         Phone = newUser.Phone,
-                        Age = newUser.Age,
+                        Age = DateTime.Now.Year - newUser.DateOfBirth.Year,
                         DateOfBirth = newUser.DateOfBirth,
                         RoleId = newUser.RoleId,
                         CreatedDate = oldUser.CreatedDate,

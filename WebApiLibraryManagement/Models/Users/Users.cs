@@ -31,7 +31,7 @@ namespace WebApiLibraryManagement.Models
         [StringLength(100, ErrorMessage = "Address cannot be loner then 100 characters")]
         public string Address { get; set; }
 
-        public virtual List<BorrowingRequest> BorrowingRequests { get; set; }
+        public virtual List<BorrowRequest> BorrowRequests { get; set; }
         [Required]
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }

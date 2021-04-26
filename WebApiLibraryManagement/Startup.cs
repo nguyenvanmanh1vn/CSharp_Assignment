@@ -51,11 +51,11 @@ namespace WebApiLibraryManagement
 
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IBorrowingRequestRepository, BorrowingRequestRepository>();
-            services.AddScoped<IBorrowingRequestDetailsRepository, BorrowingRequestDetailsRepository>();
+            services.AddScoped<IBorrowRequestRepository, BorrowRequestRepository>();
+            services.AddScoped<IBorrowRequestDetailsRepository, BorrowRequestDetailsRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
 
-            services.AddScoped<IBorrowingRequestServices, BorrowingRequestServices>();
+            services.AddScoped<IBorrowRequestServices, BorrowRequestServices>();
             services.AddScoped<IUserServices, UserServices>();
         }
 

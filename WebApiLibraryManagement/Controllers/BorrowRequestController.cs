@@ -10,6 +10,7 @@ using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using WebApiLibraryManagement.Services;
+using Newtonsoft.Json;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -17,14 +18,14 @@ namespace WebApiLibraryManagement.Controllers
     #region TodoController
     [Route("api/")]
     [ApiController]
-    public class BorrowingRequestController : ControllerBase
+    public class BorrowRequestController : ControllerBase
     {
-        private readonly ILogger<BorrowingRequestController> _logger;
-        private readonly IBorrowingRequestRepository _repository;
-        private readonly IBorrowingRequestDetailsRepository _bRDRepository;
-        private readonly IBorrowingRequestServices _services;
+        private readonly ILogger<BorrowRequestController> _logger;
+        private readonly IBorrowRequestRepository _repository;
+        private readonly IBorrowRequestDetailsRepository _bRDRepository;
+        private readonly IBorrowRequestServices _services;
 
-        public BorrowingRequestController(ILogger<BorrowingRequestController> logger, IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository bRDRepository, IBorrowingRequestServices services)
+        public BorrowRequestController(ILogger<BorrowRequestController> logger, IBorrowRequestRepository repository, IBorrowRequestDetailsRepository bRDRepository, IBorrowRequestServices services)
         {
             _logger = logger;
             _repository = repository;
@@ -33,17 +34,28 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // GET: api/BorrowingRequest
-        #region snippet_Get_List_BorrowingRequest
+        // GET: api/BorrowRequest
+        #region snippet_Get_List_BorrowRequest
         // [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("borrowingRequests")]
-        public IActionResult GetListBorrowingRequest()
+        [Route("borrowRequests")]
+        public IActionResult GetListBorrowRequest([FromQuery] BorrowRequestParameters borrowRequestParameters)
         {
             try
             {
-                var borrowingRequests = _repository.GetList();
-                _logger.LogInformation($"Returned all borrowing Requests from database.");
+                var borrowingRequests = _repository.GetBorrowRequests(borrowRequestParameters);
+                var metadata = new
+                {
+                    borrowingRequests.TotalCount,
+                    borrowingRequests.PageSize,
+                    borrowingRequests.CurrentPage,
+                    borrowingRequests.TotalPages,
+                    borrowingRequests.HasNext,
+                    borrowingRequests.HasPrevious
+                };
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+                _logger.LogInformation($"Returned {borrowingRequests.TotalCount} borrowRequests from database.");
 
                 return Ok(borrowingRequests);
             }
@@ -55,11 +67,11 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // GET: api/BorrowingRequest/:id
-        #region snippet_Get_BorrowingRequest_By_Id
+        // GET: api/BorrowRequest/:id
+        #region snippet_Get_BorrowRequest_By_Id
         // [Authorize(Roles = "Admin")]
-        [HttpGet("borrowingRequest/{id}", Name = "BorrowingRequestById")]
-        public IActionResult GetBorrowingRequestById(int id)
+        [HttpGet("borrowRequest/{id}", Name = "BorrowRequestById")]
+        public IActionResult GetBorrowRequestById(int id)
         {
             try
             {
@@ -84,16 +96,16 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // POST api/BorrowingRequests
+        // POST api/BorrowRequests
         #region snippet_Create
         // [Authorize(Roles = "User, Admin")]
         [HttpPost]
-        [Route("borrowingRequests")]
-        public IActionResult CreateBorrowingRequest([FromBody] BorrowingRequestDTO borrowingRequestDTO)
+        [Route("borrowRequests")]
+        public IActionResult CreateBorrowRequest([FromBody] BorrowRequestDTO borrowRequestDTO)
         {
             try
             {
-                if (borrowingRequestDTO == null)
+                if (borrowRequestDTO == null)
                 {
                     _logger.LogError("BorrowingRequest object sent from client is null.");
                     return BadRequest("BorrowingRequest object is null");
@@ -107,34 +119,34 @@ namespace WebApiLibraryManagement.Controllers
 
                 else
                 {
-                    int[] arrayBookIds = _services.arrayBookIds(borrowingRequestDTO);
-                    bool isBRValid = _services.IsBRInABRValid(arrayBookIds, borrowingRequestDTO);
-                    bool isBRInAMonthValid = _services.IsNumberOfTimesBRInMonthValid(borrowingRequestDTO);
+                    int[] arrayBookIds = _services.arrayBookIds(borrowRequestDTO);
+                    bool isBRValid = _services.IsBRInABRValid(arrayBookIds, borrowRequestDTO);
+                    bool isBRInAMonthValid = _services.IsNumberOfTimesBRInMonthValid(borrowRequestDTO);
 
                     if (isBRValid == false) return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
 
-                    if (isBRInAMonthValid == false) return ValidationProblem("You can't create 3 borrowing requests in a month");
+                    if (isBRInAMonthValid == false) return ValidationProblem("You can't create 3 borrow requests in a month");
 
-                    BorrowingRequest entity = _services.CreateBorrowingRequest(arrayBookIds, borrowingRequestDTO);
+                    BorrowRequest entity = _services.CreateBorrowRequest(arrayBookIds, borrowRequestDTO);
 
-                    _services.CreateBorrowingRequestDetails(entity.Id, arrayBookIds);
+                    _services.CreateBorrowRequestDetails(entity.Id, arrayBookIds);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside Create Borrowing Request action: {ex.Message}");
+                _logger.LogError($"Something went wrong inside Create Borrow Request action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
         #endregion
 
-        // PUT api/BorrowingRequest/:id
+        // PUT api/BorrowRequest/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]
-        [HttpPut("borrowingRequest/{id}")]
-        public ActionResult UpdateBorrowingRequest(int id, [FromBody] BorrowingRequest newBorrowingRequest)
+        [HttpPut("borrowRequest/{id}")]
+        public ActionResult UpdateBorrowRequest(int id, [FromBody] BorrowRequest newBorrowingRequest)
         {
             try
             {
@@ -157,7 +169,7 @@ namespace WebApiLibraryManagement.Controllers
                 }
                 else
                 {
-                    var borrowingRequestEntity = new BorrowingRequest
+                    var borrowingRequestEntity = new BorrowRequest
                     {
                         Id = id,
                         UserId = newBorrowingRequest.UserId,
@@ -179,11 +191,11 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // DELETE api/BorrowingRequest/:id
+        // DELETE api/BorrowRequest/:id
         #region snippet_Delete
         // [Authorize(Roles = "Admin")]
-        [HttpDelete("borrowingRequest/{id}")]
-        public IActionResult DeleteBorrowingRequest(int id)
+        [HttpDelete("borrowRequest/{id}")]
+        public IActionResult DeleteBorrowRequest(int id)
         {
             try
             {
@@ -213,16 +225,16 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
-        // GET: api/BorrowingRequest/getlistbyuserid?userid=1
+        // GET: api/BorrowRequest/getlistbyuserid?userid=1
         #region snippet_Get_List_BorrowingRequest_By_User_Id
         // [Authorize(Roles = "User, Admin")]
         [HttpGet]
-        [Route("borrowingRequests/getListByUserId")]
-        public IActionResult GetListBorrowingRequestByUserId([FromQuery] int userId)
+        [Route("borrowRequests/getListByUserId")]
+        public IActionResult GetListBorrowRequestByUserId([FromQuery] int userId)
         {
             try
             {
-                var listBorrowingRequest = _repository.GetListBorrowingRequestByUserId(userId);
+                var listBorrowingRequest = _repository.GetListBorrowRequestByUserId(userId);
 
                 _logger.LogInformation($"Returned all borrowing Requests from database by UserId.");
                 return Ok(listBorrowingRequest);

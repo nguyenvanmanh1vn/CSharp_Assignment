@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System;
 using WebApiLibraryManagement.Services;
+using WebApiLibraryManagement.Helpers;
 
 namespace WebApiLibraryManagement.Repositories
 {
@@ -23,6 +24,15 @@ namespace WebApiLibraryManagement.Repositories
             return Entities
                 .Include(u => u.Role)
                 .ToList();
+        }
+
+        public PagedList<User> GetUsers(UserParameters userParameters)
+        {
+            return PagedList<User>
+                    .ToPagedList(Entities
+                    .OrderBy(b => b.FirstName),
+                userParameters.PageNumber,
+                userParameters.PageSize);
         }
         public string GetMD5(string str)
         {

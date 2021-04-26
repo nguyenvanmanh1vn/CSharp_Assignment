@@ -10,7 +10,7 @@ using WebApiLibraryManagement.Repositories;
 namespace WebApiLibraryManagement.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20210420081341_CreateInitial")]
+    [Migration("20210426042124_CreateInitial")]
     partial class CreateInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,7 +56,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(236),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(1734),
                             FirstName = "Manh",
                             Gender = "Male",
                             LastName = "Nguyen"
@@ -64,7 +64,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3097),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2674),
                             FirstName = "Linh",
                             Gender = "Female",
                             LastName = "Tran"
@@ -72,7 +72,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3116),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2679),
                             FirstName = "Huong",
                             Gender = "Female",
                             LastName = "Nguyen"
@@ -80,7 +80,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3120),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2681),
                             FirstName = "Mai",
                             Gender = "Female",
                             LastName = "Bui"
@@ -88,7 +88,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3125),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2683),
                             FirstName = "Kien",
                             Gender = "Male",
                             LastName = "Do"
@@ -96,7 +96,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3130),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2684),
                             FirstName = "Dung",
                             Gender = "Male",
                             LastName = "Nguyen"
@@ -124,8 +124,7 @@ namespace WebApiLibraryManagement.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -141,7 +140,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             AuthorId = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 478, DateTimeKind.Local).AddTicks(6879),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 453, DateTimeKind.Local).AddTicks(5951),
                             Title = "JavaScript"
                         },
                         new
@@ -149,7 +148,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 2,
                             AuthorId = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(297),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8009),
                             Title = "C#"
                         },
                         new
@@ -157,7 +156,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 3,
                             AuthorId = 3,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(336),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8038),
                             Title = "HTML"
                         },
                         new
@@ -165,7 +164,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 4,
                             AuthorId = 4,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(340),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8041),
                             Title = "CSS"
                         },
                         new
@@ -173,7 +172,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 5,
                             AuthorId = 5,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(344),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8042),
                             Title = "React"
                         },
                         new
@@ -181,7 +180,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 6,
                             AuthorId = 6,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(346),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8043),
                             Title = "Unit Test"
                         },
                         new
@@ -189,12 +188,52 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 7,
                             AuthorId = 1,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 480, DateTimeKind.Local).AddTicks(429),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8045),
                             Title = "Note Js"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AuthorId = 1,
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8047),
+                            Title = "Persepolis : The Story of a Childhood"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AuthorId = 1,
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8048),
+                            Title = "Narrative of the Life of Frederick Douglass, an American Slave"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AuthorId = 1,
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8050),
+                            Title = "Do What You Are : Discover the Perfect Career for You Through the Secrets of Personality Type"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AuthorId = 1,
+                            CategoryId = 6,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8051),
+                            Title = "Naruto, Vol. 3"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AuthorId = 1,
+                            CategoryId = 7,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8053),
+                            Title = "Adobe Photoshop CS3 for Photographers : A Professional Image Editor's Guide to the Creative Use of Photoshop for the Macintosh and PC"
                         });
                 });
 
-            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowingRequest", b =>
+            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowRequest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -224,41 +263,41 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(5541),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4713),
                             Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6673),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6344),
                             Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6687),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6363),
                             Status = "Waiting",
                             UserId = 2
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6690),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6366),
                             Status = "Rejected",
                             UserId = 3
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(6692),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6370),
                             Status = "Approved",
                             UserId = 4
                         });
                 });
 
-            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowingRequestDetail", b =>
+            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowRequestDetail", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -268,6 +307,9 @@ namespace WebApiLibraryManagement.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("BorrowRequestId")
+                        .HasColumnType("int");
+
                     b.Property<int>("BorrowingRequestId")
                         .HasColumnType("int");
 
@@ -275,7 +317,7 @@ namespace WebApiLibraryManagement.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.HasIndex("BorrowingRequestId");
+                    b.HasIndex("BorrowRequestId");
 
                     b.ToTable("BorrowingRequestDetails");
 
@@ -343,14 +385,44 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(3682),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2947),
                             Name = "Front End"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(5156),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4035),
                             Name = "Back End"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4042),
+                            Name = "Arts & Music"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4044),
+                            Name = "Biographies"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4046),
+                            Name = "Business"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4048),
+                            Name = "Comics"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4050),
+                            Name = "Computers & Tech"
                         });
                 });
 
@@ -459,7 +531,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             Address = "Ha Noi",
                             Age = 24,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 483, DateTimeKind.Local).AddTicks(9785),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(9327),
                             DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manh@gmail.com",
                             FirstName = "Manh",
@@ -474,7 +546,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 2,
                             Address = "Quang Ninh",
                             Age = 23,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2644),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(656),
                             DateOfBirth = new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tung@gmail.com",
                             FirstName = "Tung",
@@ -489,7 +561,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 3,
                             Address = "Ha Noi",
                             Age = 22,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2655),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(660),
                             DateOfBirth = new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "trang@gmail.com",
                             FirstName = "Trang",
@@ -504,7 +576,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 4,
                             Address = "Ho Chi Minh",
                             Age = 21,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2664),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(665),
                             DateOfBirth = new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "thu@gmail.com",
                             FirstName = "Thu",
@@ -519,7 +591,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 5,
                             Address = "Nghe An",
                             Age = 20,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2673),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(668),
                             DateOfBirth = new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hung@gmail.com",
                             FirstName = "Hung",
@@ -534,7 +606,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 6,
                             Address = "Da Nang",
                             Age = 19,
-                            CreatedDate = new DateTime(2021, 4, 20, 15, 13, 40, 484, DateTimeKind.Local).AddTicks(2682),
+                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(672),
                             DateOfBirth = new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "toan@gmail.com",
                             FirstName = "Toan",
@@ -565,10 +637,10 @@ namespace WebApiLibraryManagement.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowingRequest", b =>
+            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowRequest", b =>
                 {
                     b.HasOne("WebApiLibraryManagement.Models.User", "User")
-                        .WithMany("BorrowingRequests")
+                        .WithMany("BorrowRequests")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -576,23 +648,21 @@ namespace WebApiLibraryManagement.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowingRequestDetail", b =>
+            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowRequestDetail", b =>
                 {
                     b.HasOne("WebApiLibraryManagement.Models.Book", "Book")
-                        .WithMany("BorrowingRequestDetails")
+                        .WithMany("BorrowRequestDetails")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApiLibraryManagement.Models.BorrowingRequest", "BorrowingRequest")
-                        .WithMany("BorrowingRequestDetails")
-                        .HasForeignKey("BorrowingRequestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("WebApiLibraryManagement.Models.BorrowRequest", "BorrowRequest")
+                        .WithMany("BorrowRequestDetails")
+                        .HasForeignKey("BorrowRequestId");
 
                     b.Navigation("Book");
 
-                    b.Navigation("BorrowingRequest");
+                    b.Navigation("BorrowRequest");
                 });
 
             modelBuilder.Entity("WebApiLibraryManagement.Models.User", b =>
@@ -613,12 +683,12 @@ namespace WebApiLibraryManagement.Migrations
 
             modelBuilder.Entity("WebApiLibraryManagement.Models.Book", b =>
                 {
-                    b.Navigation("BorrowingRequestDetails");
+                    b.Navigation("BorrowRequestDetails");
                 });
 
-            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowingRequest", b =>
+            modelBuilder.Entity("WebApiLibraryManagement.Models.BorrowRequest", b =>
                 {
-                    b.Navigation("BorrowingRequestDetails");
+                    b.Navigation("BorrowRequestDetails");
                 });
 
             modelBuilder.Entity("WebApiLibraryManagement.Models.Category", b =>
@@ -633,7 +703,7 @@ namespace WebApiLibraryManagement.Migrations
 
             modelBuilder.Entity("WebApiLibraryManagement.Models.User", b =>
                 {
-                    b.Navigation("BorrowingRequests");
+                    b.Navigation("BorrowRequests");
                 });
 #pragma warning restore 612, 618
         }

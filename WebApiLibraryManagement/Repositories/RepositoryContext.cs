@@ -14,8 +14,8 @@ namespace WebApiLibraryManagement.Repositories
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<BorrowingRequest> BorrowingRequests { get; set; }
-        public DbSet<BorrowingRequestDetail> BorrowingRequestDetails { get; set; }
+        public DbSet<BorrowRequest> BorrowingRequests { get; set; }
+        public DbSet<BorrowRequestDetail> BorrowingRequestDetails { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
@@ -31,7 +31,12 @@ namespace WebApiLibraryManagement.Repositories
                 new { Id = 4, Title = "CSS", AuthorId = 4, CategoryId = 1, CreatedDate = DateTime.Now },
                 new { Id = 5, Title = "React", AuthorId = 5, CategoryId = 1, CreatedDate = DateTime.Now },
                 new { Id = 6, Title = "Unit Test", AuthorId = 6, CategoryId = 2, CreatedDate = DateTime.Now },
-                new { Id = 7, Title = "Note Js", AuthorId = 1, CategoryId = 2, CreatedDate = DateTime.Now }
+                new { Id = 7, Title = "Note Js", AuthorId = 1, CategoryId = 2, CreatedDate = DateTime.Now },
+                new { Id = 8, Title = "Persepolis : The Story of a Childhood", AuthorId = 1, CategoryId = 3, CreatedDate = DateTime.Now },
+                new { Id = 9, Title = "Narrative of the Life of Frederick Douglass, an American Slave", AuthorId = 1, CategoryId = 4, CreatedDate = DateTime.Now },
+                new { Id = 10, Title = "Do What You Are : Discover the Perfect Career for You Through the Secrets of Personality Type", AuthorId = 1, CategoryId = 5, CreatedDate = DateTime.Now },
+                new { Id = 11, Title = "Naruto, Vol. 3", AuthorId = 1, CategoryId = 6, CreatedDate = DateTime.Now },
+                new { Id = 12, Title = "Adobe Photoshop CS3 for Photographers : A Professional Image Editor's Guide to the Creative Use of Photoshop for the Macintosh and PC", AuthorId = 1, CategoryId = 7, CreatedDate = DateTime.Now }
             );
 
             // Author List
@@ -47,11 +52,16 @@ namespace WebApiLibraryManagement.Repositories
             // Category List
             modelBuilder.Entity<Category>().HasData(
                 new { Id = 1, Name = "Front End", BookId = 1, CreatedDate = DateTime.Now },
-                new { Id = 2, Name = "Back End", BookId = 2, CreatedDate = DateTime.Now }
+                new { Id = 2, Name = "Back End", BookId = 2, CreatedDate = DateTime.Now },
+                new { Id = 3, Name = "Arts & Music", BookId = 8, CreatedDate = DateTime.Now },
+                new { Id = 4, Name = "Biographies", BookId = 9, CreatedDate = DateTime.Now },
+                new { Id = 5, Name = "Business", BookId = 10, CreatedDate = DateTime.Now },
+                new { Id = 6, Name = "Comics", BookId = 11, CreatedDate = DateTime.Now },
+                new { Id = 7, Name = "Computers & Tech", BookId = 12, CreatedDate = DateTime.Now }
             );
 
             // Borrowing Request List
-            modelBuilder.Entity<BorrowingRequest>().HasData(
+            modelBuilder.Entity<BorrowRequest>().HasData(
                 new { Id = 1, UserId = 1, Status = "Approved", CreatedDate = DateTime.Now },
                 new { Id = 2, UserId = 1, Status = "Approved", CreatedDate = DateTime.Now },
                 new { Id = 3, UserId = 2, Status = "Waiting", CreatedDate = DateTime.Now },
@@ -60,7 +70,7 @@ namespace WebApiLibraryManagement.Repositories
             );
 
             // Borrowing Request Detail List
-            modelBuilder.Entity<BorrowingRequestDetail>().HasData(
+            modelBuilder.Entity<BorrowRequestDetail>().HasData(
                 new { Id = 1, BookId = 1, BorrowingRequestId = 1 },
                 new { Id = 2, BookId = 2, BorrowingRequestId = 1 },
                 new { Id = 3, BookId = 3, BorrowingRequestId = 1 },

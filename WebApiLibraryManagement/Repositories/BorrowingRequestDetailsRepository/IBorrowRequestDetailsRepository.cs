@@ -3,8 +3,8 @@ using WebApiLibraryManagement.Models;
 
 namespace WebApiLibraryManagement.Repositories
 {
-    public interface IBorrowingRequestDetailsRepository
+    public interface IBorrowRequestDetailsRepository
     {
-        void Insert(BorrowingRequestDetail borrowingRequestDetail);
+        void Insert(BorrowRequestDetail borrowRequestDetail);
     }
 }

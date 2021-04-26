@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using WebApiLibraryManagement.Helpers;
 using WebApiLibraryManagement.Models;
 
 namespace WebApiLibraryManagement.Repositories
@@ -7,6 +8,7 @@ namespace WebApiLibraryManagement.Repositories
     {
         string GetMD5(string str);
         IEnumerable<User> GetAllInclude();
+        PagedList<User> GetUsers(UserParameters userParameters);
         IEnumerable<User> GetListUserByRoleId(int roleId);
         User PostLogin(string email, string password);
         IEnumerable<User> PostRegister(string email);

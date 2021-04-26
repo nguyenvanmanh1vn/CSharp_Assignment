@@ -9,6 +9,7 @@ using WebApiLibraryManagement.Models;
 using WebApiLibraryManagement.Repositories;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
 
 // https://localhost:5001/swagger/index.html
 namespace WebApiLibraryManagement.Controllers
@@ -33,12 +34,23 @@ namespace WebApiLibraryManagement.Controllers
         // [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("categories")]
-        public IActionResult GetListCategory()
+        public IActionResult GetListCategory([FromQuery] CategoryParameters categoryParameters)
         {
             try
             {
-                var categories = _repository.GetList();
-                _logger.LogInformation($"Returned all categories from database.");
+                var categories = _repository.GetCategories(categoryParameters);
+                var metadata = new
+                {
+                    categories.TotalCount,
+                    categories.PageSize,
+                    categories.CurrentPage,
+                    categories.TotalPages,
+                    categories.HasNext,
+                    categories.HasPrevious
+                };
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+                _logger.LogInformation($"Returned {categories.TotalCount} categories from database.");
 
                 return Ok(categories);
             }

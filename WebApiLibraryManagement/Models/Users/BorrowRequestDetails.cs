@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApiLibraryManagement.Models
 {
-    public class BorrowingRequestDetail
+    public class BorrowRequestDetail
     {
         [Key]
         public int Id { get; set; }
@@ -12,6 +12,6 @@ namespace WebApiLibraryManagement.Models
         public virtual Book Book { get; set; }
         [Required]
         public int BorrowingRequestId { get; set; }
-        public virtual BorrowingRequest BorrowingRequest { get; set; }
+        public virtual BorrowRequest BorrowRequest { get; set; }
     }
 }

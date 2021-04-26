@@ -3,6 +3,7 @@ using WebApiLibraryManagement.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using WebApiLibraryManagement.Helpers;
 
 namespace WebApiLibraryManagement.Repositories
 {
@@ -12,14 +13,15 @@ namespace WebApiLibraryManagement.Repositories
         {
         }
 
-        // Eager Loading of Related Data
-        public IEnumerable<Book> GetAllInclude()
+        public PagedList<Book> GetBooks(BookParameters bookParameters)
         {
-            return Entities
-                .Include(book => book.Author)
-                .Include(book => book.Category)
-                .ToList();
+            return PagedList<Book>
+                    .ToPagedList(Entities
+                    .OrderBy(b => b.Title),
+                bookParameters.PageNumber,
+                bookParameters.PageSize);
         }
+
         public IEnumerable<Book> GetListBookByCategoryId(int categoryId)
         {
             return Entities.Where(b => b.CategoryId == categoryId).ToList();

@@ -7,29 +7,29 @@ using WebApiLibraryManagement.Repositories;
 
 namespace WebApiLibraryManagement.Services
 {
-    public class BorrowingRequestServices : IBorrowingRequestServices
+    public class BorrowRequestServices : IBorrowRequestServices
 
     {
-        private readonly IBorrowingRequestRepository _repository;
-        private readonly IBorrowingRequestDetailsRepository _bDRepository;
-        public BorrowingRequestServices(IBorrowingRequestRepository repository, IBorrowingRequestDetailsRepository bDRepository)
+        private readonly IBorrowRequestRepository _repository;
+        private readonly IBorrowRequestDetailsRepository _bDRepository;
+        public BorrowRequestServices(IBorrowRequestRepository repository, IBorrowRequestDetailsRepository bDRepository)
         {
             _repository = repository;
             _bDRepository = bDRepository;
         }
 
-        public int[] arrayBookIds(BorrowingRequestDTO borrowingRequestDTO)
+        public int[] arrayBookIds(BorrowRequestDTO borrowRequestDTO)
         {
-            return Array.ConvertAll(borrowingRequestDTO.BorrowBooks.Split(','), Int32.Parse);
+            return Array.ConvertAll(borrowRequestDTO.BorrowBooks.Split(','), Int32.Parse);
             /* Front End:
              * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
             */
         }
 
-        public bool IsNumberOfTimesBRInMonthValid(BorrowingRequestDTO borrowingRequestDTO)
+        public bool IsNumberOfTimesBRInMonthValid(BorrowRequestDTO borrowRequestDTO)
         {
 
-            int numberOfBorrowRequestsInMonth = _repository.GetAllWithDetails().Count(br => br.UserId == borrowingRequestDTO.UserId && br.CreatedDate.Month == DateTime.Now.Month);
+            int numberOfBorrowRequestsInMonth = _repository.GetByQueryConditions().Count(br => br.UserId == borrowRequestDTO.UserId && br.CreatedDate.Month == DateTime.Now.Month);
             if (numberOfBorrowRequestsInMonth >= 3)
             {
                 return false;
@@ -37,7 +37,7 @@ namespace WebApiLibraryManagement.Services
             return true;
         }
 
-        public bool IsBRInABRValid(int[] arrayBookIds, BorrowingRequestDTO borrowingRequestDTO)
+        public bool IsBRInABRValid(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO)
         {
             if (arrayBookIds.Length > 5)
             {
@@ -47,12 +47,12 @@ namespace WebApiLibraryManagement.Services
             return true;
         }
 
-        public BorrowingRequest CreateBorrowingRequest(int[] arrayBookIds, BorrowingRequestDTO borrowingRequestDTO)
+        public BorrowRequest CreateBorrowRequest(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO)
         {
 
-            var entity = new BorrowingRequest
+            var entity = new BorrowRequest
             {
-                UserId = borrowingRequestDTO.UserId,
+                UserId = borrowRequestDTO.UserId,
                 Status = "Waiting",
                 CreatedDate = DateTime.Now
             };
@@ -61,11 +61,11 @@ namespace WebApiLibraryManagement.Services
             return entity;
         }
 
-        public void CreateBorrowingRequestDetails(int bRId, int[] arrayBookIds)
+        public void CreateBorrowRequestDetails(int bRId, int[] arrayBookIds)
         {
             foreach (int bookId in arrayBookIds)
             {
-                var entityRequestDetails = new BorrowingRequestDetail
+                var entityRequestDetails = new BorrowRequestDetail
                 {
                     BookId = bookId,
                     BorrowingRequestId = bRId,
