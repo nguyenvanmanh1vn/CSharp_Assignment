@@ -37,7 +37,7 @@ namespace WebApiLibraryManagement.Controllers
         #region Post_Login
         [HttpPost]
         [Route("users/login")]
-        public ActionResult PostLogin(FormUserLogin _user)
+        public ActionResult PostLogin([FromBody] FormUserLogin _user)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace WebApiLibraryManagement.Controllers
         // #region Post
         // [HttpPost]
         // [Route("users/register")]
-        // public async Task<ActionResult> PostRegister([FromForm] FormUserRegister _user)
+        // public async Task<ActionResult> PostRegister([FromBody] FormUserRegister _user)
         // {
         //     var check = _repository.PostRegister(_user.Email);
         //     if (check.Count() > 0)
