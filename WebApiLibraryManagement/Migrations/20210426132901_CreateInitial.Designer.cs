@@ -10,7 +10,7 @@ using WebApiLibraryManagement.Repositories;
 namespace WebApiLibraryManagement.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20210426042124_CreateInitial")]
+    [Migration("20210426132901_CreateInitial")]
     partial class CreateInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,50 +56,82 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(1734),
-                            FirstName = "Manh",
-                            Gender = "Male",
-                            LastName = "Nguyen"
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 689, DateTimeKind.Local).AddTicks(9181),
+                            FirstName = "Marjane",
+                            Gender = "Female",
+                            LastName = "Satrapi"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2674),
-                            FirstName = "Linh",
-                            Gender = "Female",
-                            LastName = "Tran"
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(210),
+                            FirstName = "Frederick",
+                            Gender = "Male",
+                            LastName = "Douglass"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2679),
-                            FirstName = "Huong",
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(217),
+                            FirstName = "Barbara",
                             Gender = "Female",
-                            LastName = "Nguyen"
+                            LastName = "Barron"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2681),
-                            FirstName = "Mai",
-                            Gender = "Female",
-                            LastName = "Bui"
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(218),
+                            FirstName = "Masashi",
+                            Gender = "Male",
+                            LastName = "Kishimoto"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2683),
-                            FirstName = "Kien",
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(220),
+                            FirstName = "Martin",
                             Gender = "Male",
-                            LastName = "Do"
+                            LastName = "Evening"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2684),
-                            FirstName = "Dung",
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(222),
+                            FirstName = "Amadea",
+                            Gender = "Female",
+                            LastName = "Morningstar"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(224),
+                            FirstName = "Elizabeth",
+                            Gender = "Female",
+                            LastName = "Zimmermann"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(226),
+                            FirstName = "Al",
                             Gender = "Male",
-                            LastName = "Nguyen"
+                            LastName = "Seckel"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(228),
+                            FirstName = "Ann",
+                            Gender = "Female",
+                            LastName = "Lawson Christine"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(229),
+                            FirstName = "Deibler ",
+                            Gender = "Female",
+                            LastName = "Rose Darlene"
                         });
                 });
 
@@ -119,8 +151,14 @@ namespace WebApiLibraryManagement.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -140,96 +178,100 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             AuthorId = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 453, DateTimeKind.Local).AddTicks(5951),
-                            Title = "JavaScript"
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 687, DateTimeKind.Local).AddTicks(2607),
+                            Image = "https://img.thriftbooks.com/api/images/m/2540127da455500c49d0c50c71683b6f38f0b70b.jpg",
+                            Status = "Exist",
+                            Title = "Persepolis : The Story of a Childhood"
                         },
                         new
                         {
                             Id = 2,
                             AuthorId = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8009),
-                            Title = "C#"
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5289),
+                            Image = "https://img.thriftbooks.com/api/images/m/8303521a462dc3511f365b692830e3e16b370742.jpg",
+                            Status = "Borowed",
+                            Title = "Narrative of the Life of Frederick Douglass, an American Slave"
                         },
                         new
                         {
                             Id = 3,
                             AuthorId = 3,
-                            CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8038),
-                            Title = "HTML"
+                            CategoryId = 3,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5315),
+                            Image = "https://img.thriftbooks.com/api/images/m/721d5caa481de1e0b2ac04205606f92cce1adeae.jpg",
+                            Status = "Exist",
+                            Title = "Do What You Are : Discover the Perfect Career for You Through the Secrets of Personality Type"
                         },
                         new
                         {
                             Id = 4,
                             AuthorId = 4,
-                            CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8041),
-                            Title = "CSS"
+                            CategoryId = 4,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5318),
+                            Image = "https://img.thriftbooks.com/api/images/m/456fbecc05164ed1e327ff5ee9922475d1e38df0.jpg",
+                            Status = "Exist",
+                            Title = "Naruto, Vol. 3"
                         },
                         new
                         {
                             Id = 5,
                             AuthorId = 5,
-                            CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8042),
-                            Title = "React"
+                            CategoryId = 5,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5319),
+                            Image = "https://img.thriftbooks.com/api/images/m/f1690297c45711d15406be34e5397b6fcf843718.jpg",
+                            Status = "Exist",
+                            Title = "Adobe Photoshop CS3 for Photographers : A Professional Image Editor's Guide to the Creative Use of Photoshop for the Macintosh and PC"
                         },
                         new
                         {
                             Id = 6,
                             AuthorId = 6,
-                            CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8043),
-                            Title = "Unit Test"
+                            CategoryId = 6,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5321),
+                            Image = "https://img.thriftbooks.com/api/images/m/5ac192845cdf424b29b55fbfa03e0db7e0d278ff.jpg",
+                            Status = "Exist",
+                            Title = "The Ayurvedic Cookbook"
                         },
                         new
                         {
                             Id = 7,
-                            AuthorId = 1,
-                            CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8045),
-                            Title = "Note Js"
+                            AuthorId = 7,
+                            CategoryId = 7,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5322),
+                            Image = "https://img.thriftbooks.com/api/images/m/d7b2a08125cda604e3ba179b5f2fa64f56ee8583.jpg",
+                            Status = "Exist",
+                            Title = "Elizabeth Zimmermann's Knitter's Almanac"
                         },
                         new
                         {
                             Id = 8,
-                            AuthorId = 1,
-                            CategoryId = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8047),
-                            Title = "Persepolis : The Story of a Childhood"
+                            AuthorId = 8,
+                            CategoryId = 8,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5324),
+                            Image = "https://m.media-amazon.com/images/I/51788Fh430L._SL350_.jpg",
+                            Status = "Exist",
+                            Title = "The Ultimate Book of Optical Illusions"
                         },
                         new
                         {
                             Id = 9,
-                            AuthorId = 1,
-                            CategoryId = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8048),
-                            Title = "Narrative of the Life of Frederick Douglass, an American Slave"
+                            AuthorId = 9,
+                            CategoryId = 9,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5326),
+                            Image = "https://img.thriftbooks.com/api/images/m/8007fc770cbec3c2baaa3026595550d44fc907d4.jpg",
+                            Status = "Exist",
+                            Title = "Understanding the Borderline Mother : Helping Her Children Transcend the Intense, Unpredictable, and Volatile Relationship"
                         },
                         new
                         {
                             Id = 10,
-                            AuthorId = 1,
-                            CategoryId = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8050),
-                            Title = "Do What You Are : Discover the Perfect Career for You Through the Secrets of Personality Type"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            AuthorId = 1,
-                            CategoryId = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8051),
-                            Title = "Naruto, Vol. 3"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            AuthorId = 1,
-                            CategoryId = 7,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 454, DateTimeKind.Local).AddTicks(8053),
-                            Title = "Adobe Photoshop CS3 for Photographers : A Professional Image Editor's Guide to the Creative Use of Photoshop for the Macintosh and PC"
+                            AuthorId = 10,
+                            CategoryId = 10,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5328),
+                            Image = "https://m.media-amazon.com/images/I/415K3VeI3zL._SL350_.jpg",
+                            Status = "Exist",
+                            Title = "Evidence Not Seen: A Woman's Miraculous Faith in the Jungles of World War II"
                         });
                 });
 
@@ -263,35 +305,35 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4713),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1561),
                             Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6344),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2477),
                             Status = "Approved",
                             UserId = 1
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6363),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2483),
                             Status = "Waiting",
                             UserId = 2
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6366),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2485),
                             Status = "Rejected",
                             UserId = 3
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(6370),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2487),
                             Status = "Approved",
                             UserId = 4
                         });
@@ -385,44 +427,62 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(2947),
-                            Name = "Front End"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4035),
-                            Name = "Back End"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4042),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(622),
                             Name = "Arts & Music"
                         },
                         new
                         {
-                            Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4044),
+                            Id = 2,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1337),
                             Name = "Biographies"
                         },
                         new
                         {
-                            Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4046),
+                            Id = 3,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1342),
                             Name = "Business"
                         },
                         new
                         {
-                            Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4048),
+                            Id = 4,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1343),
                             Name = "Comics"
                         },
                         new
                         {
-                            Id = 7,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(4050),
+                            Id = 5,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1345),
                             Name = "Computers & Tech"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1346),
+                            Name = "Cooking"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1348),
+                            Name = "Education & Reference"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1350),
+                            Name = "Logic & Brain Teaser Books"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1352),
+                            Name = "Health & Fitness"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1353),
+                            Name = "History Books "
                         });
                 });
 
@@ -531,7 +591,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             Address = "Ha Noi",
                             Age = 24,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 456, DateTimeKind.Local).AddTicks(9327),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(4092),
                             DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manh@gmail.com",
                             FirstName = "Manh",
@@ -546,7 +606,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 2,
                             Address = "Quang Ninh",
                             Age = 23,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(656),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5207),
                             DateOfBirth = new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tung@gmail.com",
                             FirstName = "Tung",
@@ -561,7 +621,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 3,
                             Address = "Ha Noi",
                             Age = 22,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(660),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5211),
                             DateOfBirth = new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "trang@gmail.com",
                             FirstName = "Trang",
@@ -576,7 +636,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 4,
                             Address = "Ho Chi Minh",
                             Age = 21,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(665),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5215),
                             DateOfBirth = new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "thu@gmail.com",
                             FirstName = "Thu",
@@ -591,7 +651,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 5,
                             Address = "Nghe An",
                             Age = 20,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(668),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5218),
                             DateOfBirth = new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hung@gmail.com",
                             FirstName = "Hung",
@@ -606,7 +666,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 6,
                             Address = "Da Nang",
                             Age = 19,
-                            CreatedDate = new DateTime(2021, 4, 26, 11, 21, 23, 457, DateTimeKind.Local).AddTicks(672),
+                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5221),
                             DateOfBirth = new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "toan@gmail.com",
                             FirstName = "Toan",

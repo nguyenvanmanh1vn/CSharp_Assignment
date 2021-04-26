@@ -8,11 +8,13 @@ namespace WebApiLibraryManagement.Models
     {
         [Required]
         public string Title { get; set; }
+        public string Image { get; set; }
         [Required]
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }
         [Required]
         public int CategoryId { get; set; }
+        public string Status { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<BorrowRequestDetail> BorrowRequestDetails { get; set; }
     }

@@ -17,9 +17,12 @@ namespace WebApiLibraryManagement.Repositories
         {
             return PagedList<Book>
                     .ToPagedList(Entities
-                    .OrderBy(b => b.Title),
-                bookParameters.PageNumber,
-                bookParameters.PageSize);
+                        .AsQueryable()
+                        .Include(b => b.Author)
+                        .Include(b => b.Category)
+                        .OrderBy(b => b.Title),
+                    bookParameters.PageNumber,
+                    bookParameters.PageSize);
         }
 
         public IEnumerable<Book> GetListBookByCategoryId(int categoryId)
