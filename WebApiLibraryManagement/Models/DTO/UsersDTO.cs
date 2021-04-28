@@ -11,6 +11,8 @@ namespace WebApiLibraryManagement.Models
     }
     public class FormUserRegister
     {
+        public string Email { get; set; }
+        public string Password { get; set; }
         [Required(ErrorMessage = "Name is required")]
         [StringLength(60, ErrorMessage = "First Name can't be longer than 60 characters")]
         public string FirstName { get; set; }
@@ -18,8 +20,6 @@ namespace WebApiLibraryManagement.Models
         [Required(ErrorMessage = "Last Name is required")]
         [StringLength(60, ErrorMessage = "Last Name can't be longer than 60 characters")]
         public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
         public int Age { get; set; }
         [StringLength(50)]
         [Required]

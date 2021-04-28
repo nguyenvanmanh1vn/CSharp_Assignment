@@ -35,129 +35,26 @@ namespace WebApiLibraryManagement.Controllers
 
         // api/users/login
         #region Post_Login
-        [HttpPost]
         [Route("users/login")]
-        public ActionResult PostLogin([FromBody] FormUserLogin _user)
+        [HttpPost]
+        public IActionResult PostLogin([FromBody] FormUserLogin _user)
         {
-            try
-            {
-                var check = _repository.PostLogin(_user.Email, _user.Password);
-                if (check.Id > 0)
-                {
-                    return Ok(check);
-                }
-                return Ok(0);
 
+            var log = _repository.PostLogin(_user.Email, _user.Password);
+            if (log == null)
+            {
+                return Ok(new { status = 401, isSuccess = false, message = "Invalid User", });
             }
-            catch (Exception e)
+            else
             {
-                return Ok(e);
-            }
-        }
-        #endregion
-
-        // api/users/register
-        // #region Post
-        // [HttpPost]
-        // [Route("users/register")]
-        // public async Task<ActionResult> PostRegister([FromBody] FormUserRegister _user)
-        // {
-        //     var check = _repository.PostRegister(_user.Email);
-        //     if (check.Count() > 0)
-        //     {
-        //         return Ok(-1);
-        //     }
-        //     var user = new User
-        //     {
-        //         FirstName = _user.FirstName,
-        //         Age = _user.Age,
-        //         Email = _user.Email.ToLower(),
-        //         Address = _user.Address,
-        //         Password = _services.GetMD5(_user.Password),
-        //         DateOfBirth = _user.DateOfBirth
-
-        //     };
-        //     var filesPath = Directory.GetCurrentDirectory() + "/images";
-        //     //get filename
-        //     string ImageName = Path.GetFileName(_user.Avatar.FileName);
-        //     var fullFilePath = Path.Combine(filesPath, ImageName);
-        //     using (var stream = new FileStream(fullFilePath, FileMode.Create))
-        //     {
-        //         await _user.Avatar.CopyToAsync(stream);
-        //     }
-        //     user.Avatar = filesPath + "/" + ImageName;
-
-        //    _repository.Insert(user);
-        //     int _insertID = user.Id;
-        //     if (_insertID > 0)
-        //     {
-        //         return Ok(_insertID);
-        //     }
-        //     return Ok(0);
-        // }
-        // #endregion
-
-
-        // GET: api/User
-        #region snippet_Get_List_User
-        // [Authorize(Roles = "Admin")]
-        [HttpGet]
-        [Route("users")]
-        public IActionResult GetAccountsForUser([FromQuery] UserParameters parameters)
-        {
-            try
-            {
-                var accounts = _repository.GetUsers(parameters);
-
-                var metadata = new
-                {
-                    accounts.TotalCount,
-                    accounts.PageSize,
-                    accounts.CurrentPage,
-                    accounts.TotalPages,
-                    accounts.HasNext,
-                    accounts.HasPrevious
-                };
-
-                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
-
-                _logger.LogInformation($"Returned {accounts.TotalCount} users from database.");
-
-                return Ok(accounts);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
-            }
-        }
-        #endregion
-
-        // GET: api/User/:id
-        #region snippet_Get_User_By_Id
-        // [Authorize(Roles = "Admin")]
-        [HttpGet("user/{id}", Name = "UserById")]
-        public IActionResult GetUserById(int id)
-        {
-            try
-            {
-                var User = _repository.GetById(id);
-                if (User == null)
-                {
-                    _logger.LogError($"User with id: {id}, hasn't been found in db.");
-                    return NotFound();
-                }
-                else
-                {
-                    _logger.LogInformation($"Returned User with id: {id}");
-
-                    return Ok(User);
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something went wrong inside GetUserById action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                // HttpContext.Request.Headers["username"]
+                // HttpContext.Request.Headers["password"]
+                // bool isAuthenticated = _loginService.Authenticated(username, password);
+                // if (!isAuthenticated)
+                // {
+                //     return Unauthorized();
+                // }
+                return Ok(new { status = 200, isSuccess = true, message = "User Login successfully", UserDetails = log });
             }
         }
         #endregion
@@ -208,6 +105,70 @@ namespace WebApiLibraryManagement.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong inside Create User action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // GET: api/User
+        #region snippet_Get_List_User
+        // [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("users")]
+        public IActionResult GetAccountsForUser([FromQuery] UserParameters parameters)
+        {
+            try
+            {
+                var accounts = _repository.GetUsers(parameters);
+
+                var metadata = new
+                {
+                    accounts.TotalCount,
+                    accounts.PageSize,
+                    accounts.CurrentPage,
+                    accounts.TotalPages,
+                    accounts.HasNext,
+                    accounts.HasPrevious
+                };
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+
+                _logger.LogInformation($"Returned {accounts.TotalCount} users from database.");
+
+                return Ok(accounts);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetList action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
+        // GET: api/User/:id
+        #region snippet_Get_User_By_Id
+        // [Authorize(Roles = "Admin")]
+        [HttpGet("user/{id}", Name = "UserById")]
+        public IActionResult GetUserById(int id)
+        {
+            try
+            {
+                var User = _repository.GetUserById(id);
+                if (User == null)
+                {
+                    _logger.LogError($"User with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInformation($"Returned User with id: {id}");
+
+                    return Ok(User);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetUserById action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

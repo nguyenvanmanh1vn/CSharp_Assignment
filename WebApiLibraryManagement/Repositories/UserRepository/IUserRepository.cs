@@ -7,7 +7,7 @@ namespace WebApiLibraryManagement.Repositories
     public interface IUserRepository : IGenericRepository<User>
     {
         string GetMD5(string str);
-        IEnumerable<User> GetAllInclude();
+        User GetUserById(int id);
         PagedList<User> GetUsers(UserParameters userParameters);
         IEnumerable<User> GetListUserByRoleId(int roleId);
         User PostLogin(string email, string password);

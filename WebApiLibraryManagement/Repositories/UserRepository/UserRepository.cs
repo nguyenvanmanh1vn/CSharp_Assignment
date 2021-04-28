@@ -18,12 +18,9 @@ namespace WebApiLibraryManagement.Repositories
         {
         }
 
-        // Eager Loading of Related Data
-        public IEnumerable<User> GetAllInclude()
+        public User GetUserById(int id)
         {
-            return Entities
-                .Include(u => u.Role)
-                .ToList();
+            return Entities.AsNoTracking().AsQueryable().Include(b => b.Role).SingleOrDefault(b => b.Id == id);
         }
 
         public PagedList<User> GetUsers(UserParameters userParameters)
@@ -55,8 +52,8 @@ namespace WebApiLibraryManagement.Repositories
 
         public User PostLogin(string email, string password)
         {
-            // return Entities.Where(s => s.Email == email && s.Password == _services.GetMD5(password)).FirstOrDefault();
-            return Entities.Where(s => s.Email == email && s.Password == password).FirstOrDefault();
+            // return Entities.Where(u => u.Email == email && u.Password == _services.GetMD5(password)).FirstOrDefault();
+            return Entities.Where(u => u.Email == email && u.Password == password).Include(u => u.Role).FirstOrDefault();
         }
 
         public IEnumerable<User> PostRegister(string email)
