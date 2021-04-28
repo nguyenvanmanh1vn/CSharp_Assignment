@@ -64,7 +64,7 @@ namespace WebApiLibraryManagement.Controllers
         // [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("users")]
-        public IActionResult CreateUser([FromBody] User User)
+        public IActionResult RegisterUser([FromBody] User User)
         {
             try
             {
