@@ -17,7 +17,6 @@ namespace WebApiLibraryManagement.Repositories
         public UserRepository(RepositoryContext context) : base(context)
         {
         }
-
         public User GetUserById(int id)
         {
             return Entities.AsNoTracking().AsQueryable().Include(b => b.Role).SingleOrDefault(b => b.Id == id);
@@ -26,7 +25,7 @@ namespace WebApiLibraryManagement.Repositories
         public PagedList<User> GetUsers(UserParameters userParameters)
         {
             return PagedList<User>
-                    .ToPagedList(Entities
+                    .ToPagedList(Entities.Include(u => u.Role)
                     .OrderBy(b => b.FirstName),
                 userParameters.PageNumber,
                 userParameters.PageSize);
