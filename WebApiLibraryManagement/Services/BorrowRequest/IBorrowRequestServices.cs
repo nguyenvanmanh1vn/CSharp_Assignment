@@ -6,10 +6,10 @@ namespace WebApiLibraryManagement.Services
 {
     public interface IBorrowRequestServices
     {
-        int[] arrayBookIds(BorrowRequestDTO borrowRequestDTO);
-        bool IsBRInABRValid(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO);
+        // int[] arrayBookIds(BorrowRequestDTO borrowRequestDTO);
+        bool IsBRInABRValid(BorrowRequestDTO borrowRequestDTO);
         bool IsNumberOfTimesBRInMonthValid(BorrowRequestDTO borrowRequestDTO);
-        BorrowRequest CreateBorrowRequest(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO);
-        void CreateBorrowRequestDetails(int bRId, int[] arrayBookIds);
+        BorrowRequest CreateBorrowRequest(BorrowRequestDTO borrowRequestDTO);
+        void CreateBorrowRequestDetails(BorrowRequestDTO borrowRequestDTO);
     }
 }

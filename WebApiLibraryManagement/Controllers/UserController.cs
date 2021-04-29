@@ -174,6 +174,35 @@ namespace WebApiLibraryManagement.Controllers
         }
         #endregion
 
+        // GET: api/User?email=...
+        #region snippet_Get_User_By_Email
+        // [Authorize(Roles = "Admin")]
+        [HttpGet("user", Name = "UserByEmail")]
+        public IActionResult GetUserByEmail([FromQuery] string email)
+        {
+            try
+            {
+                var User = _repository.GetUserByEmail(email);
+                if (User == null)
+                {
+                    _logger.LogError($"User with email: {email}, hasn't been found in db.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInformation($"Returned User with email: {email}");
+
+                    return Ok(User);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetUserById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        #endregion
+
         // PUT api/User/:id
         #region snippet_Update
         // [Authorize(Roles = "Admin")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj": {}
+    "d:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj": {}
   },
   "projects": {
-    "D:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj": {
+    "d:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj",
+        "projectUniqueName": "d:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj",
         "projectName": "WebApiLibraryManagement",
-        "projectPath": "D:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj",
+        "projectPath": "d:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\WebApiLibraryManagement.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\obj\\",
+        "outputPath": "d:\\Jobs\\Nash_Tech\\MS_Rookies\\Assignment\\CSharp_Assignment\\WebApiLibraryManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

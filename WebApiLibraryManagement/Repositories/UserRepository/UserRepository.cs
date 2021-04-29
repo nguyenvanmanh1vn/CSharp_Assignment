@@ -21,6 +21,10 @@ namespace WebApiLibraryManagement.Repositories
         {
             return Entities.AsNoTracking().AsQueryable().Include(b => b.Role).SingleOrDefault(b => b.Id == id);
         }
+        public User GetUserByEmail(string email)
+        {
+            return Entities.AsNoTracking().AsQueryable().SingleOrDefault(b => b.Email == email);
+        }
 
         public PagedList<User> GetUsers(UserParameters userParameters)
         {

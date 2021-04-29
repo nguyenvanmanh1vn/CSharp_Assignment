@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using WebApiLibraryManagement.Models;
 
 namespace WebApiLibraryManagement.Models
 {
@@ -7,6 +8,6 @@ namespace WebApiLibraryManagement.Models
         [Required]
         public int UserId { get; set; }
         public string Status { get; set; }
-        public string BorrowBooks { get; set; }
+        public BorrowRequest[] BorrowBooks { get; set; }
     }
 }

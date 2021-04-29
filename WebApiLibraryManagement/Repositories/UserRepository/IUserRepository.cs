@@ -8,6 +8,7 @@ namespace WebApiLibraryManagement.Repositories
     {
         string GetMD5(string str);
         User GetUserById(int id);
+        User GetUserByEmail(string email);
         PagedList<User> GetUsers(UserParameters userParameters);
         IEnumerable<User> GetListUserByRoleId(int roleId);
         User PostLogin(string email, string password);

@@ -18,13 +18,13 @@ namespace WebApiLibraryManagement.Services
             _bDRepository = bDRepository;
         }
 
-        public int[] arrayBookIds(BorrowRequestDTO borrowRequestDTO)
-        {
-            return Array.ConvertAll(borrowRequestDTO.BorrowBooks.Split(','), Int32.Parse);
-            /* Front End:
-             * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
-            */
-        }
+        // public int[] arrayBookIds(BorrowRequestDTO borrowRequestDTO)
+        // {
+        //     return Array.ConvertAll(borrowRequestDTO.BorrowBooks.Split(','), Int32.Parse);
+        //     /* Front End:
+        //      * string borrowingBooksRequestArrayToString = String.Join(",", borrowingBooksRequestArrayToString.Select(p => p.ToString()).ToArray());
+        //     */
+        // }
 
         public bool IsNumberOfTimesBRInMonthValid(BorrowRequestDTO borrowRequestDTO)
         {
@@ -37,9 +37,9 @@ namespace WebApiLibraryManagement.Services
             return true;
         }
 
-        public bool IsBRInABRValid(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO)
+        public bool IsBRInABRValid(BorrowRequestDTO borrowRequestDTO)
         {
-            if (arrayBookIds.Length > 5)
+            if (borrowRequestDTO.BorrowBooks.Length > 5)
             {
                 return false;
 
@@ -47,7 +47,7 @@ namespace WebApiLibraryManagement.Services
             return true;
         }
 
-        public BorrowRequest CreateBorrowRequest(int[] arrayBookIds, BorrowRequestDTO borrowRequestDTO)
+        public BorrowRequest CreateBorrowRequest(BorrowRequestDTO borrowRequestDTO)
         {
 
             var entity = new BorrowRequest
@@ -61,14 +61,14 @@ namespace WebApiLibraryManagement.Services
             return entity;
         }
 
-        public void CreateBorrowRequestDetails(int bRId, int[] arrayBookIds)
+        public void CreateBorrowRequestDetails(BorrowRequestDTO borrowRequestDTO)
         {
-            foreach (int bookId in arrayBookIds)
+            foreach (BorrowRequest book in borrowRequestDTO.BorrowBooks)
             {
                 var entityRequestDetails = new BorrowRequestDetail
                 {
-                    BookId = bookId,
-                    BorrowingRequestId = bRId,
+                    BookId = book.Id,
+                    BorrowingRequestId = book.Id,
                 };
                 _bDRepository.Insert(entityRequestDetails);
             }

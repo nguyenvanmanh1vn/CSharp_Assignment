@@ -119,17 +119,17 @@ namespace WebApiLibraryManagement.Controllers
 
                 else
                 {
-                    int[] arrayBookIds = _services.arrayBookIds(borrowRequestDTO);
-                    bool isBRValid = _services.IsBRInABRValid(arrayBookIds, borrowRequestDTO);
+                    // int[] arrayBookIds = _services.arrayBookIds(borrowRequestDTO);
+                    bool isBRValid = _services.IsBRInABRValid(borrowRequestDTO);
                     bool isBRInAMonthValid = _services.IsNumberOfTimesBRInMonthValid(borrowRequestDTO);
 
                     if (isBRValid == false) return ValidationProblem("One borrowing request more than 1 book(maximum is 5 books)");
 
                     if (isBRInAMonthValid == false) return ValidationProblem("You can't create 3 borrow requests in a month");
 
-                    BorrowRequest entity = _services.CreateBorrowRequest(arrayBookIds, borrowRequestDTO);
+                    BorrowRequest entity = _services.CreateBorrowRequest(borrowRequestDTO);
 
-                    _services.CreateBorrowRequestDetails(entity.Id, arrayBookIds);
+                    _services.CreateBorrowRequestDetails(borrowRequestDTO);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
                 }
