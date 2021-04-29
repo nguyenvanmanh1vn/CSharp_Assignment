@@ -8,6 +8,7 @@ namespace WebApiLibraryManagement.Repositories
     public interface IBorrowRequestRepository : IGenericRepository<BorrowRequest>
     {
         PagedList<BorrowRequest> GetBorrowRequests(BorrowRequestParameters borrowRequestParameters);
+        BorrowRequest GetBorrowRequestById(int id);
         IEnumerable<BorrowRequest> GetListBorrowRequestByUserId(int userId);
         IEnumerable<BorrowRequest> GetListBorrowRequestByUserIdAndBorrowDate(int userId, int thisMonth);
     }

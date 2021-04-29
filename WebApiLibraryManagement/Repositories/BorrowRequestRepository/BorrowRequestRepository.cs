@@ -23,9 +23,13 @@ namespace WebApiLibraryManagement.Repositories
                 borrowRequestParameters.PageSize);
         }
 
+        public BorrowRequest GetBorrowRequestById(int id)
+        {
+            return Entities.AsNoTracking().AsQueryable().Include(br => br.BorrowRequestDetails).SingleOrDefault(br => br.Id == id);
+        }
         public IEnumerable<BorrowRequest> GetListBorrowRequestByUserId(int userId)
         {
-            return Entities.Where(br => br.UserId == userId).ToList();
+            return Entities.Where(br => br.UserId == userId).Include(br => br.BorrowRequestDetails).ToList();
         }
         public IEnumerable<BorrowRequest> GetListBorrowRequestByUserIdAndBorrowDate(int userId, int thisMonth)
         {

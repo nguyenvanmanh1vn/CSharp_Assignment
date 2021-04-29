@@ -8,6 +8,6 @@ namespace WebApiLibraryManagement.Models
         [Required]
         public int UserId { get; set; }
         public string Status { get; set; }
-        public BorrowRequest[] BorrowBooks { get; set; }
+        public Book[] BorrowBooks { get; set; }
     }
 }

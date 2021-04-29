@@ -30,7 +30,7 @@ namespace WebApiLibraryManagement.Services
         {
 
             int numberOfBorrowRequestsInMonth = _repository.GetByQueryConditions().Count(br => br.UserId == borrowRequestDTO.UserId && br.CreatedDate.Month == DateTime.Now.Month);
-            if (numberOfBorrowRequestsInMonth >= 3)
+            if (numberOfBorrowRequestsInMonth > 3)
             {
                 return false;
             }
@@ -61,14 +61,14 @@ namespace WebApiLibraryManagement.Services
             return entity;
         }
 
-        public void CreateBorrowRequestDetails(BorrowRequestDTO borrowRequestDTO)
+        public void CreateBorrowRequestDetails(int borrowRequestId, BorrowRequestDTO borrowRequestDTO)
         {
-            foreach (BorrowRequest book in borrowRequestDTO.BorrowBooks)
+            foreach (Book book in borrowRequestDTO.BorrowBooks)
             {
                 var entityRequestDetails = new BorrowRequestDetail
                 {
                     BookId = book.Id,
-                    BorrowingRequestId = book.Id,
+                    BorrowRequestId = borrowRequestId,
                 };
                 _bDRepository.Insert(entityRequestDetails);
             }

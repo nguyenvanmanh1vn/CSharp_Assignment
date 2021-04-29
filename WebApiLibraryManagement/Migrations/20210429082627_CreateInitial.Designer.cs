@@ -10,7 +10,7 @@ using WebApiLibraryManagement.Repositories;
 namespace WebApiLibraryManagement.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20210426132901_CreateInitial")]
+    [Migration("20210429082627_CreateInitial")]
     partial class CreateInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,7 +56,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 689, DateTimeKind.Local).AddTicks(9181),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(3179),
                             FirstName = "Marjane",
                             Gender = "Female",
                             LastName = "Satrapi"
@@ -64,7 +64,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(210),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4226),
                             FirstName = "Frederick",
                             Gender = "Male",
                             LastName = "Douglass"
@@ -72,7 +72,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(217),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4232),
                             FirstName = "Barbara",
                             Gender = "Female",
                             LastName = "Barron"
@@ -80,7 +80,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(218),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4234),
                             FirstName = "Masashi",
                             Gender = "Male",
                             LastName = "Kishimoto"
@@ -88,7 +88,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(220),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4236),
                             FirstName = "Martin",
                             Gender = "Male",
                             LastName = "Evening"
@@ -96,7 +96,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(222),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4238),
                             FirstName = "Amadea",
                             Gender = "Female",
                             LastName = "Morningstar"
@@ -104,7 +104,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(224),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4239),
                             FirstName = "Elizabeth",
                             Gender = "Female",
                             LastName = "Zimmermann"
@@ -112,7 +112,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(226),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4241),
                             FirstName = "Al",
                             Gender = "Male",
                             LastName = "Seckel"
@@ -120,7 +120,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(228),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4242),
                             FirstName = "Ann",
                             Gender = "Female",
                             LastName = "Lawson Christine"
@@ -128,7 +128,7 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(229),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4244),
                             FirstName = "Deibler ",
                             Gender = "Female",
                             LastName = "Rose Darlene"
@@ -178,7 +178,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             AuthorId = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 687, DateTimeKind.Local).AddTicks(2607),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 567, DateTimeKind.Local).AddTicks(6624),
                             Image = "https://img.thriftbooks.com/api/images/m/2540127da455500c49d0c50c71683b6f38f0b70b.jpg",
                             Status = "Exist",
                             Title = "Persepolis : The Story of a Childhood"
@@ -188,7 +188,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 2,
                             AuthorId = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5289),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8080),
                             Image = "https://img.thriftbooks.com/api/images/m/8303521a462dc3511f365b692830e3e16b370742.jpg",
                             Status = "Borowed",
                             Title = "Narrative of the Life of Frederick Douglass, an American Slave"
@@ -198,7 +198,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 3,
                             AuthorId = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5315),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8100),
                             Image = "https://img.thriftbooks.com/api/images/m/721d5caa481de1e0b2ac04205606f92cce1adeae.jpg",
                             Status = "Exist",
                             Title = "Do What You Are : Discover the Perfect Career for You Through the Secrets of Personality Type"
@@ -208,7 +208,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 4,
                             AuthorId = 4,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5318),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8103),
                             Image = "https://img.thriftbooks.com/api/images/m/456fbecc05164ed1e327ff5ee9922475d1e38df0.jpg",
                             Status = "Exist",
                             Title = "Naruto, Vol. 3"
@@ -218,7 +218,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 5,
                             AuthorId = 5,
                             CategoryId = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5319),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8104),
                             Image = "https://img.thriftbooks.com/api/images/m/f1690297c45711d15406be34e5397b6fcf843718.jpg",
                             Status = "Exist",
                             Title = "Adobe Photoshop CS3 for Photographers : A Professional Image Editor's Guide to the Creative Use of Photoshop for the Macintosh and PC"
@@ -228,7 +228,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 6,
                             AuthorId = 6,
                             CategoryId = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5321),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8106),
                             Image = "https://img.thriftbooks.com/api/images/m/5ac192845cdf424b29b55fbfa03e0db7e0d278ff.jpg",
                             Status = "Exist",
                             Title = "The Ayurvedic Cookbook"
@@ -238,7 +238,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 7,
                             AuthorId = 7,
                             CategoryId = 7,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5322),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8108),
                             Image = "https://img.thriftbooks.com/api/images/m/d7b2a08125cda604e3ba179b5f2fa64f56ee8583.jpg",
                             Status = "Exist",
                             Title = "Elizabeth Zimmermann's Knitter's Almanac"
@@ -248,7 +248,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 8,
                             AuthorId = 8,
                             CategoryId = 8,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5324),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8109),
                             Image = "https://m.media-amazon.com/images/I/51788Fh430L._SL350_.jpg",
                             Status = "Exist",
                             Title = "The Ultimate Book of Optical Illusions"
@@ -258,7 +258,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 9,
                             AuthorId = 9,
                             CategoryId = 9,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5326),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8115),
                             Image = "https://img.thriftbooks.com/api/images/m/8007fc770cbec3c2baaa3026595550d44fc907d4.jpg",
                             Status = "Exist",
                             Title = "Understanding the Borderline Mother : Helping Her Children Transcend the Intense, Unpredictable, and Volatile Relationship"
@@ -268,7 +268,7 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 10,
                             AuthorId = 10,
                             CategoryId = 10,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 688, DateTimeKind.Local).AddTicks(5328),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 568, DateTimeKind.Local).AddTicks(8116),
                             Image = "https://m.media-amazon.com/images/I/415K3VeI3zL._SL350_.jpg",
                             Status = "Exist",
                             Title = "Evidence Not Seen: A Woman's Miraculous Faith in the Jungles of World War II"
@@ -299,43 +299,43 @@ namespace WebApiLibraryManagement.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BorrowingRequests");
+                    b.ToTable("BorrowRequests");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1561),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5536),
                             Status = "Approved",
-                            UserId = 1
+                            UserId = 4
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2477),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(6223),
                             Status = "Approved",
-                            UserId = 1
+                            UserId = 5
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2483),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(6229),
                             Status = "Waiting",
-                            UserId = 2
+                            UserId = 6
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2485),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(6231),
                             Status = "Rejected",
-                            UserId = 3
+                            UserId = 7
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(2487),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(6232),
                             Status = "Approved",
-                            UserId = 4
+                            UserId = 8
                         });
                 });
 
@@ -349,10 +349,7 @@ namespace WebApiLibraryManagement.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("BorrowRequestId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BorrowingRequestId")
+                    b.Property<int>("BorrowRequestId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -361,44 +358,44 @@ namespace WebApiLibraryManagement.Migrations
 
                     b.HasIndex("BorrowRequestId");
 
-                    b.ToTable("BorrowingRequestDetails");
+                    b.ToTable("BorrowRequestDetails");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             BookId = 1,
-                            BorrowingRequestId = 1
+                            BorrowRequestId = 1
                         },
                         new
                         {
                             Id = 2,
                             BookId = 2,
-                            BorrowingRequestId = 1
+                            BorrowRequestId = 1
                         },
                         new
                         {
                             Id = 3,
                             BookId = 3,
-                            BorrowingRequestId = 1
+                            BorrowRequestId = 2
                         },
                         new
                         {
                             Id = 4,
                             BookId = 4,
-                            BorrowingRequestId = 1
+                            BorrowRequestId = 2
                         },
                         new
                         {
                             Id = 5,
                             BookId = 5,
-                            BorrowingRequestId = 2
+                            BorrowRequestId = 3
                         },
                         new
                         {
                             Id = 6,
                             BookId = 6,
-                            BorrowingRequestId = 3
+                            BorrowRequestId = 3
                         });
                 });
 
@@ -427,61 +424,61 @@ namespace WebApiLibraryManagement.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(622),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(4539),
                             Name = "Arts & Music"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1337),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5300),
                             Name = "Biographies"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1342),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5305),
                             Name = "Business"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1343),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5307),
                             Name = "Comics"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1345),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5309),
                             Name = "Computers & Tech"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1346),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5310),
                             Name = "Cooking"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1348),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5312),
                             Name = "Education & Reference"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1350),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5313),
                             Name = "Logic & Brain Teaser Books"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1352),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5315),
                             Name = "Health & Fitness"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(1353),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(5316),
                             Name = "History Books "
                         });
                 });
@@ -591,7 +588,37 @@ namespace WebApiLibraryManagement.Migrations
                             Id = 1,
                             Address = "Ha Noi",
                             Age = 24,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(4092),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(7924),
+                            DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "admin@gmail.com",
+                            FirstName = "Admin",
+                            Gender = "Male",
+                            LastName = "A",
+                            Password = "123456",
+                            Phone = "0123456789",
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Ha Noi",
+                            Age = 24,
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9240),
+                            DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "user@gmail.com",
+                            FirstName = "User",
+                            Gender = "Male",
+                            LastName = "A",
+                            Password = "123456",
+                            Phone = "0123456789",
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "Ha Noi",
+                            Age = 24,
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9245),
                             DateOfBirth = new DateTime(1997, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "manh@gmail.com",
                             FirstName = "Manh",
@@ -603,10 +630,10 @@ namespace WebApiLibraryManagement.Migrations
                         },
                         new
                         {
-                            Id = 2,
+                            Id = 4,
                             Address = "Quang Ninh",
                             Age = 23,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5207),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9359),
                             DateOfBirth = new DateTime(1998, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tung@gmail.com",
                             FirstName = "Tung",
@@ -618,10 +645,10 @@ namespace WebApiLibraryManagement.Migrations
                         },
                         new
                         {
-                            Id = 3,
+                            Id = 5,
                             Address = "Ha Noi",
                             Age = 22,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5211),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9362),
                             DateOfBirth = new DateTime(1999, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "trang@gmail.com",
                             FirstName = "Trang",
@@ -633,10 +660,10 @@ namespace WebApiLibraryManagement.Migrations
                         },
                         new
                         {
-                            Id = 4,
+                            Id = 6,
                             Address = "Ho Chi Minh",
                             Age = 21,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5215),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9367),
                             DateOfBirth = new DateTime(2000, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "thu@gmail.com",
                             FirstName = "Thu",
@@ -648,10 +675,10 @@ namespace WebApiLibraryManagement.Migrations
                         },
                         new
                         {
-                            Id = 5,
+                            Id = 7,
                             Address = "Nghe An",
                             Age = 20,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5218),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9370),
                             DateOfBirth = new DateTime(2001, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "hung@gmail.com",
                             FirstName = "Hung",
@@ -663,10 +690,10 @@ namespace WebApiLibraryManagement.Migrations
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 8,
                             Address = "Da Nang",
                             Age = 19,
-                            CreatedDate = new DateTime(2021, 4, 26, 20, 29, 0, 690, DateTimeKind.Local).AddTicks(5221),
+                            CreatedDate = new DateTime(2021, 4, 29, 15, 26, 26, 570, DateTimeKind.Local).AddTicks(9373),
                             DateOfBirth = new DateTime(2002, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "toan@gmail.com",
                             FirstName = "Toan",
@@ -718,7 +745,9 @@ namespace WebApiLibraryManagement.Migrations
 
                     b.HasOne("WebApiLibraryManagement.Models.BorrowRequest", "BorrowRequest")
                         .WithMany("BorrowRequestDetails")
-                        .HasForeignKey("BorrowRequestId");
+                        .HasForeignKey("BorrowRequestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Book");
 

@@ -14,8 +14,8 @@ namespace WebApiLibraryManagement.Repositories
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<BorrowRequest> BorrowingRequests { get; set; }
-        public DbSet<BorrowRequestDetail> BorrowingRequestDetails { get; set; }
+        public DbSet<BorrowRequest> BorrowRequests { get; set; }
+        public DbSet<BorrowRequestDetail> BorrowRequestDetails { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
@@ -67,21 +67,21 @@ namespace WebApiLibraryManagement.Repositories
 
             // Borrowing Request List
             modelBuilder.Entity<BorrowRequest>().HasData(
-                new { Id = 1, UserId = 1, Status = "Approved", CreatedDate = DateTime.Now },
-                new { Id = 2, UserId = 1, Status = "Approved", CreatedDate = DateTime.Now },
-                new { Id = 3, UserId = 2, Status = "Waiting", CreatedDate = DateTime.Now },
-                new { Id = 4, UserId = 3, Status = "Rejected", CreatedDate = DateTime.Now },
-                new { Id = 5, UserId = 4, Status = "Approved", CreatedDate = DateTime.Now }
+                new { Id = 1, UserId = 4, Status = "Approved", CreatedDate = DateTime.Now },
+                new { Id = 2, UserId = 5, Status = "Approved", CreatedDate = DateTime.Now },
+                new { Id = 3, UserId = 6, Status = "Waiting", CreatedDate = DateTime.Now },
+                new { Id = 4, UserId = 7, Status = "Rejected", CreatedDate = DateTime.Now },
+                new { Id = 5, UserId = 8, Status = "Approved", CreatedDate = DateTime.Now }
             );
 
             // Borrowing Request Detail List
             modelBuilder.Entity<BorrowRequestDetail>().HasData(
-                new { Id = 1, BookId = 1, BorrowingRequestId = 1 },
-                new { Id = 2, BookId = 2, BorrowingRequestId = 1 },
-                new { Id = 3, BookId = 3, BorrowingRequestId = 1 },
-                new { Id = 4, BookId = 4, BorrowingRequestId = 1 },
-                new { Id = 5, BookId = 5, BorrowingRequestId = 2 },
-                new { Id = 6, BookId = 6, BorrowingRequestId = 3 }
+                new { Id = 1, BookId = 1, BorrowRequestId = 1 },
+                new { Id = 2, BookId = 2, BorrowRequestId = 1 },
+                new { Id = 3, BookId = 3, BorrowRequestId = 2 },
+                new { Id = 4, BookId = 4, BorrowRequestId = 2 },
+                new { Id = 5, BookId = 5, BorrowRequestId = 3 },
+                new { Id = 6, BookId = 6, BorrowRequestId = 3 }
             );
 
             // Role List
@@ -92,12 +92,14 @@ namespace WebApiLibraryManagement.Repositories
 
             // User List
             modelBuilder.Entity<User>().HasData(
-                new { Id = 1, Password = "123456", FirstName = "Manh", LastName = "Nguyen", Age = DateTime.Now.Year - 1997, DateOfBirth = new DateTime(1997, 01, 22), Gender = "Male", Phone = "0123456789", Address = "Ha Noi", Email = "manh@gmail.com", RoleId = 1, CreatedDate = DateTime.Now },
-                new { Id = 2, Password = "123456", FirstName = "Tung", LastName = "Tran", Age = DateTime.Now.Year - 1998, DateOfBirth = new DateTime(1998, 02, 23), Gender = "Male", Phone = "0987654321", Address = "Quang Ninh", Email = "tung@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
-                new { Id = 3, Password = "123456", FirstName = "Trang", LastName = "Bui", Age = DateTime.Now.Year - 1999, DateOfBirth = new DateTime(1999, 03, 24), Gender = "Female", Phone = "0123789456", Address = "Ha Noi", Email = "trang@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
-                new { Id = 4, Password = "123456", FirstName = "Thu", LastName = "Nguyen", Age = DateTime.Now.Year - 2000, DateOfBirth = new DateTime(2000, 04, 25), Gender = "Female", Phone = "0456123789", Address = "Ho Chi Minh", Email = "thu@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
-                new { Id = 5, Password = "123456", FirstName = "Hung", LastName = "Nguyen", Age = DateTime.Now.Year - 2001, DateOfBirth = new DateTime(2001, 05, 26), Gender = "Male", Phone = "0789456123", Address = "Nghe An", Email = "hung@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
-                new { Id = 6, Password = "123456", FirstName = "Toan", LastName = "Tran", Age = DateTime.Now.Year - 2002, DateOfBirth = new DateTime(2002, 06, 27), Gender = "Male", Phone = "0789123456", Address = "Da Nang", Email = "toan@gmail.com", RoleId = 2, CreatedDate = DateTime.Now }
+                new { Id = 1, Password = "123456", FirstName = "Admin", LastName = "A", Age = DateTime.Now.Year - 1997, DateOfBirth = new DateTime(1997, 01, 22), Gender = "Male", Phone = "0123456789", Address = "Ha Noi", Email = "admin@gmail.com", RoleId = 1, CreatedDate = DateTime.Now },
+                new { Id = 2, Password = "123456", FirstName = "User", LastName = "A", Age = DateTime.Now.Year - 1997, DateOfBirth = new DateTime(1997, 01, 22), Gender = "Male", Phone = "0123456789", Address = "Ha Noi", Email = "user@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
+                new { Id = 3, Password = "123456", FirstName = "Manh", LastName = "Nguyen", Age = DateTime.Now.Year - 1997, DateOfBirth = new DateTime(1997, 01, 22), Gender = "Male", Phone = "0123456789", Address = "Ha Noi", Email = "manh@gmail.com", RoleId = 1, CreatedDate = DateTime.Now },
+                new { Id = 4, Password = "123456", FirstName = "Tung", LastName = "Tran", Age = DateTime.Now.Year - 1998, DateOfBirth = new DateTime(1998, 02, 23), Gender = "Male", Phone = "0987654321", Address = "Quang Ninh", Email = "tung@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
+                new { Id = 5, Password = "123456", FirstName = "Trang", LastName = "Bui", Age = DateTime.Now.Year - 1999, DateOfBirth = new DateTime(1999, 03, 24), Gender = "Female", Phone = "0123789456", Address = "Ha Noi", Email = "trang@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
+                new { Id = 6, Password = "123456", FirstName = "Thu", LastName = "Nguyen", Age = DateTime.Now.Year - 2000, DateOfBirth = new DateTime(2000, 04, 25), Gender = "Female", Phone = "0456123789", Address = "Ho Chi Minh", Email = "thu@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
+                new { Id = 7, Password = "123456", FirstName = "Hung", LastName = "Nguyen", Age = DateTime.Now.Year - 2001, DateOfBirth = new DateTime(2001, 05, 26), Gender = "Male", Phone = "0789456123", Address = "Nghe An", Email = "hung@gmail.com", RoleId = 2, CreatedDate = DateTime.Now },
+                new { Id = 8, Password = "123456", FirstName = "Toan", LastName = "Tran", Age = DateTime.Now.Year - 2002, DateOfBirth = new DateTime(2002, 06, 27), Gender = "Male", Phone = "0789123456", Address = "Da Nang", Email = "toan@gmail.com", RoleId = 2, CreatedDate = DateTime.Now }
             );
         }
         #endregion

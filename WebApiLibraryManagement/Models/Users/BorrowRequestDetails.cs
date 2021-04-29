@@ -11,7 +11,7 @@ namespace WebApiLibraryManagement.Models
         public int BookId { get; set; }
         public virtual Book Book { get; set; }
         [Required]
-        public int BorrowingRequestId { get; set; }
+        public int BorrowRequestId { get; set; }
         public virtual BorrowRequest BorrowRequest { get; set; }
     }
 }

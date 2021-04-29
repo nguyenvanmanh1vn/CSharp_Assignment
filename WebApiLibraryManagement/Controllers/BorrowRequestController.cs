@@ -43,21 +43,21 @@ namespace WebApiLibraryManagement.Controllers
         {
             try
             {
-                var borrowingRequests = _repository.GetBorrowRequests(borrowRequestParameters);
+                var borrowRequests = _repository.GetBorrowRequests(borrowRequestParameters);
                 var metadata = new
                 {
-                    borrowingRequests.TotalCount,
-                    borrowingRequests.PageSize,
-                    borrowingRequests.CurrentPage,
-                    borrowingRequests.TotalPages,
-                    borrowingRequests.HasNext,
-                    borrowingRequests.HasPrevious
+                    borrowRequests.TotalCount,
+                    borrowRequests.PageSize,
+                    borrowRequests.CurrentPage,
+                    borrowRequests.TotalPages,
+                    borrowRequests.HasNext,
+                    borrowRequests.HasPrevious
                 };
 
                 Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
-                _logger.LogInformation($"Returned {borrowingRequests.TotalCount} borrowRequests from database.");
+                _logger.LogInformation($"Returned {borrowRequests.TotalCount} borrowRequests from database.");
 
-                return Ok(borrowingRequests);
+                return Ok(borrowRequests);
             }
             catch (Exception ex)
             {
@@ -129,7 +129,7 @@ namespace WebApiLibraryManagement.Controllers
 
                     BorrowRequest entity = _services.CreateBorrowRequest(borrowRequestDTO);
 
-                    _services.CreateBorrowRequestDetails(borrowRequestDTO);
+                    _services.CreateBorrowRequestDetails(entity.Id, borrowRequestDTO);
 
                     return CreatedAtRoute("BorrowingRequestById", new { id = entity.Id }, entity);
                 }
@@ -150,7 +150,7 @@ namespace WebApiLibraryManagement.Controllers
         {
             try
             {
-                var oldBorrowingRequest = _repository.GetById(id);
+                var oldBorrowingRequest = _repository.GetBorrowRequestById(id);
 
                 if (newBorrowingRequest == null)
                 {

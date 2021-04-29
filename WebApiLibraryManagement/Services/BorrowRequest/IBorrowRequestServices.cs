@@ -10,6 +10,6 @@ namespace WebApiLibraryManagement.Services
         bool IsBRInABRValid(BorrowRequestDTO borrowRequestDTO);
         bool IsNumberOfTimesBRInMonthValid(BorrowRequestDTO borrowRequestDTO);
         BorrowRequest CreateBorrowRequest(BorrowRequestDTO borrowRequestDTO);
-        void CreateBorrowRequestDetails(BorrowRequestDTO borrowRequestDTO);
+        void CreateBorrowRequestDetails(int borrowRequestId, BorrowRequestDTO borrowRequestDTO);
     }
 }
